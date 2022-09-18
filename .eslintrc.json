@@ -17,6 +17,7 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "func-names": ["error", "as-needed"]
   }
 }
