@@ -1,19 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from 'react-router-dom';
+
 import './index.css';
-import reportWebVitals from './reportWebVitals';
-import StandalonePN from './pages/StandalonePN';
 import NotFound from './pages/NotFound';
+import StandalonePN from './pages/StandalonePN';
+import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
-    path: '*',
-    element: <NotFound />,
+    path: '/',
+    element: <Navigate to="/standalone-pn" />,
   },
   {
     path: '/standalone-pn',
     element: <StandalonePN />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
 
