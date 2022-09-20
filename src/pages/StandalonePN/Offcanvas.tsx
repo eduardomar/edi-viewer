@@ -1,8 +1,8 @@
 import React from 'react';
-import TableBootstrap from 'react-bootstrap/Table';
 import OffcanvasBootstrap from 'react-bootstrap/Offcanvas';
-import { Element } from '../../utils/ediToObject';
+import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
+import { Element } from '../../utils/ediToObject';
 
 interface OffcanvasProps {
   title: string;

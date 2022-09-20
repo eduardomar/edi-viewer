@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Table from 'react-bootstrap/Table';
+import TableBootstrap from 'react-bootstrap/Table';
+import styled from 'styled-components';
 import EDI from '../../components/EDI';
 import { Element, Segment } from '../../utils/ediToObject';
 import Offcanvas from './Offcanvas';
@@ -35,7 +36,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
           <EDI segment={segment.edi} highlight={highlight} />
         </Accordion.Header>
         <Accordion.Body>
-          <Table striped bordered hover>
+          <TableStyled striped bordered hover>
             <tbody>
               {segment.elements.map((element, index) => (
                 <tr
@@ -51,11 +52,19 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
                 </tr>
               ))}
             </tbody>
-          </Table>
+          </TableStyled>
         </Accordion.Body>
       </Accordion.Item>
     </>
   );
 };
+
+const TableStyled = styled(TableBootstrap)`
+  table-layout: fixed;
+
+  & > tbody > tr > td:nth-child(1) {
+    width: 30%;
+  }
+`;
 
 export default AccordionItem;
