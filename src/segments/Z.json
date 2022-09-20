@@ -1,0 +1,101 @@
+{
+  "name": "Z",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 1,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "Always Z"
+    },
+    {
+      "name": "senderReceiverSiteCode",
+      "originalName": "Sender/Receiver Site Code",
+      "sec": 2,
+      "status": "M",
+      "start": 2,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "description": "The CBP assigned code for the ‘data processing’ site/location of the transmitter (i.e., both sender of the batch and recipient of the response)."
+    },
+    {
+      "name": "senderReceiverIdCode",
+      "originalName": "Sender/Receiver ID Code",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 8,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "description": "Transmitter’s identification code (as assigned by CBP)."
+    },
+    {
+      "name": "communicationPasswordEman",
+      "originalName": "Communication Password (eMAN)",
+      "sec": 4,
+      "status": "M",
+      "start": 9,
+      "end": 14,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "description": "A pre-established password used to authorize the transmitter of the data."
+    },
+    {
+      "name": "transmissionDate",
+      "originalName": "Transmission Date",
+      "sec": 5,
+      "status": "C",
+      "start": 15,
+      "end": 20,
+      "filler": " ",
+      "align": null,
+      "max": 6,
+      "description": "Transmitter’s date of batch transmission.<br />Space fill if not used."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 21,
+      "end": 37,
+      "filler": " ",
+      "align": null,
+      "max": 17,
+      "description": "Space fill."
+    },
+    {
+      "name": "senderReceiverOfficeCode",
+      "originalName": "Sender/Receiver Office Code",
+      "sec": 7,
+      "status": "C",
+      "start": 38,
+      "end": 39,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "description": "A code agreed upon by the transmitter and CBP representing a specific ‘office’ (or sub-location)."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 40,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 41,
+      "description": "Space fill."
+    }
+  ]
+}

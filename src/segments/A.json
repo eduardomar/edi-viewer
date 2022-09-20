@@ -1,0 +1,137 @@
+{
+  "name": "A",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 1,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "Always A"
+    },
+    {
+      "name": "senderReceiverSiteCode",
+      "originalName": "Sender/Receiver Site Code",
+      "sec": 2,
+      "status": "M",
+      "start": 2,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "description": "The CBP assigned code for the ‘data processing’ site/location of the transmitter (i.e., both sender of the batch and recipient of the response)."
+    },
+    {
+      "name": "senderReceiverIdCode",
+      "originalName": "Sender/Receiver ID Code",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 8,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "description": "Transmitter’s identification code (as assigned by CBP)."
+    },
+    {
+      "name": "communicationPassword",
+      "originalName": "Communication Password",
+      "sec": 4,
+      "status": "M",
+      "start": 9,
+      "end": 14,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "description": "A pre-established password used to authorize the transmitter of the data."
+    },
+    {
+      "name": "transmissionDate",
+      "originalName": "Transmission Date",
+      "sec": 5,
+      "status": "O",
+      "start": 15,
+      "end": 20,
+      "filler": " ",
+      "align": null,
+      "max": 6,
+      "description": "Transmitter’s date of batch transmission. These positions are returned, unmodified, in the A-Record returned in the response to the batch (format MMDDYY).<br /><br />Space fill if not used."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 21,
+      "end": 25,
+      "filler": " ",
+      "align": null,
+      "max": 5,
+      "description": "Space fill."
+    },
+    {
+      "name": "applicationIdentifierCode",
+      "originalName": "Application Identifier Code",
+      "sec": 7,
+      "status": "M-ESAR OR O-eMAN",
+      "start": 26,
+      "end": 27,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "description": "A code that identifies the type of transaction data within the batch."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 28,
+      "end": 37,
+      "filler": " ",
+      "align": null,
+      "max": 10,
+      "description": "Space fill."
+    },
+    {
+      "name": "senderReceiverOfficeCode",
+      "originalName": "Sender/Receiver Office Code",
+      "sec": 9,
+      "status": "C",
+      "start": 38,
+      "end": 39,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "description": "A code agreed upon by the transmitter and CBP representing a specific ‘office’ (or sub-location).<br /><br />Space fill if not used"
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler",
+      "sec": 10,
+      "status": "M",
+      "start": 40,
+      "end": 59,
+      "filler": " ",
+      "align": null,
+      "max": 20,
+      "description": "Space fill."
+    },
+    {
+      "name": "transmitterSUserDataText",
+      "originalName": "Transmitter’s User Data Text",
+      "sec": 11,
+      "status": "O",
+      "start": 60,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 21,
+      "description": "Provided for the transmitter's internal use. These positions are returned, unmodified, in the A-Record returned in the response to the batch.<br /><br />Space fill if not used."
+    }
+  ]
+}

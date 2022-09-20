@@ -1,0 +1,101 @@
+{
+  "name": "Y",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 1,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "Always Y"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 2,
+      "end": 3,
+      "filler": " ",
+      "align": null,
+      "max": 2,
+      "description": "Space fill."
+    },
+    {
+      "name": "processingDistrictPortCode",
+      "originalName": "Processing District/Port Code",
+      "sec": 3,
+      "status": "M",
+      "start": 4,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "description": "The code for the U.S. port where the enclosed transaction(s) are to be ‘processed’."
+    },
+    {
+      "name": "filerCode",
+      "originalName": "Filer Code",
+      "sec": 4,
+      "status": "M",
+      "start": 8,
+      "end": 10,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "description": "Filer’s identification code (as assigned by CBP)."
+    },
+    {
+      "name": "applicationIdentifierCode",
+      "originalName": "Application Identifier Code",
+      "sec": 5,
+      "status": "M",
+      "start": 11,
+      "end": 12,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "description": "A code that identifies the type of transaction data within the block."
+    },
+    {
+      "name": "inputTransactionImageCount",
+      "originalName": "Filler (ESAR)<br/>OR<br/>Input Transaction Image Count (eMAN)<br />Filler (eMAN)",
+      "sec": 6,
+      "status": "M",
+      "start": 13,
+      "end": 44,
+      "filler": " ",
+      "align": null,
+      "max": 32,
+      "description": "Number of input images (i.e., records) submitted in the block. The count does not include the B-Record or the Y-Record."
+    },
+    {
+      "name": "processingFilerOfficeCode",
+      "originalName": "Processing Filer Office Code",
+      "sec": 7,
+      "status": "C",
+      "start": 45,
+      "end": 46,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "description": "A code agreed upon by the Filer and CBP representing a specific Filer ‘office’ (or sub-location).<br />Space fill if not used."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "C",
+      "start": 47,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 34,
+      "description": "Space fill."
+    }
+  ]
+}

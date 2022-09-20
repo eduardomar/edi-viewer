@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Navigate to="/standalone-pn" />,
   },
   {
-    path: '/standalone-pn',
+    path: '/standalone-pn/:edi',
     element: <StandalonePN />,
   },
   {

@@ -1,0 +1,77 @@
+{
+  "name": "PE90",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Record Type",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "description": "Must always equal PE90."
+    },
+    {
+      "name": "narrativeMessageTypeCode",
+      "originalName": "Narrative Message Type Code",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 6,
+      "filler": " ",
+      "align": "Right",
+      "max": 2,
+      "description": "01 = Message Rejected<br />02 = Message Accepted<br />03 = Message Accepted with Warning(s)<br />04 = Message Referred to Human Review<br />11 = Record Rejected<br />13 = Record Accepted with a Warning"
+    },
+    {
+      "name": "narrativeMessageIdentifier",
+      "originalName": "Narrative Message Identifier",
+      "sec": 3,
+      "status": "C",
+      "start": 7,
+      "end": 9,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "description": "A code identifying the narrative message."
+    },
+    {
+      "name": "narrativeMessage",
+      "originalName": "Narrative Message",
+      "sec": 4,
+      "status": "C",
+      "start": 10,
+      "end": 49,
+      "filler": " ",
+      "align": "Left",
+      "max": 40,
+      "description": "A narrative message indicating the acceptance or rejection of the input data."
+    },
+    {
+      "name": "envelopeNumber",
+      "originalName": "Envelope Number",
+      "sec": 5,
+      "status": "C",
+      "start": 50,
+      "end": 69,
+      "filler": " ",
+      "align": "Left",
+      "max": 20,
+      "description": "Envelope Number with the accepted FDA transaction"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 70,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 11,
+      "description": "Space fill."
+    }
+  ]
+}

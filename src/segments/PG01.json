@@ -1,0 +1,161 @@
+{
+  "name": "PG01",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "description": "Must always equal PG01."
+    },
+    {
+      "name": "pgaLineNumber",
+      "originalName": "PGA Line Number",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Right",
+      "max": 3,
+      "description": "Number required by PGAs beginning with 001 within a CBP line and sequentially incremented on subsequent PG01 records, if applicable."
+    },
+    {
+      "name": "governmentAgencyCode",
+      "originalName": "Government Agency Code",
+      "sec": 3,
+      "status": "M",
+      "start": 8,
+      "end": 10,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "description": "Code that identifies the PGA. Refer to Appendix V Government Agency Codes for ACE, for valid codes."
+    },
+    {
+      "name": "governmentAgencyProgramCode",
+      "originalName": "Government Agency Program Code",
+      "sec": 4,
+      "status": "M",
+      "start": 11,
+      "end": 13,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "description": "Code indicating an agency’s program for which the PGA data set is related.<br />For example, a code might indicate the data is for EPA’s Vehicles and Engines reporting requirements. Refer to Appendix PGA for valid codes."
+    },
+    {
+      "name": "governmentAgencyProcessingCode",
+      "originalName": "Government Agency Processing Code",
+      "sec": 5,
+      "status": "C",
+      "start": 14,
+      "end": 16,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "description": "Code indicating the specific PGA processing requirements for which the data set is related. For example, EPA’s Vehicles and Engines may have a processing code for Off Road vehicles. Refer to Appendix PGA for valid codes."
+    },
+    {
+      "name": "electronicImageSubmitted",
+      "originalName": "Electronic Image Submitted",
+      "sec": 6,
+      "status": "C",
+      "start": 17,
+      "end": 17,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "Refer to Appendix PGA for valid codes."
+    },
+    {
+      "name": "confidentialInformationIndicator",
+      "originalName": "Confidential Information Indicator",
+      "sec": 7,
+      "status": "C",
+      "start": 18,
+      "end": 18,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "A code of Y (Yes) indicating information should be treated as confidential, per the agency’s regulations. No other code is accepted."
+    },
+    {
+      "name": "globallyUniqueProductIdentificationCodeQualifier",
+      "originalName": "Globally Unique Product Identification Code Qualifier",
+      "sec": 8,
+      "status": "C",
+      "start": 19,
+      "end": 22,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "description": "Code indicating the type of globally unique number used to identify the commercial product or commodity, i.e., Global Trade Item Number (GTIN) or Universal Product Code (UPC). Use the PG02 record to provide a non-globally unique product identity number such as a Stock Keeping Unit (SKU) number. Use the PG07 and PG08 to provide numbers that identify items by such things as serial numbers or vehicle identification numbers. Valid codes are listed in Appendix PGA of this publication."
+    },
+    {
+      "name": "globallyUniqueProductIdentificationCode",
+      "originalName": "Globally Unique Product Identification Code",
+      "sec": 9,
+      "status": "C",
+      "start": 23,
+      "end": 41,
+      "filler": " ",
+      "align": "Left",
+      "max": 19,
+      "description": "The number used to uniquely identify the commercial product or commodity in the global supply chain, i.e., the GTIN or UPC Code number."
+    },
+    {
+      "name": "intendedUseCode",
+      "originalName": "Intended Use Code",
+      "sec": 10,
+      "status": "C",
+      "start": 42,
+      "end": 57,
+      "filler": " ",
+      "align": "Left",
+      "max": 16,
+      "description": "The code indicating the intended use base code of the product followed by the intended use subcode. Refer to Appendix R Intended Use Codes for ACE for valid codes."
+    },
+    {
+      "name": "intendedUseDescription",
+      "originalName": "Intended Use Description",
+      "sec": 11,
+      "status": "C",
+      "start": 58,
+      "end": 78,
+      "filler": " ",
+      "align": "Left",
+      "max": 21,
+      "description": "If “For Other Use” (980.000) code is used, then a free text description of the intended can be provided."
+    },
+    {
+      "name": "correctionIndicator",
+      "originalName": "Correction Indicator",
+      "sec": 12,
+      "status": "C",
+      "start": 79,
+      "end": 79,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "Indicator allowing trade to identify the expected action to be taken on the corrected data. Please refer to Appendix PGA for allowed list of values and their meaning. Refer to the PGA Data Corrections spec for usage guidance."
+    },
+    {
+      "name": "disclaimer",
+      "originalName": "Disclaimer",
+      "sec": 13,
+      "status": "C",
+      "start": 80,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "A code indicating the reason data is not being provided. Valid codes are:<br /><ul><li>A = product is not regulated by this agency</li><li>B = data is not required per agency guidance</li><li>C = data filed through other agency means</li><li>D = data filed through paper</li><li>E = product does not contain fish or wildlife, including live, dead, parts or products thereof, except as specifically exempted from declaration requirements under 50 CFR Part 14.</li></ul>"
+    }
+  ]
+}

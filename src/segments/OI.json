@@ -1,0 +1,41 @@
+{
+  "name": "OI",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "description": "Must always equal OI."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 10,
+      "filler": " ",
+      "align": "Left",
+      "max": 8,
+      "description": "Space fill."
+    },
+    {
+      "name": "commercialDescription",
+      "originalName": "Commercial Description",
+      "sec": 3,
+      "status": "M",
+      "start": 11,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 70,
+      "description": "A clear description of the commercial line item in English. Provide the description according to other agency instructions."
+    }
+  ]
+}
