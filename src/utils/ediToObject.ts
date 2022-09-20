@@ -3,8 +3,11 @@ import segments from '../segments';
 export interface Element {
   name: string;
   value: string;
+  max: number;
   start: number;
   end: number;
+  status: string;
+  description: string;
 }
 
 export interface Segment {
@@ -34,11 +37,14 @@ const ediToObject = (edi: string): Segment[] => {
           return {
             edi,
             elements: segments[segment[0]].map(
-              ({ originalName, start, end }) => ({
+              ({ originalName, start, end, max, status, description }) => ({
                 name: originalName,
                 value: edi.substring(start - 1, end),
+                max,
                 start,
                 end,
+                status,
+                description,
               }),
             ),
           };
