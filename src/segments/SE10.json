@@ -11,6 +11,7 @@
       "filler": " ",
       "align": "Left",
       "max": 4,
+      "class": "AN",
       "description": "Must always equal SE10"
     },
     {
@@ -23,7 +24,14 @@
       "filler": " ",
       "align": "Left",
       "max": 1,
-      "description": "A code representing the update action."
+      "class": "A",
+      "description": "A code representing the update action.",
+      "options": {
+        "A": "Add",
+        "D": "Cancel",
+        "R": "Replace",
+        "U": "Update"
+      }
     },
     {
       "name": "entryFilerCode",
@@ -35,6 +43,7 @@
       "filler": " ",
       "align": "Left",
       "max": 3,
+      "class": "AN",
       "description": "A unique code assigned by CBP to all active entry document preparers. The Entry Filer Code occupies the first three positions of an entry number regardless of where the entry is filed. This code must be the same as the Entry Filer Code in the block control header record (Record Identifier B)."
     },
     {
@@ -47,6 +56,7 @@
       "filler": " ",
       "align": "Left",
       "max": 2,
+      "class": "X",
       "description": "Space fill. Reserved filler for possible future expansion of Entry Filer Code and/or Entry Number."
     },
     {
@@ -59,6 +69,7 @@
       "filler": " ",
       "align": "Left",
       "max": 8,
+      "class": "AN",
       "description": "Unique identifying number assigned to the Entry by the Filer. For additional information on valid entry number formats, refer to Appendix E of the ACE CATAIR Chapters publication."
     },
     {
@@ -71,6 +82,7 @@
       "filler": " ",
       "align": "Left",
       "max": 1,
+      "class": "X",
       "description": "Space fill."
     },
     {
@@ -83,7 +95,21 @@
       "filler": " ",
       "align": "Left",
       "max": 2,
-      "description": "A code representing the entry type. Valid entry type codes are listed in Appendix B of the ACE CATAIR Chapters publication."
+      "class": "AN",
+      "description": "A code representing the entry type. Valid entry type codes are listed in Appendix B of the ACE CATAIR Chapters publication.",
+      "options": {
+        "01": "Consumption – Free and Dutiable",
+        "02": "Consumption - Quota/Visa",
+        "03": "Consumption - Antidumping/ Countervailing Duty",
+        "06": "Consumption - Foreign Trade Zone (FTZ)",
+        "07": "Consumption - Antidumping/ Countervailing Duty & Quota/Visa Combination 11 Informal – Free and Dutiable",
+        "12": "Informal - Quota/Visa (other than textiles)",
+        "21": "Warehouse",
+        "22": "Re-Warehouse",
+        "23": "Temporary Importation Bond (TIB)",
+        "52": "Government Dutiable",
+        "86": "Section 321"
+      }
     },
     {
       "name": "importerOfRecordType",
@@ -95,7 +121,13 @@
       "filler": " ",
       "align": "Left",
       "max": 3,
-      "description": "The type of number being used to identify the importer of record."
+      "class": "AN",
+      "description": "The type of number being used to identify the importer of record.",
+      "options": {
+        "EI": "Employer Identification Number (IRS #)",
+        "ANI": "CBP-assigned Number",
+        "34": "Social Security Number"
+      }
     },
     {
       "name": "importerOfRecord",
@@ -107,6 +139,7 @@
       "filler": " ",
       "align": "Left",
       "max": 12,
+      "class": "X",
       "description": "Identification of the importer of record."
     },
     {
@@ -119,7 +152,25 @@
       "filler": " ",
       "align": "Left",
       "max": 2,
-      "description": "A code representing the mode of transportation. Valid mode of transportation codes are listed in Appendix B of the ACE CATAIR Chapters publication."
+      "class": "AN",
+      "description": "A code representing the mode of transportation. Valid mode of transportation codes are listed in Appendix B of the ACE CATAIR Chapters publication.",
+      "options": {
+        "10": "Vessel, Non-container",
+        "11": "Vessel, Container",
+        "12": "Border Water-borne (only Mexico and Canada)",
+        "20": "Rail, Non-container",
+        "21": "Rail, Container",
+        "30": "Truck, Non-container",
+        "31": "Truck, Container",
+        "32": "Auto",
+        "33": "Pedestrian",
+        "34": "Road, other. Includes foot and animal-borne.",
+        "40": "Air, Non-container",
+        "41": "Air, Container",
+        "50": "Mail",
+        "60": "Passenger, Hand Carried",
+        "70": "Fixed Transport Installations. Includes pipeline and powerhouse."
+      }
     },
     {
       "name": "bondTypeCode",
@@ -131,7 +182,13 @@
       "filler": " ",
       "align": "Right",
       "max": 1,
-      "description": "A code representing the bond type."
+      "class": "N",
+      "description": "A code representing the bond type.",
+      "options": {
+        "0": "No bond required",
+        "8": "Continuous bond",
+        "9": "Single transaction bond"
+      }
     },
     {
       "name": "estimatedEntryValue",
@@ -143,6 +200,7 @@
       "filler": " ",
       "align": "Right",
       "max": 10,
+      "class": "N",
       "description": "The total entered value of the entry in whole US dollars."
     },
     {
@@ -155,6 +213,7 @@
       "filler": " ",
       "align": "Left",
       "max": 5,
+      "class": "AN",
       "description": "Planned / scheduled port of entry in Schedule D code.<br /><br />**See Note 7 for explanation regarding input for this data element.**<br /><br />Updating the value reported for <i>Planned Port of Entry</i> is not allowed when submitting an SE with action code “U” (Update)<br /><br />Planned Port of Entry is required for entries with Non-AMs bills"
     },
     {
@@ -167,6 +226,7 @@
       "filler": " ",
       "align": "Left",
       "max": 1,
+      "class": "AN",
       "description": "A code representing an option for releasing split shipments."
     },
     {
@@ -179,6 +239,7 @@
       "filler": " ",
       "align": "Left",
       "max": 5,
+      "class": "AN",
       "description": "Planned / scheduled port of unlading in Schedule D code.<br />Port of Unlading is required for Mail (MOT 50), Passenger Hand Carried (MOT 60), and Fixed Transport Installation (MOT 70)"
     },
     {
@@ -191,6 +252,7 @@
       "filler": " ",
       "align": "Left",
       "max": 20,
+      "class": "X",
       "description": "Space fill."
     }
   ]
