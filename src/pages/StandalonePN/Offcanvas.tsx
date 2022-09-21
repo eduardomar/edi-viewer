@@ -54,7 +54,7 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
               <td>Description</td>
               <td
                 dangerouslySetInnerHTML={{
-                  __html: `<p>${dataElement?.description ?? ''}</p>`,
+                  __html: dataElement?.description ?? '',
                 }}
               />
             </tr>
