@@ -1,0 +1,109 @@
+{
+  "name": "SE16",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE16."
+    },
+    {
+      "name": "carrierCode",
+      "originalName": "Carrier Code",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 8,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "A code identifying the carrier."
+    },
+    {
+      "name": "voyageFlightTripManifestNumber",
+      "originalName": "Voyage/Flight/Trip Manifest Number",
+      "sec": 3,
+      "status": "M",
+      "start": 9,
+      "end": 13,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "The voyage/flight/trip number of the importing carrier."
+    },
+    {
+      "name": "dateOfArrival",
+      "originalName": "Date of Arrival",
+      "sec": 4,
+      "status": "M",
+      "start": 14,
+      "end": 19,
+      "filler": " ",
+      "align": "Right",
+      "max": 6,
+      "class": "N",
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of arrival."
+    },
+    {
+      "name": "quantity",
+      "originalName": "Quantity",
+      "sec": 5,
+      "status": "M",
+      "start": 20,
+      "end": 27,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "The entered quantity associated with the bill of lading number being reported in the related SE15 record. It is the smallest exterior packaging unit."
+    },
+    {
+      "name": "unitOfMeasure",
+      "originalName": "Unit of Measure",
+      "sec": 6,
+      "status": "O",
+      "start": 28,
+      "end": 32,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "The unit of measure corresponding to the bill of lading quantity."
+    },
+    {
+      "name": "conveyanceName",
+      "originalName": "Conveyance Name",
+      "sec": 7,
+      "status": "C",
+      "start": 33,
+      "end": 52,
+      "filler": " ",
+      "align": "Left",
+      "max": 20,
+      "class": "X",
+      "description": "Name of the conveyance."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 53,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 28,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}

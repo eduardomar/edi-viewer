@@ -1,0 +1,70 @@
+{
+  "name": "SE20",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE20."
+    },
+    {
+      "name": "referenceIdentifierQualifier",
+      "originalName": "Reference Identifier Qualifier",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "Code that defines the Reference Identifier.",
+      "options": {
+        "CR": "Filer-defined Reference Number",
+        "EN": "Replacement Entry Number",
+        "IB": "Replacement In-bond Number",
+        "FTZ": "Replacement FTZ Admission Number",
+        "DIS": "Filer-defined DIS Reference Number",
+        "V1": "Surety Code",
+        "AMT": "Bond amount",
+        "EXP": "Express Consignment Shipment",
+        "KII": "Known Importer Indicator",
+        "RRN": "Rail Reference Number",
+        "PER": "Perishable Goods Indicator"
+      }
+    },
+    {
+      "name": "referenceIdentifier",
+      "originalName": "Reference Identifier",
+      "sec": 3,
+      "status": "M",
+      "start": 8,
+      "end": 57,
+      "filler": " ",
+      "align": "Left",
+      "max": 50,
+      "class": "X",
+      "description": "Reference data."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 58,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 23,
+      "class": "X",
+      "description": "Space fill"
+    }
+  ]
+}

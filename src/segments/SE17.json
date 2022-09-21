@@ -1,0 +1,44 @@
+{
+  "name": "SE17",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE17."
+    },
+    {
+      "name": "equipmentNumber",
+      "originalName": "Equipment Number",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 24,
+      "filler": " ",
+      "align": "Left",
+      "max": 20,
+      "class": "AN",
+      "description": "Equipment unit's full number including: the SCAC prefix, the sequencing or serial part of an equipment unit's identifying number, and the check digit"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 25,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 56,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}
