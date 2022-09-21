@@ -17,16 +17,18 @@ const ediToObject = (edi: string): Segment[] => {
     segmentsArr
       // .filter(segment => segment.startsWith('A'))
       .map(edi => {
-        const segment = segmentsNames.filter(name => {
+        const index = segmentsNames.findIndex(name => {
           const { start, end } = segments[name][0] ?? { start: 0, end: 0 };
 
           return edi.substring(start - 1, end) === name;
         });
 
-        if (segment.length > 0) {
+        if (index !== -1) {
+          const segName = segmentsNames[index];
+
           return {
             edi,
-            elements: segments[segment[0]].map(seg => {
+            elements: segments[segName].map(seg => {
               const value = edi.substring(seg.start - 1, seg.end);
               return {
                 ...seg,
@@ -42,6 +44,7 @@ const ediToObject = (edi: string): Segment[] => {
           };
         }
 
+        console.error('No segment found for this record ::>', edi);
         return {
           edi,
           elements: [],
