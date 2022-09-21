@@ -2,7 +2,7 @@ import React from 'react';
 import OffcanvasBootstrap from 'react-bootstrap/Offcanvas';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
-import { Element } from '../../utils/ediToObject';
+import { Element } from '../../segments';
 
 interface OffcanvasProps {
   title: string;
@@ -21,7 +21,7 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
     <OffcanvasStyled show={dataElement !== null} onHide={handleClose}>
       <OffcanvasStyled.Header closeButton>
         <OffcanvasStyled.Title>
-          {title} - {dataElement?.name}
+          {title} - {dataElement?.originalName}
         </OffcanvasStyled.Title>
       </OffcanvasStyled.Header>
       <OffcanvasStyled.Body>
@@ -29,11 +29,14 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
           <tbody>
             <tr>
               <td>Value</td>
-              <td>{dataElement?.value}</td>
+              <td>{dataElement?.valueFormatted}</td>
             </tr>
             <tr>
               <td>Length/Class</td>
-              <td>{dataElement?.max}</td>
+              <td>
+                {dataElement?.max}
+                {dataElement?.class}
+              </td>
             </tr>
             <tr>
               <td>Position</td>

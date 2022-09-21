@@ -3,7 +3,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import EDI from '../../components/EDI';
-import { Element, Segment } from '../../utils/ediToObject';
+import { Element } from '../../segments';
+import { Segment } from '../../utils/ediToObject';
 import Offcanvas from './Offcanvas';
 
 interface AccordionItemProps {
@@ -47,8 +48,10 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
                   onMouseLeave={handleMouseLeave}
                   onClick={() => handleShow(element)}
                 >
-                  <td dangerouslySetInnerHTML={{ __html: element.name }} />
-                  <td>{element.value}</td>
+                  <td
+                    dangerouslySetInnerHTML={{ __html: element.originalName }}
+                  />
+                  <td>{element.valueFormatted}</td>
                 </tr>
               ))}
             </tbody>
