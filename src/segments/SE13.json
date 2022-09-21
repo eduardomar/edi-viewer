@@ -1,0 +1,123 @@
+{
+  "name": "SE13",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE13."
+    },
+    {
+      "name": "contactName",
+      "originalName": "Contact Name",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 44,
+      "filler": " ",
+      "align": "Left",
+      "max": 40,
+      "class": "AN",
+      "description": "Contact Name for the entry filing"
+    },
+    {
+      "name": "contactPhone",
+      "originalName": "Contact Phone",
+      "sec": 3,
+      "status": "M",
+      "start": 45,
+      "end": 59,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "AN",
+      "description": "Phone Number for the entry filing"
+    },
+    {
+      "name": "reasonCode",
+      "originalName": "Reason Code",
+      "sec": 4,
+      "status": "C",
+      "start": 60,
+      "end": 61,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "A",
+      "description": "Reason code for Cancellation request.<br /><br />Space fill for Correction requests.",
+      "options": {
+        "10": "Shipment not authorized for import",
+        "11": "System error",
+        "12": "No Foreign status goods removed from FTZ [Used only for Entry Type 06]",
+        "01": "Clerical error",
+        "02": "Entry replaced by CBPF 7512 (replacement in-bond number required)",
+        "03": "Merchandise cleared under another entry (replacement entry number required)",
+        "04": "Entry replaced by FTZ Admission (replacement FTZ Admission Number required)",
+        "05": "Merchandise cleared under informal entry",
+        "06": "Merchandise seized",
+        "07": "Merchandise destroyed",
+        "08": "Non-arrival",
+        "09": "Shipment refused by importer"
+      }
+    },
+    {
+      "name": "multipleCargoDispositionsIndicator",
+      "originalName": "Multiple Cargo Dispositions Indicator",
+      "sec": 5,
+      "status": "O",
+      "start": 62,
+      "end": 62,
+      "filler": " ",
+      "align": "Right",
+      "max": 1,
+      "class": "N",
+      "description": "Use 1 to indicate that multiple cargo dispositions exist in addition to the reason code provided for the entry in the cancellation request.<br /><br />Space fill for Correction requests."
+    },
+    {
+      "name": "disIndicator",
+      "originalName": "DIS indicator",
+      "sec": 6,
+      "status": "O",
+      "start": 63,
+      "end": 63,
+      "filler": " ",
+      "align": "Right",
+      "max": 1,
+      "class": "N",
+      "description": "Use 1 to indicate a Document Image System (DIS) submission has been made in support of the correction or cancellation request"
+    },
+    {
+      "name": "splitShipmentIndicator",
+      "originalName": "Split Shipment indicator",
+      "sec": 7,
+      "status": "O",
+      "start": 64,
+      "end": 64,
+      "filler": " ",
+      "align": "Right",
+      "max": 1,
+      "class": "N",
+      "description": "Use 1 to indicate that the SE is associated with a split shipment"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 65,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 16,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}

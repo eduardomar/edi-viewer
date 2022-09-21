@@ -1,0 +1,116 @@
+{
+  "name": "SE15",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE15."
+    },
+    {
+      "name": "billTypeIndicator",
+      "originalName": "Bill Type Indicator",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "A",
+      "description": "Code identifying the type of Bill of Lading Number. Valid codes are:<br /> <ul class='custom'><li type='R'> Regular / Simple Bill of Lading; <ul> <li>Use ‘R’ for Mode Rail (MOT 20, 21)</li> <li> Use ‘R’ for Mode Truck (MOT 30, 31) [aka <i>Shipment Control Number]</i> </li> <li>Use ‘R’ for Mode Pipeline (MOT 70)</li> <li>Use ‘R’ for Mode Passenger, Hand Carried (MOT 60)</li> <li>Use ‘R’ for Mode Mail, (MOT 50)</li> <li> Use ‘R’ for Modes 32, 33, 34 <ul> <li>Automobile (MOT 32)</li> <li>Pedestrian (MOT 33)</li> <li>Road, other. Includes Foot and Animal Borne (MOT 34)</li> </ul> </li> </ul> </li> <li type='M'> Master Bill of Lading; <i>(Not currently valid for all modes)</i> </li> <li type='H'> House Bill of Lading; <i>(Not currently valid for all modes)</i> </li> <li type='T'>Express Carrier Tracking Number <i>(air only)</i></li> <li type='I'>In-bond number</li> </ul> See Note 3 regarding entry type 22.<br /> See Note 9 regarding MOT 60.<br /> See Note 10 regarding entry type 06.<br /> See Note 11 regarding entry type 86.",
+      "options": {
+        "R": "Regular / Simple Bill of Lading",
+        "M": "Master Bill of Lading",
+        "H": "House Bill of Lading",
+        "T": "Express Carrier Tracking Number",
+        "I": "In-bond number"
+      }
+    },
+    {
+      "name": "issuerCodeOfBillOfLadingNumber",
+      "originalName": "Issuer Code of Bill of Lading Number",
+      "sec": 3,
+      "status": "C",
+      "start": 6,
+      "end": 9,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "A code representing the issuer of the bill of lading.<br /><br /> Space fill for: <ul> <li>In-Bond</li> <li>Air Shipments (MOT 40, 41)</li> <li>Auto (MOT 32), Pedestrian (MOT 33), Road/Other (MOT 34), Passenger, Mail (MOT 50), Hand Carried (MOT 60)</li> </ul> Use of “UNKN” as a carrier code is <u>not</u> permitted."
+    },
+    {
+      "name": "billOfLadingNumber",
+      "originalName": "Bill of Lading Number",
+      "sec": 4,
+      "status": "M",
+      "start": 10,
+      "end": 59,
+      "filler": " ",
+      "align": "Left",
+      "max": 50,
+      "class": "X",
+      "description": "The bill of lading number as listed on the manifest; or, In-Bond number. If the number is less than 50 positions, it is left justified. Do not include spaces, hyphens, slashes or other special characters. Include the AWB prefix for Air shipments for Master / Simple Bill of Lading and Tracking Numbers.<br /><br /> See Note 3 regarding entry type 22.<br /> See Note 9 regarding MOT 60.<br /> See Note 10 regarding entry type 06.<br /> See Note 12 regarding entry type 86."
+    },
+    {
+      "name": "quantity",
+      "originalName": "Quantity",
+      "sec": 5,
+      "status": "C",
+      "start": 60,
+      "end": 67,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "Enter the quantity associated with the bill of lading number being reported. It is the smallest exterior packaging unit.<br/><br/> See Note 3 regarding entry type 22.<br /> See Note 9 regarding MOT 60.<br /> See Note 10 regarding entry type 06.<br /> See Note 11 regarding entry type 86."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 68,
+      "end": 72,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "Space fill."
+    },
+    {
+      "name": "nonAmsIndicator",
+      "originalName": "Non-AMS indicator",
+      "sec": 7,
+      "status": "M",
+      "start": 73,
+      "end": 73,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "X",
+      "description": "Default value is ‘N’.<br /><br />Enter ‘Y’ to represent that the bill of lading will not be manifested via EDI with a CBP automated manifest system.<br /><br />See Note 5 below for specific instances when a ‘Y’ must be declared.<br /><br />When ‘Y’ is declared in this field, use of the SE16 record is mandatory."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 74,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 7,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}

@@ -2,10 +2,12 @@ import SegmentA from './A.json';
 import SegmentB from './B.json';
 import SegmentOI from './OI.json';
 import SegmentPE10 from './PE10.json';
-import SegmentSE10 from './SE10.json';
-import SegmentSE11 from './SE11.json';
 import SegmentPE90 from './PE90.json';
 import SegmentPG01 from './PG01.json';
+import SegmentSE10 from './SE10.json';
+import SegmentSE11 from './SE11.json';
+import SegmentSE13 from './SE13.json';
+import SegmentSE15 from './SE15.json';
 import SegmentY from './Y.json';
 import SegmentZ from './Z.json';
 
@@ -38,12 +40,14 @@ const segments = Object.fromEntries(
   [
     SegmentA,
     SegmentB,
-    SegmentSE10,
-    SegmentSE11,
+    SegmentOI,
     SegmentPE10,
     SegmentPE90,
-    SegmentOI,
     SegmentPG01,
+    SegmentSE10,
+    SegmentSE11,
+    SegmentSE13,
+    SegmentSE15,
     SegmentY,
     SegmentZ,
   ].map(({ name, segments }: SegmentJSON) => [name, segments]),

@@ -18,7 +18,7 @@ const ediToObject = (edi: string): Segment[] => {
       // .filter(segment => segment.startsWith('A'))
       .map(edi => {
         const segment = segmentsNames.filter(name => {
-          const { start, end } = segments[name][0];
+          const { start, end } = segments[name][0] ?? { start: 0, end: 0 };
 
           return edi.substring(start - 1, end) === name;
         });
@@ -32,7 +32,7 @@ const ediToObject = (edi: string): Segment[] => {
                 ...seg,
                 value,
                 valueFormatted:
-                  seg?.options === undefined
+                  seg?.options === undefined || value.trim().length === 0
                     ? value.trim()
                     : `${value.trim()} - ${seg.options[value?.trim()]}`,
               };
