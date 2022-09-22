@@ -1,0 +1,70 @@
+{
+  "name": "SE90",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE90."
+    },
+    {
+      "name": "messageTypeCode",
+      "originalName": "Message Type Code",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 6,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<ul class='custom'><li type='01'>Message Rejected</li><li type='02'>Message Accepted</li><li type='03'>Message Accepted with Warning(s) 04 = Message Referred to Human Review 11 = Record Rejected</li><li type='13'>Record Accepted with a Warning</li></ul>"
+    },
+    {
+      "name": "messageIdentifierCode",
+      "originalName": "Message Identifier Code",
+      "sec": 3,
+      "status": "C",
+      "start": 7,
+      "end": 9,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "A code that identifies the message."
+    },
+    {
+      "name": "narrativeMessageText",
+      "originalName": "Narrative Message Text",
+      "sec": 4,
+      "status": "M",
+      "start": 10,
+      "end": 49,
+      "filler": " ",
+      "align": "Left",
+      "max": 40,
+      "class": "X",
+      "description": "Narrative message text."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 50,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 31,
+      "class": "X",
+      "description": "Space-fill"
+    }
+  ]
+}

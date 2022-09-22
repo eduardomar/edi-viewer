@@ -1,0 +1,126 @@
+{
+  "name": "SF30",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SF30."
+    },
+    {
+      "name": "entityCode",
+      "originalName": "Entity Code",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "A",
+      "description": "Code identifying the type of commercial entity being reported.",
+      "options": {
+        "MF": "Manufacturer/Supplier",
+        "SE": "Selling Party",
+        "BY": "Buying Party",
+        "ST": "Ship To Party",
+        "LG": "Scheduled Container Stuffing Location",
+        "CS": "Consolidator",
+        "BKP": "Booking Party",
+        "CN": "Consignee"
+      }
+    },
+    {
+      "name": "entityName",
+      "originalName": "Entity Name",
+      "sec": 3,
+      "status": "C",
+      "start": 8,
+      "end": 42,
+      "filler": " ",
+      "align": "Left",
+      "max": 35,
+      "class": "X",
+      "description": "The name of the entity identified by the Entity Code. This field must be blank if an Entity Identifier is used."
+    },
+    {
+      "name": "entityIdentifierQualifier",
+      "originalName": "Entity Identifier Qualifier",
+      "sec": 4,
+      "status": "C",
+      "start": 43,
+      "end": 45,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "X",
+      "description": "This field must be used if the entity identifier is being supplied in lieu of name and address. This field is mandatory if the entity identifier is CN.",
+      "options": {
+        "34": "Social Security Number",
+        "EI": "Employer Identification Number (IRS #)",
+        "ANI": "CBP-assigned Number",
+        "CIN": "CBP encrypted Consignee ID",
+        "FR": "Facility Information Resource Management System (FIRMS) Code"
+      }
+    },
+    {
+      "name": "entityIdentifier",
+      "originalName": "Entity Identifier",
+      "sec": 5,
+      "status": "C",
+      "start": 46,
+      "end": 65,
+      "filler": " ",
+      "align": "Left",
+      "max": 20,
+      "class": "X",
+      "description": "The code identified by the entity identifier qualifier. This field is mandatory if the entity identifier is CN."
+    },
+    {
+      "name": "countryCode",
+      "originalName": "Country Code",
+      "sec": 6,
+      "status": "M",
+      "start": 66,
+      "end": 67,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "Space fill for Unified Entry/ISF filing"
+    },
+    {
+      "name": "dateOfBirthDob",
+      "originalName": "Date of Birth (DOB)",
+      "sec": 7,
+      "status": "M",
+      "start": 68,
+      "end": 75,
+      "filler": " ",
+      "align": "Left",
+      "max": 8,
+      "class": "X",
+      "description": "Space fill for Unified Entry/ISF filing"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 76,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}

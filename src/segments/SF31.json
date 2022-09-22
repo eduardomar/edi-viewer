@@ -1,0 +1,65 @@
+{
+  "name": "SF31",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SF31."
+    },
+    {
+      "name": "entityCode",
+      "originalName": "Entity Code",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "A",
+      "description": "Code identifying the type of secondary name.",
+      "options": {
+        "ALA": "Alternative Addressee",
+        "DH": "Doing Business As",
+        "DV": "Division",
+        "NU": "Formerly Known As",
+        "NV": "Formerly Doing Business As",
+        "XD": "Alias (Other Names Used)"
+      }
+    },
+    {
+      "name": "entityName",
+      "originalName": "Entity Name",
+      "sec": 3,
+      "status": "M",
+      "start": 8,
+      "end": 42,
+      "filler": " ",
+      "align": "Left",
+      "max": 35,
+      "class": "X",
+      "description": "The secondary name of the entity reported in the SF30 record."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 43,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 38,
+      "class": "X",
+      "description": "Space fill"
+    }
+  ]
+}

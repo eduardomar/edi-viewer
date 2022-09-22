@@ -1,5 +1,5 @@
 {
-  "name": "SE55",
+  "name": "SF35",
   "segments": [
     {
       "name": "controlId",
@@ -12,7 +12,7 @@
       "align": "Left",
       "max": 4,
       "class": "AN",
-      "description": "Must always equal SE55."
+      "description": "Must always equal SF35."
     },
     {
       "name": "addressComponentQualifier1",

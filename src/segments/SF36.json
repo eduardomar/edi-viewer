@@ -1,0 +1,96 @@
+{
+  "name": "SF36",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SF36."
+    },
+    {
+      "name": "cityName",
+      "originalName": "City Name",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 39,
+      "filler": " ",
+      "align": "Left",
+      "max": 35,
+      "class": "AN",
+      "description": "The city portion of the address where the entity is located."
+    },
+    {
+      "name": "countrySubEntityCode",
+      "originalName": "Country Sub Entity Code",
+      "sec": 3,
+      "status": "C",
+      "start": 40,
+      "end": 42,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "ISO subdivision code. Space fill if not applicable.<br /><br />A list of country codes and their subdivision codes may be found <a href='http://www.unece.org/cefact/locode/service/location.html' target='_blank'>here</a>."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 43,
+      "end": 48,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "class": "X",
+      "description": "Space fill"
+    },
+    {
+      "name": "postalCode",
+      "originalName": "Postal Code",
+      "sec": 5,
+      "status": "C",
+      "start": 49,
+      "end": 63,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "AN",
+      "description": "Postal code (i.e. ZIP code in USA). Space fill if no postal code is available."
+    },
+    {
+      "name": "countryCode",
+      "originalName": "Country Code",
+      "sec": 6,
+      "status": "M",
+      "start": 64,
+      "end": 65,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "A",
+      "description": "The International Standards Organization (ISO) country code representing the country portion of the address. A list of ISO country codes is found in Appendix B of this publication."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 7,
+      "status": "M",
+      "start": 66,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}
