@@ -19,6 +19,10 @@ import SegmentSE35 from './SE35.json';
 import SegmentSE36 from './SE36.json';
 import SegmentSE40 from './SE40.json';
 import SegmentSE41 from './SE41.json';
+import SegmentSE50 from './SE50.json';
+import SegmentSE55 from './SE55.json';
+import SegmentSE56 from './SE56.json';
+import SegmentSE60 from './SE60.json';
 import SegmentY from './Y.json';
 import SegmentZ from './Z.json';
 
@@ -41,6 +45,10 @@ const segmentsJSON = [
   SegmentSE36,
   SegmentSE40,
   SegmentSE41,
+  SegmentSE50,
+  SegmentSE55,
+  SegmentSE56,
+  SegmentSE60,
   SegmentY,
   SegmentZ,
 ];
@@ -85,7 +93,11 @@ const Wrapper = styled.span`
   }
 `;
 const segmentsEntries = segmentsJSON
-  .filter(seg => seg)
+  .filter(seg => {
+    const { name, segments } = seg as SegmentJSON;
+
+    return name?.length > 0 && segments?.length > 0;
+  })
   .map(seg => {
     const { name, segments } = seg as SegmentJSON;
 

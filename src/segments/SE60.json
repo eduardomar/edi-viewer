@@ -1,0 +1,57 @@
+{
+  "name": "SE60",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE60."
+    },
+    {
+      "name": "htsNumber",
+      "originalName": "HTS Number",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 14,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "The appropriate duty/statistical reporting number under which the article is classified in the <i>Harmonized Tariff Schedule of the United States Annotated</i> (HTS)."
+    },
+    {
+      "name": "lineItemValue",
+      "originalName": "Line Item Value",
+      "sec": 3,
+      "status": "C",
+      "start": 15,
+      "end": 24,
+      "filler": " ",
+      "align": "Right",
+      "max": 10,
+      "class": "N",
+      "description": "The line item value in whole US dollars."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 25,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 56,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}
