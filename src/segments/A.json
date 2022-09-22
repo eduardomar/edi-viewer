@@ -11,6 +11,7 @@
       "filler": " ",
       "align": "Left",
       "max": 1,
+      "class": "A",
       "description": "Always A"
     },
     {
@@ -23,6 +24,7 @@
       "filler": " ",
       "align": "Left",
       "max": 4,
+      "class": "AN",
       "description": "The CBP assigned code for the ‘data processing’ site/location of the transmitter (i.e., both sender of the batch and recipient of the response)."
     },
     {
@@ -35,6 +37,7 @@
       "filler": " ",
       "align": "Left",
       "max": 3,
+      "class": "AN",
       "description": "Transmitter’s identification code (as assigned by CBP)."
     },
     {
@@ -47,6 +50,7 @@
       "filler": " ",
       "align": "Left",
       "max": 6,
+      "class": "AN",
       "description": "A pre-established password used to authorize the transmitter of the data."
     },
     {
@@ -59,6 +63,7 @@
       "filler": " ",
       "align": null,
       "max": 6,
+      "class": "D",
       "description": "Transmitter’s date of batch transmission. These positions are returned, unmodified, in the A-Record returned in the response to the batch (format MMDDYY).<br /><br />Space fill if not used."
     },
     {
@@ -71,6 +76,7 @@
       "filler": " ",
       "align": null,
       "max": 5,
+      "class": "S",
       "description": "Space fill."
     },
     {
@@ -83,7 +89,79 @@
       "filler": " ",
       "align": "Left",
       "max": 2,
-      "description": "A code that identifies the type of transaction data within the batch."
+      "class": "AN",
+      "description": "A code that identifies the type of transaction data within the batch.",
+      "options": {
+        "FQ": "Input - ACE Reference Data Query/Extract",
+        "FO": "Response - ACE Reference Data Query/Extract",
+        "AD": "Input - AD/CVD Case Information Query",
+        "AC": "Response - AD/CVD Case Information Query",
+        "SE": "Input - Cargo Release (Create/Update)",
+        "SX": "Response - Cargo Release (Create/Update)",
+        "CQ": "Input - Cargo/Manifest/Entry Release Query",
+        "C1": "Response - Cargo/Manifest/Entry Release Query",
+        "CW": "Input - Census Warning Override",
+        "CO": "Response - Census Warning Override",
+        "CJ": "Input - Census Warning Query",
+        "CL": "Response - Census Warning Query",
+        "CB": "Input - Customs eBond Create/Update",
+        "CX": "Response - Customs eBond Create/Update",
+        "DE": "Input - Drawback Entry Summary Create/Update",
+        "DX": "Response - Drawback Entry Summary Create/Update",
+        "AE": "Input - Entry Summary Create/Update",
+        "AX": "Response - Entry Summary Create/Update",
+        "JC": "Input - Entry Summary Query",
+        "JD": "Response - Entry Summary Query",
+        "FT": "Input - FTZ Admission Create/Update",
+        "FZ": "Input - FTZ Manifest Quantity Concurrence / Permit to Transfer / Arrival",
+        "HB": "Input - Harmonized Tariff Schedule - Extract Reference File",
+        "HZ": "Response - Harmonized Tariff Schedule - Extract Reference File",
+        "HA": "Input - Harmonized Tariff Schedule - Query",
+        "HY": "Response - Harmonized Tariff Schedule - Query",
+        "KI": "Input - Importer/Bond Query",
+        "KR": "Response - Importer/Bond Query",
+        "TP": "Input - Importer/Consignee Create/Update",
+        "TT": "Response - Importer/Consignee Create/Update",
+        "SF": "Input - Importer Security Filing",
+        "SN": "Response - Importer Security Filing",
+        "WP": "Input - In-bond Arrival/Export/Transfer of Liability (eMAN)",
+        "WT": "Response - In-bond Arrival/Export/Transfer of Liability (eMAN)",
+        "QP": "Input - In-bond Transaction Processing Results (eMAN)",
+        "QT": "Response - In-bond Transaction Processing Results (eMAN)",
+        "$I": "Input - Manufacturer Name/Address Add",
+        "$R": "Response - Manufacturer Name/Address Add",
+        "MA": "Input - Manufacturer Query",
+        "MY": "Response - Manufacturer Query",
+        "NE": "Input - NAFTA Duty Deferral Create/Update",
+        "NX": "Response - NAFTA Duty Deferral Create/Update",
+        "CA": "Input - Partner Government Agency Correction",
+        "CC": "Response - Partner Government Agency Correction",
+        "MO": "Input - Periodic Monthly Statement - Request Reroute",
+        "MQ": "Response - Periodic Monthly Statement - Request Reroute",
+        "QA": "Input - Quota Query",
+        "QB": "Response - Quota Query",
+        "RE": "Input - Reconciliation Entry Summary Create/Update",
+        "RX": "Response - Reconciliation Entry Summary Create/Update",
+        "PE": "Input - Standalone Prior Notice",
+        "PX": "Response - Standalone Prior Notice",
+        "SU": "Input - Statement Update",
+        "SQ": "Response - Statement Update",
+        "TE": "Input - Temporary Importation Bond Extension/Close Request",
+        "TX": "Response - Temporary Importation Bond Extension/Close Request",
+        "RM": "Input - ACH Debit Authorization/Entry Summary Presentation",
+        "PZ": "Response - ACH Debit Authorization/Entry Summary Presentation",
+        "BS": "Response - Customs eBond Status Notification",
+        "MS": "Response - Periodic Monthly Statement",
+        "NF": "Response - FTZ Admission Status Notification",
+        "NR": "Response - Courtesy Notice (of Liquidation)",
+        "NS": "Response - Status Notification (eMAN)",
+        "PF": "Response - Daily Statement",
+        "PO": "Response - Standalone Prior Notice Status Notification",
+        "SO": "Response - Cargo Release Status Notification",
+        "TS": "Response - Temporary Importation Bond Expiration Notice",
+        "UC": "Response - Entry Summary Status Notification",
+        "ZD": "Response - FTZ Output for Broker Download"
+      }
     },
     {
       "name": "filler2",
@@ -95,6 +173,7 @@
       "filler": " ",
       "align": null,
       "max": 10,
+      "class": "S",
       "description": "Space fill."
     },
     {
@@ -107,6 +186,7 @@
       "filler": " ",
       "align": "Left",
       "max": 2,
+      "class": "AN",
       "description": "A code agreed upon by the transmitter and CBP representing a specific ‘office’ (or sub-location).<br /><br />Space fill if not used"
     },
     {
@@ -119,6 +199,7 @@
       "filler": " ",
       "align": null,
       "max": 20,
+      "class": "S",
       "description": "Space fill."
     },
     {
@@ -131,6 +212,7 @@
       "filler": " ",
       "align": "Left",
       "max": 21,
+      "class": "X",
       "description": "Provided for the transmitter's internal use. These positions are returned, unmodified, in the A-Record returned in the response to the batch.<br /><br />Space fill if not used."
     }
   ]

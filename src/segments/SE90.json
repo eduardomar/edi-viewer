@@ -25,7 +25,15 @@
       "align": "Left",
       "max": 2,
       "class": "AN",
-      "description": "<ul class='custom'><li type='01'>Message Rejected</li><li type='02'>Message Accepted</li><li type='03'>Message Accepted with Warning(s) 04 = Message Referred to Human Review 11 = Record Rejected</li><li type='13'>Record Accepted with a Warning</li></ul>"
+      "description": "<ul class='custom'><li type='01'>Message Rejected</li><li type='02'>Message Accepted</li><li type='03'>Message Accepted with Warning(s)</li><li type='04'>Message Referred to Human Review</li><li type='11'>Record Rejected</li><li type='13'>Record Accepted with a Warning</li></ul>",
+      "options": {
+        "11": "Record Rejected",
+        "13": "Record Accepted with a Warning",
+        "01": "Message Rejected",
+        "02": "Message Accepted",
+        "03": "Message Accepted with Warning(s)",
+        "04": "Message Referred to Human Review"
+      }
     },
     {
       "name": "messageIdentifierCode",
