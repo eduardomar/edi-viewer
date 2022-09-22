@@ -1,0 +1,96 @@
+{
+  "name": "SF25",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SF25."
+    },
+    {
+      "name": "equipmentDescriptionCode",
+      "originalName": "Equipment Description Code",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 6,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "X",
+      "description": "Code that describes the equipment. Valid codes are listed in Appendix B of this publication."
+    },
+    {
+      "name": "equipmentInitial",
+      "originalName": "Equipment Initial",
+      "sec": 3,
+      "status": "M",
+      "start": 7,
+      "end": 10,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "A",
+      "description": "Alpha prefix preceding the equipment serial number"
+    },
+    {
+      "name": "equipmentNumber",
+      "originalName": "Equipment Number",
+      "sec": 4,
+      "status": "M",
+      "start": 11,
+      "end": 25,
+      "filler": " ",
+      "align": "Right",
+      "max": 15,
+      "class": "N",
+      "description": "Serial number of the equipment"
+    },
+    {
+      "name": "equipmentNumberCheckDigit",
+      "originalName": "Equipment Number Check Digit",
+      "sec": 5,
+      "status": "C",
+      "start": 26,
+      "end": 26,
+      "filler": " ",
+      "align": "Right",
+      "max": 1,
+      "class": "N",
+      "description": "Check digit of the equipment number. Not all intermodal equipment have a check digit but if the equipment has a check digit, it must be reported in this location."
+    },
+    {
+      "name": "equipmentSizeTypeCode",
+      "originalName": "Equipment Size Type Code",
+      "sec": 6,
+      "status": "O",
+      "start": 27,
+      "end": 30,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Code identifying the type of equipment. Valid codes are listed in Appendix B of the ISF publication."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 7,
+      "status": "M",
+      "start": 31,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 50,
+      "class": "X",
+      "description": "Space fill"
+    }
+  ]
+}

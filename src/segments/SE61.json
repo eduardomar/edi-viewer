@@ -1,0 +1,44 @@
+{
+  "name": "SE61",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE61."
+    },
+    {
+      "name": "currentHtsNumberForPfStatusMerchandise",
+      "originalName": "Current HTS Number for PF Status Merchandise",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 14,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "FTZ Privileged Foreign Status Add’l Detail<br /><br />A <strong>mandatory</strong> data element that is to be used to report the current Harmonized Tariff Schedule number that fully or partially describes/classifies the article.<br /><br />Report the full 10-digit classification number."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 15,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 66,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}

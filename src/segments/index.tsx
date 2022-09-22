@@ -23,6 +23,10 @@ import SegmentSE50 from './SE50.json';
 import SegmentSE55 from './SE55.json';
 import SegmentSE56 from './SE56.json';
 import SegmentSE60 from './SE60.json';
+import SegmentSE61 from './SE61.json';
+import SegmentSF10 from './SF10.json';
+import SegmentSF20 from './SF20.json';
+import SegmentSF25 from './SF25.json';
 import SegmentY from './Y.json';
 import SegmentZ from './Z.json';
 
@@ -49,6 +53,10 @@ const segmentsJSON = [
   SegmentSE55,
   SegmentSE56,
   SegmentSE60,
+  SegmentSE61,
+  SegmentSF10,
+  SegmentSF20,
+  SegmentSF25,
   SegmentY,
   SegmentZ,
 ];
