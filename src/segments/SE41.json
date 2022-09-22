@@ -1,0 +1,70 @@
+{
+  "name": "SE41",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SE41."
+    },
+    {
+      "name": "zoneStatus",
+      "originalName": "Zone Status",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "A",
+      "description": "Code indicating FTZ status. This field is required for entry type 06 (FTZ) entries.<br /> <ul class='custom'> <li type='Code P'>Privileged Foreign</li> <li type='Code N'>Non-privileged Foreign</li> <li type='Code D'>Domestic</li> <li type='Code Z'>Zone restricted</li> </ul> *These two zone statuses are not used on type 06 consumption entries."
+    },
+    {
+      "name": "privilegedFtzMerchandiseFilingDate",
+      "originalName": "Privileged FTZ Merchandise Filing Date",
+      "sec": 3,
+      "status": "C",
+      "start": 6,
+      "end": 11,
+      "filler": " ",
+      "align": "Right",
+      "max": 6,
+      "class": "N",
+      "description": "**(See Note 2 for use guidance)**<br/><br/> <strong>Space fill if</strong> NOT Privileged Foreign.<br/><br/> <strong>Space fill if</strong> Privileged Foreign and the HTS number in the subsequent SE60 record is a current <strong>active</strong> HTS number.<br/><br/> <strong>This record is used ONLY if: <ul> <li>the HTS number in the subsequent SE60 record is no longer an active HTS number; and,</li> <li>the merchandise has been granted Privileged Foreign status.</li> </ul></strong> For Privileged Foreign status, (i.e., that merchandise that has not been manipulated or manufactured so as to effect a change in tariff), a numeric date in MMDDYY (month, day, year) format representing the date the merchandise was granted Privileged Foreign Status.<br /><br />This record is <u>NOT</u> for use with HTS numbers which are currently active."
+    },
+    {
+      "name": "ftzLineItemQuantity",
+      "originalName": "FTZ Line Item Quantity",
+      "sec": 4,
+      "status": "M",
+      "start": 12,
+      "end": 19,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "Enter the quantity in units of this HTS Line (SE40 record) to be removed from the FTZ and entered into the Commerce of the U.S.<br /><br />Quantity entered must be a whole number. Quantity entered must be greater than Zero."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 20,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 61,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}

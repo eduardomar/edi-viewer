@@ -15,6 +15,10 @@ import SegmentSE16 from './SE16.json';
 import SegmentSE17 from './SE17.json';
 import SegmentSE20 from './SE20.json';
 import SegmentSE30 from './SE30.json';
+import SegmentSE35 from './SE35.json';
+import SegmentSE36 from './SE36.json';
+import SegmentSE40 from './SE40.json';
+import SegmentSE41 from './SE41.json';
 import SegmentY from './Y.json';
 import SegmentZ from './Z.json';
 
@@ -33,6 +37,10 @@ const segmentsJSON = [
   SegmentSE17,
   SegmentSE20,
   SegmentSE30,
+  SegmentSE35,
+  SegmentSE36,
+  SegmentSE40,
+  SegmentSE41,
   SegmentY,
   SegmentZ,
 ];
@@ -76,21 +84,23 @@ const Wrapper = styled.span`
     content: '=';
   }
 `;
-const segmentsEntries = segmentsJSON.map(seg => {
-  const { name, segments } = seg as SegmentJSON;
+const segmentsEntries = segmentsJSON
+  .filter(seg => seg)
+  .map(seg => {
+    const { name, segments } = seg as SegmentJSON;
 
-  return [
-    name,
-    segments.map(seg => {
-      const { description } = seg;
-      seg.description = ReactDOMServer.renderToString(
-        <Wrapper dangerouslySetInnerHTML={{ __html: description }} />,
-      );
+    return [
+      name,
+      segments.map(seg => {
+        const { description } = seg;
+        seg.description = ReactDOMServer.renderToString(
+          <Wrapper dangerouslySetInnerHTML={{ __html: description }} />,
+        );
 
-      return seg;
-    }),
-  ];
-});
+        return seg;
+      }),
+    ];
+  });
 
 const segments = Object.fromEntries(segmentsEntries) as Segment;
 

@@ -36,7 +36,7 @@ const ediToObject = (edi: string): Segment[] => {
                 valueFormatted:
                   seg?.options === undefined ||
                   value.trim().length === 0 ||
-                  seg.options[value.trim()].length === 0
+                  seg.options[value.trim()]?.length === 0
                     ? value.trim()
                     : `${value.trim()} - ${seg.options[value.trim()]}`,
               };
