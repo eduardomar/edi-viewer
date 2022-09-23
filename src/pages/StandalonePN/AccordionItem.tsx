@@ -16,11 +16,20 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
   const [highlight, setHighlight] = useState({ start: -1, end: -1 });
   const [dataElement, setDataElement] = useState<Element | null>(null);
 
-  const handleMouseOver = (start: number, end: number): void =>
-    setHighlight({ start, end });
-  const handleMouseLeave = (): void => setHighlight({ start: -1, end: -1 });
+  const handleMouseOver = (start: number, end: number): void => {
+    if (dataElement === null) setHighlight({ start, end });
+  };
+
+  const handleMouseLeave = (): void => {
+    if (dataElement === null) setHighlight({ start: -1, end: -1 });
+  };
 
   const handleShow = (element: Element): void => setDataElement(element);
+
+  const handleHide = (): void => {
+    setHighlight({ start: -1, end: -1 });
+    setDataElement(null);
+  };
 
   if (segment.edi.length === 0 || segment.elements.length === 0) return <></>;
 
@@ -29,8 +38,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
       <Offcanvas
         title={segment.elements[0].value}
         dataElement={dataElement}
-        setDataElement={setDataElement}
+        handleHide={handleHide}
       />
+
       <Accordion.Item eventKey={eventKey}>
         <Accordion.Header>
           <EDI segment={segment.edi} highlight={highlight} />

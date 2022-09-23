@@ -7,18 +7,16 @@ import Element from '../../interfaces/Element';
 interface OffcanvasProps {
   title: string;
   dataElement: Element | null;
-  setDataElement: (dataElement: Element | null) => void;
+  handleHide: () => void;
 }
 
 const Offcanvas: React.FC<OffcanvasProps> = ({
   title,
   dataElement,
-  setDataElement,
+  handleHide,
 }) => {
-  const handleClose = (): void => setDataElement(null);
-
   return (
-    <OffcanvasStyled show={dataElement !== null} onHide={handleClose}>
+    <OffcanvasStyled show={dataElement !== null} onHide={handleHide}>
       <OffcanvasStyled.Header closeButton>
         <OffcanvasStyled.Title>
           {title} - {dataElement?.originalName}
