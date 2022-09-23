@@ -1,0 +1,70 @@
+{
+  "name": "SO30",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SO30."
+    },
+    {
+      "name": "lineItemIdentifier",
+      "originalName": "Line Item Identifier",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Right",
+      "max": 3,
+      "class": "N",
+      "description": "This number is the same as the Line Item Number transmitted on the input Record SE40."
+    },
+    {
+      "name": "countryOfOrigin",
+      "originalName": "Country of Origin",
+      "sec": 3,
+      "status": "M",
+      "start": 8,
+      "end": 9,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "A",
+      "description": "The International Organization for Standardization (ISO) country code representing the country of origin. Valid ISO codes are listed in Appendix B of this publication."
+    },
+    {
+      "name": "htsNumber",
+      "originalName": "HTS Number",
+      "sec": 4,
+      "status": "M",
+      "start": 10,
+      "end": 19,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "A code located in the <i>Harmonized Tariff Schedule of the United States Annotated</i> (HTS) representing the tariff number."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 20,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 61,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}

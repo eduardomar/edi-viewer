@@ -3,9 +3,9 @@ import Accordion from 'react-bootstrap/Accordion';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import EDI from '../../components/EDI';
-import { Element } from '../../segments';
 import { Segment } from '../../utils/ediToObject';
 import Offcanvas from './Offcanvas';
+import Element from '../../interfaces/Element';
 
 interface AccordionItemProps {
   eventKey: string;

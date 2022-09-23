@@ -2,7 +2,7 @@ import React from 'react';
 import OffcanvasBootstrap from 'react-bootstrap/Offcanvas';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
-import { Element } from '../../segments';
+import Element from '../../interfaces/Element';
 
 interface OffcanvasProps {
   title: string;

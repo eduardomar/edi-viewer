@@ -1,0 +1,96 @@
+{
+  "name": "SO40",
+  "segments": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SO40."
+    },
+    {
+      "name": "billTypeIndicator",
+      "originalName": "Bill Type Indicator",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "A",
+      "description": "Code identifying the type of Bill of Lading Number. Valid codes are: <ul class='custom'><li type='R'>Regular / Simple Bill of Lading</li><li type='M'>Master Bill of Lading</li><li type='H'>House Bill of Lading</li><li type='S'>Sub-House Bill of Lading <i>(future use)</i></li><li type='T'>Express Carrier Tracking Number <i>(Air only)</i></li></ul>"
+    },
+    {
+      "name": "issuerCodeOfBillOfLadingNumber",
+      "originalName": "Issuer Code of Bill of Lading Number",
+      "sec": 3,
+      "status": "C",
+      "start": 6,
+      "end": 9,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "A code representing the party who issued the bill of lading. Space fill for Air mode of transportation."
+    },
+    {
+      "name": "billOfLadingNumber",
+      "originalName": "Bill of Lading Number",
+      "sec": 4,
+      "status": "M",
+      "start": 10,
+      "end": 59,
+      "filler": " ",
+      "align": "Left",
+      "max": 50,
+      "class": "X",
+      "description": "The bill of lading number as listed on the manifest. If the number is less than 50 positions, it is left justified. Do not include spaces, hyphens, slashes or other special characters."
+    },
+    {
+      "name": "quantity",
+      "originalName": "Quantity",
+      "sec": 5,
+      "status": "C",
+      "start": 60,
+      "end": 67,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "The entered quantity associated with the bill of lading number being reported. It is the smallest exterior packaging unit."
+    },
+    {
+      "name": "unitOfMeasure",
+      "originalName": "Unit of Measure",
+      "sec": 6,
+      "status": "C",
+      "start": 68,
+      "end": 72,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "The unit of measure corresponding to the bill of lading quantity."
+    },
+    {
+      "name": "manifestedQuantity",
+      "originalName": "Manifested Quantity",
+      "sec": 7,
+      "status": "C",
+      "start": 73,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 8,
+      "class": "X",
+      "description": "The manifested quantity associated with the bill of lading number being reported. It is the smallest exterior packaging unit."
+    }
+  ]
+}

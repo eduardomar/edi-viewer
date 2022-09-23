@@ -1,11 +1,12 @@
-import segments, { Element } from '../segments';
+import records from '../records';
+import Element from '../interfaces/Element';
 
 export interface Segment {
   edi: string;
   elements: Element[];
 }
 
-const segmentsNames = Object.keys(segments);
+const segmentsNames = Object.keys(records);
 
 const ediToObject = (edi: string): Segment[] => {
   const max = edi.length + (80 - (edi.length % 80));
@@ -13,44 +14,42 @@ const ediToObject = (edi: string): Segment[] => {
   if (ediFix.length % 80 !== 0) return [];
 
   const segmentsArr: string[] = ediFix.match(/.{80}/g) ?? [];
-  return (
-    segmentsArr
-      // .filter(segment => segment.startsWith('A'))
-      .map(edi => {
-        const index = segmentsNames.findIndex(name => {
-          const { start, end } = segments[name][0] ?? { start: 0, end: 0 };
+  return segmentsArr.map(edi => {
+    const index = segmentsNames.findIndex(name => {
+      const { start, end } = records[name][0] ?? { start: 0, end: 0 };
 
-          return edi.substring(start - 1, end) === name;
-        });
+      return edi.substring(start - 1, end) === name;
+    });
 
-        if (index !== -1) {
-          const segName = segmentsNames[index];
+    if (index !== -1) {
+      const segName = segmentsNames[index];
+
+      return {
+        edi,
+        elements: records[segName].map(seg => {
+          const value = edi.substring(seg.start - 1, seg.end);
+          const valueFormatted = value.trim();
 
           return {
-            edi,
-            elements: segments[segName].map(seg => {
-              const value = edi.substring(seg.start - 1, seg.end);
-              return {
-                ...seg,
-                value,
-                valueFormatted:
-                  seg?.options === undefined ||
-                  value.trim().length === 0 ||
-                  seg.options[value.trim()]?.length === 0
-                    ? value.trim()
-                    : `${value.trim()} - ${seg.options[value.trim()]}`,
-              };
-            }),
+            ...seg,
+            value,
+            valueFormatted:
+              seg?.options === undefined ||
+              valueFormatted.length === 0 ||
+              seg.options[valueFormatted]?.length === 0
+                ? valueFormatted
+                : `${valueFormatted} - ${seg.options[valueFormatted]}`,
           };
-        }
+        }),
+      };
+    }
 
-        console.error('No segment found for this record ::>', edi);
-        return {
-          edi,
-          elements: [],
-        };
-      })
-  );
+    console.error('No segment found for this record ::>', edi);
+    return {
+      edi,
+      elements: [],
+    };
+  });
 };
 
 export default ediToObject;
