@@ -1,1 +1,31 @@
-{}
+{
+  "name": "SO72",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SO72"
+    },
+    {
+      "name": "commentsToTradeFromPga",
+      "originalName": "Comments to Trade from PGA",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 76,
+      "class": "X",
+      "description": "A narrative message from PGAs to the trade regarding a particular PGA line."
+    }
+  ]
+}
