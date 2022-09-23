@@ -1,6 +1,6 @@
 {
   "name": "A",
-  "segments": [
+  "elements": [
     {
       "name": "controlId",
       "originalName": "Control Identifier",

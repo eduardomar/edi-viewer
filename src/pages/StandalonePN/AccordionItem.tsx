@@ -3,9 +3,9 @@ import Accordion from 'react-bootstrap/Accordion';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import EDI from '../../components/EDI';
-import { Segment } from '../../utils/ediToObject';
-import Offcanvas from './Offcanvas';
 import Element from '../../interfaces/Element';
+import Segment from '../../interfaces/Segment';
+import Offcanvas from './Offcanvas';
 
 interface AccordionItemProps {
   eventKey: string;
@@ -22,13 +22,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
 
   const handleShow = (element: Element): void => setDataElement(element);
 
-  if (segment?.edi?.length === 0 || segment?.elements?.length === 0)
-    return <></>;
+  if (segment.edi.length === 0 || segment.elements.length === 0) return <></>;
 
   return (
     <>
       <Offcanvas
-        title={segment?.elements[0].value ?? ''}
+        title={segment.elements[0].value}
         dataElement={dataElement}
         setDataElement={setDataElement}
       />

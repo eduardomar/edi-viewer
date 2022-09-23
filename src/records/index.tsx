@@ -1,28 +1,28 @@
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 import styled from 'styled-components';
-import SegmentA from './A.json';
-import SegmentB from './B.json';
-import SegmentOI from './OI.json';
-import SegmentPE10 from './PE10.json';
-import SegmentPE90 from './PE90.json';
-import SegmentPG01 from './PG01.json';
+import A from './A.json';
+import B from './B.json';
+import OI from './OI.json';
+import PE10 from './PE10.json';
+import PE90 from './PE90.json';
+import PG01 from './PG01.json';
 import CargoRelease from './Cargo Release';
-import SegmentY from './Y.json';
-import SegmentZ from './Z.json';
+import Y from './Y.json';
+import Z from './Z.json';
 import RecordJSON from '../interfaces/RecordJSON';
 import Record from '../interfaces/Record';
 
 const recordsJSON: RecordJSON[] = [
-  SegmentA,
-  SegmentB,
+  A,
+  B,
   ...CargoRelease,
-  SegmentOI,
-  SegmentPE10,
-  SegmentPE90,
-  SegmentPG01,
-  SegmentY,
-  SegmentZ,
+  OI,
+  PE10,
+  PE90,
+  PG01,
+  Y,
+  Z,
 ];
 
 const Wrapper = styled.span`
@@ -36,13 +36,13 @@ const Wrapper = styled.span`
   }
 `;
 const recordsEntries = recordsJSON
-  .filter(({ name, segments }) => {
-    return name?.length > 0 && segments?.length > 0;
+  .filter(({ name, elements }) => {
+    return name?.length > 0 && elements?.length > 0;
   })
-  .map(({ name, segments }) => {
+  .map(({ name, elements }) => {
     return [
       name,
-      segments.map(seg => {
+      elements.map(seg => {
         const { description } = seg;
         seg.description = ReactDOMServer.renderToString(
           <Wrapper dangerouslySetInnerHTML={{ __html: description }} />,
@@ -53,5 +53,5 @@ const recordsEntries = recordsJSON
     ];
   });
 
-const segments = Object.fromEntries(recordsEntries) as Record;
-export default segments;
+const records = Object.fromEntries(recordsEntries) as Record;
+export default records;

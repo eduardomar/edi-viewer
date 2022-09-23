@@ -1,6 +1,6 @@
 {
   "name": "PG01",
-  "segments": [
+  "elements": [
     {
       "name": "controlId",
       "originalName": "Control Identifier",

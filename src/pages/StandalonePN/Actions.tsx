@@ -2,16 +2,16 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import styled from 'styled-components';
 import { downloadEDI, downloadJSON } from '../../utils/downloadFile';
-import { Segment } from '../../utils/ediToObject';
+import Segment from '../../interfaces/Segment';
 
 interface ActionsProps {
-  edi: Segment[];
+  segments: Segment[];
 }
 
-const Actions: React.FC<ActionsProps> = ({ edi }) => {
+const Actions: React.FC<ActionsProps> = ({ segments }) => {
   const handleDownloadJSON = (): void => {
     downloadJSON(
-      edi.map(({ elements }) =>
+      segments.map(({ elements }) =>
         Object.fromEntries(elements.map(({ name, value }) => [name, value])),
       ),
       'edi',
@@ -20,7 +20,7 @@ const Actions: React.FC<ActionsProps> = ({ edi }) => {
 
   const handleDownloadEDI = (): void => {
     downloadEDI(
-      edi.map(({ edi }) => edi),
+      segments.map(({ edi }) => edi),
       'edi',
     );
   };

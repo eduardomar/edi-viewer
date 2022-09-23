@@ -1,6 +1,6 @@
 {
   "name": "SF25",
-  "segments": [
+  "elements": [
     {
       "name": "controlId",
       "originalName": "Control Identifier",

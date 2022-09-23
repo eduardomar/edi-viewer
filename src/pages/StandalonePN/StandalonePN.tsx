@@ -16,7 +16,7 @@ const StandalonePN: React.FC = () => {
   );
 
   const { edi } = useParams();
-  const ret = ediToObject(edi ?? '');
+  const segments = ediToObject(edi ?? '');
 
   return (
     <Wrapper>
@@ -24,7 +24,7 @@ const StandalonePN: React.FC = () => {
 
       {radioValue === 'rich' && (
         <Accordion alwaysOpen>
-          {ret.map((segment, index) => (
+          {segments.map((segment, index) => (
             <AccordionItem
               key={index}
               eventKey={`${index}`}
@@ -35,14 +35,14 @@ const StandalonePN: React.FC = () => {
       )}
       {radioValue === 'json' && (
         <ReactJson
-          src={ret.map(({ elements }) =>
+          src={segments.map(({ elements }) =>
             Object.fromEntries(
               elements.map(({ name, value }) => [name, value]),
             ),
           )}
         />
       )}
-      <Actions edi={ret} />
+      <Actions segments={segments} />
     </Wrapper>
   );
 };

@@ -1,12 +1,7 @@
 import records from '../records';
-import Element from '../interfaces/Element';
+import Segment from '../interfaces/Segment';
 
-export interface Segment {
-  edi: string;
-  elements: Element[];
-}
-
-const segmentsNames = Object.keys(records);
+const recordsNames = Object.keys(records);
 
 const ediToObject = (edi: string): Segment[] => {
   const max = edi.length + (80 - (edi.length % 80));
@@ -15,14 +10,14 @@ const ediToObject = (edi: string): Segment[] => {
 
   const segmentsArr: string[] = ediFix.match(/.{80}/g) ?? [];
   return segmentsArr.map(edi => {
-    const index = segmentsNames.findIndex(name => {
+    const index = recordsNames.findIndex(name => {
       const { start, end } = records[name][0] ?? { start: 0, end: 0 };
 
       return edi.substring(start - 1, end) === name;
     });
 
     if (index !== -1) {
-      const segName = segmentsNames[index];
+      const segName = recordsNames[index];
 
       return {
         edi,
@@ -44,7 +39,7 @@ const ediToObject = (edi: string): Segment[] => {
       };
     }
 
-    console.error('No segment found for this record ::>', edi);
+    console.error('No record found for this record ::>', edi);
     return {
       edi,
       elements: [],

@@ -1,6 +1,6 @@
 {
   "name": "PE10",
-  "segments": [
+  "elements": [
     {
       "name": "controlId",
       "originalName": "Record Type",

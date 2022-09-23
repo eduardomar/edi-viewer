@@ -2,7 +2,7 @@ import ElementJSON from './ElementJSON';
 
 interface RecordJSON {
   name: string;
-  segments: ElementJSON[];
+  elements: ElementJSON[];
 }
 
 export default RecordJSON;

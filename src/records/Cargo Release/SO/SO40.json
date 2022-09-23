@@ -1,6 +1,6 @@
 {
   "name": "SO40",
-  "segments": [
+  "elements": [
     {
       "name": "controlId",
       "originalName": "Control Identifier",

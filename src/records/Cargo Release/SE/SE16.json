@@ -1,6 +1,6 @@
 {
   "name": "SE16",
-  "segments": [
+  "elements": [
     {
       "name": "controlId",
       "originalName": "Control Identifier",
