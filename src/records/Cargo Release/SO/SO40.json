@@ -25,7 +25,14 @@
       "align": "Left",
       "max": 1,
       "class": "A",
-      "description": "Code identifying the type of Bill of Lading Number. Valid codes are: <ul class='custom'><li type='R'>Regular / Simple Bill of Lading</li><li type='M'>Master Bill of Lading</li><li type='H'>House Bill of Lading</li><li type='S'>Sub-House Bill of Lading <i>(future use)</i></li><li type='T'>Express Carrier Tracking Number <i>(Air only)</i></li></ul>"
+      "description": "Code identifying the type of Bill of Lading Number. Valid codes are: <ul class='custom'><li type='R'>Regular / Simple Bill of Lading</li><li type='M'>Master Bill of Lading</li><li type='H'>House Bill of Lading</li><li type='S'>Sub-House Bill of Lading <i>(future use)</i></li><li type='T'>Express Carrier Tracking Number <i>(Air only)</i></li></ul>",
+      "options": {
+        "R": "Regular / Simple Bill of Lading",
+        "M": "Master Bill of Lading",
+        "H": "House Bill of Lading",
+        "S": "Sub-House Bill of Lading <i>(future use)</i>",
+        "T": "Express Carrier Tracking Number <i>(Air only)</i>"
+      }
     },
     {
       "name": "issuerCodeOfBillOfLadingNumber",

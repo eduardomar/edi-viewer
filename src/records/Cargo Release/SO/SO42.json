@@ -1,1 +1,122 @@
-{}
+{
+  "name": "SO42",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "Must always equal SO42."
+    },
+    {
+      "name": "inBondNumber",
+      "originalName": "In-bond Number",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 16,
+      "filler": " ",
+      "align": "Left",
+      "max": 12,
+      "class": "AN",
+      "description": "The number identifying the in-bond movement."
+    },
+    {
+      "name": "inBondEntryType",
+      "originalName": "In-bond Entry Type",
+      "sec": 3,
+      "status": "M",
+      "start": 17,
+      "end": 18,
+      "filler": " ",
+      "align": "Right",
+      "max": 2,
+      "class": "N",
+      "description": "The code representing the type of in-bond movement."
+    },
+    {
+      "name": "usPortOfInBondDeparture",
+      "originalName": "U.S. Port of In-bond Departure",
+      "sec": 4,
+      "status": "M",
+      "start": 19,
+      "end": 22,
+      "filler": " ",
+      "align": "Right",
+      "max": 4,
+      "class": "N",
+      "description": "In-bond port of departure in Schedule D code."
+    },
+    {
+      "name": "usPortOfInBondArrival",
+      "originalName": "U.S. Port of In-bond Arrival",
+      "sec": 5,
+      "status": "M",
+      "start": 23,
+      "end": 26,
+      "filler": " ",
+      "align": "Right",
+      "max": 4,
+      "class": "N",
+      "description": "In-bond port of arrival in Schedule D code."
+    },
+    {
+      "name": "inBondCreateDate",
+      "originalName": "In-bond Create Date",
+      "sec": 6,
+      "status": "M",
+      "start": 27,
+      "end": 32,
+      "filler": " ",
+      "align": "Right",
+      "max": 6,
+      "class": "N",
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of in-bond creation."
+    },
+    {
+      "name": "dateOfInBondArrival",
+      "originalName": "Date of In-bond Arrival",
+      "sec": 7,
+      "status": "C",
+      "start": 33,
+      "end": 38,
+      "filler": " ",
+      "align": "Right",
+      "max": 6,
+      "class": "N",
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of arrival of the in-bond."
+    },
+    {
+      "name": "inBondQuantity",
+      "originalName": "In-Bond Quantity",
+      "sec": 8,
+      "status": "C",
+      "start": 39,
+      "end": 46,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "This field is used when the in-bond quantity is less than the full bill quantity of the Bill of Lading. If not provided, the in-bond quantity will automatically be assumed to be full Bill quantity."
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 9,
+      "status": "M",
+      "start": 47,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 34,
+      "class": "X",
+      "description": "Space fill."
+    }
+  ]
+}
