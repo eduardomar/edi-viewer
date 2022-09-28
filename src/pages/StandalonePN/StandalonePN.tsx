@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import useParams from '../../hooks/useParams';
+import Segment from '../../interfaces/Segment';
 import ediToObject from '../../utils/ediToObject';
 import Actions from './Actions';
 import { optionsViewer } from './constants';
@@ -31,14 +32,26 @@ const StandalonePN: React.FC = () => {
     return arr;
   }, [edi]);
 
+  const [validSegments, invalidSegments] = useMemo(() => {
+    return segments.reduce(
+      (acc, segment) => {
+        if (segment.elements.length > 0) acc[0].push(segment);
+        else acc[1].push(segment);
+
+        return acc;
+      },
+      [[] as Segment[], [] as Segment[]],
+    );
+  }, [segments]);
+
   return (
     <Wrapper>
       <ViewerSelector radioValue={radioValue} setRadioValue={setRadioValue} />
 
-      {radioValue === 'rich' && <RichView segments={segments} />}
-      {radioValue === 'json' && <JsonView segments={segments} />}
+      {radioValue === 'rich' && <RichView segments={validSegments} />}
+      {radioValue === 'json' && <JsonView segments={validSegments} />}
 
-      <MissingRecords segments={segments} />
+      <MissingRecords segments={invalidSegments} />
       <Actions segments={segments} />
     </Wrapper>
   );
