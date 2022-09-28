@@ -52,6 +52,7 @@ const Char = styled.span<CharProps>`
   height: 19.1953px;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.15s ease-in-out 0s;
 
   ${({ highlight, hover }: CharProps) => {
     if (highlight === false) return;
