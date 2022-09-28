@@ -23,7 +23,7 @@ const EDI: React.FC<Props> = ({ segment, highlight }) => {
   const markHighlight = start > 0 && end >= start && end <= segment.length;
 
   return (
-    <>
+    <Wrapper>
       {segment.split('').map((char, index) => {
         return (
           <Char
@@ -36,9 +36,15 @@ const EDI: React.FC<Props> = ({ segment, highlight }) => {
           </Char>
         );
       })}
-    </>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Char = styled.span<CharProps>`
   display: flex;
@@ -57,7 +63,7 @@ const Char = styled.span<CharProps>`
         ? css`
             border-bottom: solid 0.1rem var(--bs-accordion-active-color);
 
-            .collapsed > &&&& {
+            .collapsed &&&& {
               border-bottom: solid 0.1rem var(--bs-accordion-btn-color);
             }
           `
@@ -80,7 +86,7 @@ const Char = styled.span<CharProps>`
             opacity: 0.5;
           }
 
-          .collapsed > &&&&::before {
+          .collapsed &&&&::before {
             border-color: var(--bs-accordion-btn-color);
           }
         `

@@ -8,6 +8,7 @@ import ediToObject from '../../utils/ediToObject';
 import AccordionItem from './AccordionItem';
 import Actions from './Actions';
 import { optionsViewer } from './constants';
+import MissingRecords from './MissingRecords';
 import ViewerSelector from './ViewerSelector';
 
 const StandalonePN: React.FC = () => {
@@ -48,13 +49,17 @@ const StandalonePN: React.FC = () => {
       )}
       {radioValue === 'json' && (
         <ReactJson
-          src={segments.map(({ elements }) =>
-            Object.fromEntries(
-              elements.map(({ name, value }) => [name, value]),
-            ),
-          )}
+          src={segments
+            .filter(({ elements }) => elements.length > 0)
+            .map(({ elements }) =>
+              Object.fromEntries(
+                elements.map(({ name, value }) => [name, value]),
+              ),
+            )}
         />
       )}
+
+      <MissingRecords segments={segments} />
       <Actions segments={segments} />
     </Wrapper>
   );
