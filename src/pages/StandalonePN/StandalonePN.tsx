@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
 import ReactJson from 'react-json-view';
-import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import useParams from '../../hooks/useParams';
 import ediToObject from '../../utils/ediToObject';
 import AccordionItem from './AccordionItem';
 import Actions from './Actions';
@@ -14,9 +14,22 @@ const StandalonePN: React.FC = () => {
   const [radioValue, setRadioValue] = React.useState<string>(
     optionsViewer[0].value,
   );
-
   const { edi } = useParams();
-  const segments = ediToObject(edi ?? '');
+  const segments = useMemo(() => {
+    const arr = ediToObject(edi ?? '');
+    const SegmentA = arr.find(({ elements }) =>
+      elements.some(({ name, value }) => name === 'controlId' && value === 'A'),
+    );
+    const elementApp = (SegmentA?.elements ?? []).find(
+      ({ name }) => name === 'applicationIdentifierCode',
+    );
+
+    if (elementApp?.valueFormatted?.length !== undefined) {
+      document.title = elementApp.valueFormatted;
+    }
+
+    return arr;
+  }, [edi]);
 
   return (
     <Wrapper>
