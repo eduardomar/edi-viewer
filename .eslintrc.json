@@ -17,7 +17,7 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "func-names": ["error", "as-needed"],
     "@typescript-eslint/no-unused-vars": "warn"
   }
