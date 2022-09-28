@@ -77,7 +77,8 @@
       "align": "Right",
       "max": 6,
       "class": "N",
-      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of in-bond creation."
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of in-bond creation.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "dateOfInBondArrival",
@@ -90,7 +91,8 @@
       "align": "Right",
       "max": 6,
       "class": "N",
-      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of arrival of the in-bond."
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of arrival of the in-bond.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "inBondQuantity",

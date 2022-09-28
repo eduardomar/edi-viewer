@@ -1,7 +1,21 @@
+import moment from 'moment';
 import records from '../records';
 import Segment from '../interfaces/Segment';
+import ElementJSON from '../interfaces/ElementJSON';
 
 const recordsNames = Object.keys(records);
+
+const getValueFormatted = (seg: ElementJSON, value: string): string => {
+  if (value?.trim()?.length === 0) return value;
+
+  if (seg.options?.[value] !== undefined) {
+    return `${value} - ${seg.options?.[value]}`;
+  } else if (seg.datetimeFormat !== undefined) {
+    return moment(value, seg.datetimeFormat[0]).format(seg.datetimeFormat[1]);
+  }
+
+  return value;
+};
 
 const ediToObject = (edi: string): Segment[] => {
   const max = edi.length + (80 - (edi.length % 80));
@@ -28,12 +42,7 @@ const ediToObject = (edi: string): Segment[] => {
           return {
             ...seg,
             value,
-            valueFormatted:
-              seg?.options === undefined ||
-              valueFormatted.length === 0 ||
-              seg.options[valueFormatted]?.length === 0
-                ? valueFormatted
-                : `${valueFormatted} - ${seg.options[valueFormatted]}`,
+            valueFormatted: getValueFormatted(seg, valueFormatted),
           };
         }),
       };

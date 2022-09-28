@@ -168,7 +168,8 @@
       "align": "Right",
       "max": 6,
       "class": "N",
-      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of arrival."
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the date of arrival.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "splitShipmentReleaseCode",

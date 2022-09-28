@@ -25,7 +25,8 @@
       "align": "Right",
       "max": 6,
       "class": "N",
-      "description": "A numeric date in MMDDYY (month, day, year) format representing the disposition action date."
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the disposition action date.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "dispositionActionTime",
@@ -38,7 +39,8 @@
       "align": "Right",
       "max": 4,
       "class": "N",
-      "description": "The military time in HHMM (hour, minute) format representing the time of the disposition action."
+      "description": "The military time in HHMM (hour, minute) format representing the time of the disposition action.",
+      "datetimeFormat": ["HHmm", "HH:mm"]
     },
     {
       "name": "dispositionActionCode",
@@ -113,7 +115,8 @@
       "align": "Right",
       "max": 6,
       "class": "N",
-      "description": "A numeric date in MMDDYY (month, day, year) format representing the release date. This data element is only returned if the Disposition Action Code is 22 or 98."
+      "description": "A numeric date in MMDDYY (month, day, year) format representing the release date. This data element is only returned if the Disposition Action Code is 22 or 98.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "releaseOriginCode",

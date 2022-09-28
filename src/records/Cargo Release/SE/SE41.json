@@ -38,7 +38,8 @@
       "align": "Right",
       "max": 6,
       "class": "N",
-      "description": "**(See Note 2 for use guidance)**<br/><br/> <strong>Space fill if</strong> NOT Privileged Foreign.<br/><br/> <strong>Space fill if</strong> Privileged Foreign and the HTS number in the subsequent SE60 record is a current <strong>active</strong> HTS number.<br/><br/> <strong>This record is used ONLY if: <ul> <li>the HTS number in the subsequent SE60 record is no longer an active HTS number; and,</li> <li>the merchandise has been granted Privileged Foreign status.</li> </ul></strong> For Privileged Foreign status, (i.e., that merchandise that has not been manipulated or manufactured so as to effect a change in tariff), a numeric date in MMDDYY (month, day, year) format representing the date the merchandise was granted Privileged Foreign Status.<br /><br />This record is <u>NOT</u> for use with HTS numbers which are currently active."
+      "description": "**(See Note 2 for use guidance)**<br/><br/> <strong>Space fill if</strong> NOT Privileged Foreign.<br/><br/> <strong>Space fill if</strong> Privileged Foreign and the HTS number in the subsequent SE60 record is a current <strong>active</strong> HTS number.<br/><br/> <strong>This record is used ONLY if: <ul> <li>the HTS number in the subsequent SE60 record is no longer an active HTS number; and,</li> <li>the merchandise has been granted Privileged Foreign status.</li> </ul></strong> For Privileged Foreign status, (i.e., that merchandise that has not been manipulated or manufactured so as to effect a change in tariff), a numeric date in MMDDYY (month, day, year) format representing the date the merchandise was granted Privileged Foreign Status.<br /><br />This record is <u>NOT</u> for use with HTS numbers which are currently active.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "ftzLineItemQuantity",

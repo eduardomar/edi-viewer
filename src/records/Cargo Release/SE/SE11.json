@@ -38,7 +38,8 @@
       "align": "Right",
       "max": 6,
       "class": "N",
-      "description": "Enter a numeric date in MMDDYY (month, day, year) format.<br /><br />The date submitted in this field will be used as the Date of Entry for Entry Summary and duty calculation purposes.<br /><br />For entry type 06, and an Entry Date Election Code = “W” (Weekly Entry), this represents the date of the first day of the Zone Week."
+      "description": "Enter a numeric date in MMDDYY (month, day, year) format.<br /><br />The date submitted in this field will be used as the Date of Entry for Entry Summary and duty calculation purposes.<br /><br />For entry type 06, and an Entry Date Election Code = “W” (Weekly Entry), this represents the date of the first day of the Zone Week.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "locationOfGoodsFirms",

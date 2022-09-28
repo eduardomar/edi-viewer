@@ -15,6 +15,7 @@ interface ElementJSON {
   class?: string;
   description: string;
   options?: Option;
+  datetimeFormat?: [string, string];
 }
 
 export default ElementJSON;

@@ -64,7 +64,8 @@
       "align": null,
       "max": 6,
       "class": "D",
-      "description": "Transmitter’s date of batch transmission. These positions are returned, unmodified, in the A-Record returned in the response to the batch (format MMDDYY).<br /><br />Space fill if not used."
+      "description": "Transmitter’s date of batch transmission. These positions are returned, unmodified, in the A-Record returned in the response to the batch (format MMDDYY).<br /><br />Space fill if not used.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "filler1",
