@@ -1,14 +1,13 @@
 import React, { useMemo } from 'react';
-import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
-import ReactJson from 'react-json-view';
 import styled from 'styled-components';
 import useParams from '../../hooks/useParams';
 import ediToObject from '../../utils/ediToObject';
-import AccordionItem from './AccordionItem';
 import Actions from './Actions';
 import { optionsViewer } from './constants';
+import JsonView from './JsonView';
 import MissingRecords from './MissingRecords';
+import RichView from './RichView';
 import ViewerSelector from './ViewerSelector';
 
 const StandalonePN: React.FC = () => {
@@ -36,28 +35,8 @@ const StandalonePN: React.FC = () => {
     <Wrapper>
       <ViewerSelector radioValue={radioValue} setRadioValue={setRadioValue} />
 
-      {radioValue === 'rich' && (
-        <Accordion alwaysOpen>
-          {segments.map((segment, index) => (
-            <AccordionItem
-              key={index}
-              eventKey={`${index}`}
-              segment={segment}
-            />
-          ))}
-        </Accordion>
-      )}
-      {radioValue === 'json' && (
-        <ReactJson
-          src={segments
-            .filter(({ elements }) => elements.length > 0)
-            .map(({ elements }) =>
-              Object.fromEntries(
-                elements.map(({ name, value }) => [name, value]),
-              ),
-            )}
-        />
-      )}
+      {radioValue === 'rich' && <RichView segments={segments} />}
+      {radioValue === 'json' && <JsonView segments={segments} />}
 
       <MissingRecords segments={segments} />
       <Actions segments={segments} />
