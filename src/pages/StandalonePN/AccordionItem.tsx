@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import TableBootstrap from 'react-bootstrap/Table';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import EDI from '../../components/EDI';
 import Element from '../../interfaces/Element';
 import Segment from '../../interfaces/Segment';
@@ -10,6 +10,10 @@ import Offcanvas from './Offcanvas';
 interface AccordionItemProps {
   eventKey: string;
   segment: Segment;
+}
+
+interface TableProps extends React.HTMLProps<HTMLTableElement> {
+  enableScroll: Boolean;
 }
 
 const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
@@ -46,7 +50,12 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
           <EDI segment={segment.edi} highlight={highlight} />
         </Accordion.Header>
         <Accordion.Body>
-          <TableStyled striped bordered hover>
+          <TableStyled
+            striped
+            bordered
+            hover
+            enableScroll={segment.elements.length > 15}
+          >
             <tbody>
               {segment.elements.map((element, index) => (
                 <tr
@@ -71,8 +80,26 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ eventKey, segment }) => {
   );
 };
 
-const TableStyled = styled(TableBootstrap)`
+const TableStyled = styled(TableBootstrap)<TableProps>`
   table-layout: fixed;
+
+  ${({ enableScroll }) => {
+    if (enableScroll === false) return;
+
+    return css`
+      & > tbody {
+        display: inline-block;
+        height: 50vh;
+        overflow-y: scroll;
+        width: 100%;
+      }
+
+      & > tbody > tr {
+        display: inline-table;
+        width: 100% !important;
+      }
+    `;
+  }}
 
   & > tbody > tr > td:nth-child(1) {
     width: 30%;
