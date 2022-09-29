@@ -20,7 +20,9 @@ const MissingRecords: React.FC<MissingRecordsProps> = ({ segments }) => {
   return (
     <WrapperButtons>
       <Card bg="danger">
-        <Card.Header>No record found for these segments</Card.Header>
+        <Card.Header>
+          No record found for these {segmentsNotFound.length} segments
+        </Card.Header>
         <ListGroup variant="flush">
           {segmentsNotFound.map(({ edi }, index) => (
             <ItemRecordNotFound key={index} edi={edi} />
