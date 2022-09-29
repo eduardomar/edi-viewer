@@ -1,0 +1,57 @@
+{
+  "name": "22",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "Always <strong>22</strong>"
+    },
+    {
+      "name": "manifestedQuantity",
+      "originalName": "Manifested Quantity",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 10,
+      "filler": " ",
+      "align": null,
+      "max": 8,
+      "class": "N",
+      "description": "<p>Total number of units manifested on the lowest bill level reported; total number of units that correspond to the Manifested Quantity Unit of Measure Code.</p>"
+    },
+    {
+      "name": "manifestedQuantityUnitOfMeasureCode",
+      "originalName": "Manifested Quantity Unit of Measure Code",
+      "sec": 3,
+      "status": "M",
+      "start": 11,
+      "end": 15,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "<p>A unit of measure code that corresponds to the manifested quantity.</p><p>Left justify; trailing spaces.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 16,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 65,
+      "class": "S",
+      "description": "Space fill."
+    }
+  ]
+}
