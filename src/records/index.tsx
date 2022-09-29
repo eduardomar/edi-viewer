@@ -8,6 +8,7 @@ import PE10 from './PE10.json';
 import PE90 from './PE90.json';
 import PG01 from './PG01.json';
 import CargoRelease from './Cargo Release';
+import EntrySummary from './Entry Summary';
 import Y from './Y.json';
 import Z from './Z.json';
 import RecordJSON from '../interfaces/RecordJSON';
@@ -17,6 +18,7 @@ const recordsJSON: RecordJSON[] = [
   A,
   B,
   ...CargoRelease,
+  ...EntrySummary,
   OI,
   PE10,
   PE90,
@@ -26,6 +28,10 @@ const recordsJSON: RecordJSON[] = [
 ];
 
 const Wrapper = styled.span`
+  & > ul {
+    margin-block: 1rem;
+  }
+
   & > ul.custom > li::marker {
     content: attr(type) ' ';
     font-weight: bold;
