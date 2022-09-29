@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import RecordJSON from '../../interfaces/RecordJSON';
-import AE from './AE';
-import AX from './AX';
+const EntrySummary: RecordJSON[] = [
+  require('./AE').default,
+  require('./AX').default,
+];
 
-const EntrySummary = ([] as RecordJSON[]).concat(AE).concat(AX);
-
-export default EntrySummary;
+export default EntrySummary.flat();

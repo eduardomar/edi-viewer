@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import RecordJSON from '../../interfaces/RecordJSON';
-import SE from './SE';
-import SF from './SF';
-import SO from './SO';
+const CargoRelease: RecordJSON[] = [
+  require('./SE').default,
+  require('./SF').default,
+  require('./SO').default,
+];
 
-const CargoRelease = ([] as RecordJSON[]).concat(SE).concat(SF).concat(SO);
-
-export default CargoRelease;
+export default CargoRelease.flat();

@@ -1,30 +1,22 @@
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 import styled from 'styled-components';
-import A from './A.json';
-import B from './B.json';
-import OI from './OI.json';
-import PE10 from './PE10.json';
-import PE90 from './PE90.json';
-import PG01 from './PG01.json';
-import CargoRelease from './Cargo Release';
-import EntrySummary from './Entry Summary';
-import Y from './Y.json';
-import Z from './Z.json';
 import RecordJSON from '../interfaces/RecordJSON';
 import Record from '../interfaces/Record';
+import CargoRelease from './Cargo Release';
+import EntrySummary from './Entry Summary';
 
 const recordsJSON: RecordJSON[] = [
-  A,
-  B,
-  ...CargoRelease,
-  ...EntrySummary,
-  OI,
-  PE10,
-  PE90,
-  PG01,
-  Y,
-  Z,
+  require('./A.json'),
+  require('./B.json'),
+  require('./OI.json'),
+  require('./PE10.json'),
+  require('./PE90.json'),
+  require('./PG01.json'),
+  CargoRelease,
+  EntrySummary,
+  require('./Y.json'),
+  require('./Z.json'),
 ];
 
 const Wrapper = styled.span`
@@ -42,6 +34,7 @@ const Wrapper = styled.span`
   }
 `;
 const recordsEntries = recordsJSON
+  .flat()
   .filter(({ name, elements }) => {
     return name?.length > 0 && elements?.length > 0;
   })
