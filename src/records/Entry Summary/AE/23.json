@@ -1,0 +1,89 @@
+{
+  "name": "23",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>23</strong></p>"
+    },
+    {
+      "name": "manifestComponentTypeCode",
+      "originalName": "Manifest Component Type Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>The type of identifier reported in the Manifest Component Identifier data element.</p><ul class='custom'> <li type='I'>In-Bond/In-Transit Number.</li> <li type='M'>Master Bill Number.</li> <li type='H'>House Bill Number.</li> <li type='S'>Sub-House Bill Number.</li> </ul>",
+      "options": {
+        "I": "In-Bond/In-Transit Number.",
+        "M": "Master Bill Number.",
+        "H": "House Bill Number.",
+        "S": "Sub-House Bill Number."
+      }
+    },
+    {
+      "name": "manifestComponentIssuerCode",
+      "originalName": "Manifest Component Issuer Code",
+      "sec": 3,
+      "status": "C",
+      "start": 4,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>A code that identifies the issuer of the manifest component.</p><p>Space fill if not required/not reported for component type.</p>"
+    },
+    {
+      "name": "manifestComponentIdentifier",
+      "originalName": "Manifest Component Identifier",
+      "sec": 4,
+      "status": "M",
+      "start": 8,
+      "end": 19,
+      "filler": " ",
+      "align": "Left",
+      "max": 12,
+      "class": "X",
+      "description": "<p>The identifier of the manifest component.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 20,
+      "end": 57,
+      "filler": " ",
+      "align": null,
+      "max": 38,
+      "class": "S",
+      "description": "<p>Space fill until expanded length fully supported. <i>Reserved filler for future expansion of the Manifest Component Identifier when fully ACE compatible.</i></p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 58,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 23,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

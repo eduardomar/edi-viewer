@@ -1,0 +1,123 @@
+{
+  "name": "31",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>31</strong></p>"
+    },
+    {
+      "name": "bondTypeCode",
+      "originalName": "Bond Type Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication of the type of bond coverage required for the payment of duties, fees, and taxes, when required. <ul class='custom'><li type='8'>A continuous (multiple transaction) bond.</li>.<li type='9'>A single transaction bond (STB).</li>.</ul></p>",
+      "options": {
+        "8": "A continuous (multiple transaction) bond.",
+        "9": "A single transaction bond (STB)."
+      }
+    },
+    {
+      "name": "bondDesignationTypeCode",
+      "originalName": "Bond Designation Type Code",
+      "sec": 3,
+      "status": "M",
+      "start": 4,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication as to the general purpose of the bond. <ul class='custom'><li type='B'>The basic bond; the bond that secures the Entry and Entry Summary requirements.</li>.<li type='A'>An additional bond; the bond that secures an AD/CVD, PGA or any other aspect not covered by the basic bond requirement.</li>.<li type='U'>Substitution single transaction bond; this bond is a substitute for the bond presented at time of entry.</li>.<li type='E'>Superseding single transaction bond; this bond supersedes the bond presented at time of entry.</li>.</ul></p>",
+      "options": {
+        "B": "The basic bond; the bond that secures the Entry and Entry Summary requirements.",
+        "A": "An additional bond; the bond that secures an AD/CVD, PGA or any other aspect not covered by the basic bond requirement.",
+        "U": "Substitution single transaction bond; this bond is a substitute for the bond presented at time of entry.",
+        "E": "Superseding single transaction bond; this bond supersedes the bond presented at time of entry."
+      }
+    },
+    {
+      "name": "continuousBondIndicator",
+      "originalName": "Continuous Bond Indicator",
+      "sec": 4,
+      "status": "C",
+      "start": 5,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication that the continuous bond cited here supersedes or is a substitute for the bond presented at time of entry.</p><ul class='custom'><li type='Y'>Continuous bond supersedes the bond presented at time of entry.</li>.<li type='S'>Substitution continuous bond replaces the bond presented at the time of entry.</li>.</ul><p>Space fill if continuous yet not superseding, substitution, or if STB.</p>",
+      "options": {
+        "Y": "Continuous bond supersedes the bond presented at time of entry.",
+        "S": "Substitution continuous bond replaces the bond presented at the time of entry."
+      }
+    },
+    {
+      "name": "suretyCompanyCode",
+      "originalName": "Surety Company Code",
+      "sec": 5,
+      "status": "M",
+      "start": 6,
+      "end": 8,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>Identification of the Surety company that has underwritten the bond.</p>"
+    },
+    {
+      "name": "singleTransactionBondAmount",
+      "originalName": "Single Transaction Bond Amount",
+      "sec": 6,
+      "status": "C",
+      "start": 9,
+      "end": 18,
+      "filler": " ",
+      "align": null,
+      "max": 10,
+      "class": "N",
+      "description": "<p>STB coverage amount in whole U.S. dollars.</p><p>Space fill if continuous bond.</p>"
+    },
+    {
+      "name": "singleTransactionBondProducerAccountNumber",
+      "originalName": "Single Transaction Bond Producer Account Number",
+      "sec": 7,
+      "status": "O",
+      "start": 19,
+      "end": 28,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "<p>The Surety Reference Number from CBP form 301 as assigned by the Surety company of the STB.</p><p>Left justified; trailing spaces. Space fill if continuous bond.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 29,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 52,
+      "class": "S",
+      "description": "<p>Space Fill.</p>"
+    }
+  ]
+}
