@@ -7,6 +7,10 @@ const AE: RecordJSON[] = [
   require('./23.json'),
   require('./31.json'),
   require('./40.json'),
+  require('./47.json'),
+  require('./50.json'),
+  require('./62.json'),
+  require('./SE50.json'),
 ];
 
 export default AE;

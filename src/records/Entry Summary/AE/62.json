@@ -1,0 +1,57 @@
+{
+  "name": "62",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>62</strong>.</p>"
+    },
+    {
+      "name": "accountingClassCode",
+      "originalName": "Accounting Class Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>CBP accounting classification code representing a specific fee type.</p><p>See ‘<i>AE Table 6 – User Fee Accounting Class Codes</i>’ for a list those codes supported at the Entry Summary line level.</p>"
+    },
+    {
+      "name": "userFeeAmount",
+      "originalName": "User Fee Amount",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 13,
+      "filler": " ",
+      "align": null,
+      "max": 8,
+      "class": "N",
+      "description": "<p>The applicable fee amount in U.S. dollars and cents.</p><p>Two decimal places are implied.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 14,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 67,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}
