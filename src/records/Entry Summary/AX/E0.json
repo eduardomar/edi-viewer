@@ -1,0 +1,122 @@
+{
+  "name": "E0",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>E0</strong>.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Always space.</p>"
+    },
+    {
+      "name": "referenceDataTypeCode",
+      "originalName": "Reference Data Type Code",
+      "sec": 3,
+      "status": "M",
+      "start": 4,
+      "end": 9,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "class": "AN",
+      "description": "<p>An indication as to the type of reference information returned.</p><p>See Table 1 ‘Returned Entry Summary Reference Data’ for a list of codes.Always space.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 10,
+      "end": 10,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Always space fill.</p>"
+    },
+    {
+      "name": "occurrencePosition",
+      "originalName": "Occurrence Position",
+      "sec": 5,
+      "status": "M",
+      "start": 11,
+      "end": 16,
+      "filler": " ",
+      "align": "Right",
+      "max": 6,
+      "class": "N",
+      "description": "<p>If a repeating group, the relative position of the submitted input detail within the grouping, otherwise zero.</p>"
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 17,
+      "end": 17,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Always space fill.</p>"
+    },
+    {
+      "name": "referenceIdConstant",
+      "originalName": "Reference ID Constant",
+      "sec": 7,
+      "status": "M",
+      "start": 18,
+      "end": 24,
+      "filler": " ",
+      "align": "Left",
+      "max": 7,
+      "class": "X",
+      "description": "<p>Always ‘<strong>REF ID:</strong>’.</p>"
+    },
+    {
+      "name": "filler4",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 25,
+      "end": 25,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Always space fill.</p>"
+    },
+    {
+      "name": "referenceDataText",
+      "originalName": "Reference Data Text",
+      "sec": 9,
+      "status": "M",
+      "start": 26,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 55,
+      "class": "X",
+      "description": "<p>Identifying data extracted from the submitted input that corresponds to the Reference Data Type Code.</p><p>See Table 1 ‘<i>Returned Entry Summary Reference Data</i>’ for details of the returned data.</p>"
+    }
+  ]
+}

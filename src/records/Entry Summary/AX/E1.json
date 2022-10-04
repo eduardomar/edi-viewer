@@ -1,0 +1,173 @@
+{
+  "name": "E1",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>E1</strong>.</p>"
+    },
+    {
+      "name": "dispositionTypeCode",
+      "originalName": "Disposition Type Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication as to CBP’s final disposition of action requested.</p><ul class='custom'><li type='Space'>Not a final disposition record.</li><li type='A'>Final disposition; the transaction has been <strong>ACCEPTED</strong> by CBP; the action requested was successfully performed.</li><li type='R'>Final disposition; the transaction has been <strong>REJECTED</strong> by CBP; the action requested was NOT performed.</li></ul><p></p>",
+      "options": {
+        "": "Not a final disposition record.",
+        "A": "Final disposition; the transaction has been ACCEPTED by CBP; the action requested was successfully performed.",
+        "R": "Final disposition; the transaction has been REJECTED by CBP; the action requested was NOT performed."
+      }
+    },
+    {
+      "name": "severityCode",
+      "originalName": "Severity Code",
+      "sec": 3,
+      "status": "M",
+      "start": 4,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication as to the severity of the condition (if any):</p><ul class='custom'><li type='F'>‘Fatally’ invalid data or critical error.</li><li type='W'>Census warning.</li><li type='P'>Partner Government Agency warning.</li><li type='I'>Informational notice ONLY.</li><li type='Space'>No condition(s) encountered.</li></ul><p></p>",
+      "options": {
+        "F": "‘Fatally’ invalid data or critical error.",
+        "W": "Census warning.",
+        "P": "Partner Government Agency warning.",
+        "I": "Informational notice ONLY.",
+        "": "No condition(s) encountered."
+      }
+    },
+    {
+      "name": "conditionCode",
+      "originalName": "Condition Code",
+      "sec": 4,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>Code that identifies the condition or final disposition regarding an Entry Summary filing.</p>"
+    },
+    {
+      "name": "reasonCode",
+      "originalName": "Reason Code",
+      "sec": 5,
+      "status": "C",
+      "start": 8,
+      "end": 10,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>A further identification of the condition for CBP internal use ONLY.</p>"
+    },
+    {
+      "name": "narrativeText",
+      "originalName": "Narrative Text",
+      "sec": 6,
+      "status": "M",
+      "start": 11,
+      "end": 50,
+      "filler": " ",
+      "align": "Left",
+      "max": 40,
+      "class": "AN",
+      "description": "<p>Text description that corresponds to the Condition Code.</p>"
+    },
+    {
+      "name": "entryFilerCode",
+      "originalName": "Entry Filer Code",
+      "sec": 7,
+      "status": "C",
+      "start": 51,
+      "end": 53,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>Filer’s identification code as reported on the input 10-Record.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 54,
+      "end": 55,
+      "filler": " ",
+      "align": null,
+      "max": 2,
+      "class": "S",
+      "description": "<p>Space fill. Reserved filler for possible future expansion of Entry Filer Code and/or Entry Number.</p>"
+    },
+    {
+      "name": "entryNumber",
+      "originalName": "Entry Number",
+      "sec": 9,
+      "status": "C",
+      "start": 56,
+      "end": 63,
+      "filler": " ",
+      "align": "Left",
+      "max": 8,
+      "class": "AN",
+      "description": "<p>Unique identifying number assigned to the Entry by the Filer as reported on the input 10-Record.</p>"
+    },
+    {
+      "name": "versionNumber",
+      "originalName": "Version Number",
+      "sec": 10,
+      "status": "C",
+      "start": 64,
+      "end": 68,
+      "filler": " ",
+      "align": null,
+      "max": 5,
+      "class": "N",
+      "description": "<p>The latest version number of the entry summary (when the transaction is accepted).</p><p>The first 3 positions indicate the “major” revision number; the last 2 positions indicate the “minor” revision number.</p>"
+    },
+    {
+      "name": "brokerReferenceNumber",
+      "originalName": "Broker Reference Number",
+      "sec": 11,
+      "status": "C",
+      "start": 69,
+      "end": 77,
+      "filler": " ",
+      "align": "Left",
+      "max": 9,
+      "class": "X",
+      "description": "<p>Conditionally, the Filer/Preparer’s internal Entry Summary identifier as reported on the input, if any.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 12,
+      "status": "M",
+      "start": 78,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 3,
+      "class": "S",
+      "description": "<p>Space fill until expanded length fully supported. Reserved filler for future expansion of the Broker Reference Number when fully ACE compatible.</p>"
+    }
+  ]
+}
