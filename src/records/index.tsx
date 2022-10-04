@@ -33,6 +33,7 @@ const Wrapper = styled.span`
     content: '=';
   }
 `;
+
 const recordsEntries = recordsJSON
   .flat()
   .filter(({ name, elements }) => {

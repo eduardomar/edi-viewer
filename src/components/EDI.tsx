@@ -41,6 +41,7 @@ const EDI: React.FC<Props> = ({ segment, highlight }) => {
 };
 
 const Wrapper = styled.span`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
