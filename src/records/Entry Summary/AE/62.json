@@ -25,7 +25,30 @@
       "align": "Left",
       "max": 3,
       "class": "AN",
-      "description": "<p>CBP accounting classification code representing a specific fee type.</p><p>See ‘<i>AE Table 6 – User Fee Accounting Class Codes</i>’ for a list those codes supported at the Entry Summary line level.</p>"
+      "description": "<p>CBP accounting classification code representing a specific fee type.</p><p>See ‘<i>AE Table 6 – User Fee Accounting Class Codes</i>’ for a list those codes supported at the Entry Summary line level.</p>",
+      "options": {
+        "102": "Lime Fee",
+        "103": "Mushroom Fee",
+        "104": "Watermelon Fee",
+        "105": "Softwood Lumber Fee",
+        "106": "Blueberry Fee",
+        "107": "Avocado Fee",
+        "108": "Mango Fee",
+        "109": "Sorghum Fee",
+        "110": "Dairy Product Fee",
+        "311": "Informal Merchandise Processing Fee ",
+        "496": "Dutiable Mail Fee",
+        "499": "Formal Merchandise Processing Fee ",
+        "500": "Manual Entry Surcharge",
+        "501": "Harbor Maintenance Fee",
+        "053": "Beef Fee",
+        "054": "Pork Fee",
+        "055": "Honey Fee",
+        "056": "Cotton Fee",
+        "057": "Raspberry Fee",
+        "079": "Sugar Fee",
+        "090": "Potato Fee"
+      }
     },
     {
       "name": "userFeeAmount",
