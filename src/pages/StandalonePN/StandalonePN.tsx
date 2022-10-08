@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import useParams from '../../hooks/useParams';
@@ -8,13 +8,15 @@ import Actions from './Actions';
 import { optionsViewer } from './constants';
 import JsonView from './JsonView';
 import MissingRecords from './MissingRecords';
+import Offcanvas, { OffcanvasProps } from './Offcanvas';
 import RichView from './RichView';
 import ViewerSelector from './ViewerSelector';
 
 const StandalonePN: React.FC = () => {
-  const [radioValue, setRadioValue] = React.useState<string>(
-    optionsViewer[0].value,
+  const [dataOffcanvas, setDataOffcanvas] = useState<OffcanvasProps | null>(
+    null,
   );
+  const [radioValue, setRadioValue] = useState<string>(optionsViewer[0].value);
   const { edi } = useParams();
   const segments = useMemo(() => {
     const arr = ediToObject(edi ?? '');
@@ -46,9 +48,17 @@ const StandalonePN: React.FC = () => {
 
   return (
     <Wrapper>
+      {dataOffcanvas !== null && <Offcanvas {...dataOffcanvas} />}
+
       <ViewerSelector radioValue={radioValue} setRadioValue={setRadioValue} />
 
-      {radioValue === 'rich' && <RichView segments={validSegments} />}
+      {radioValue === 'rich' && (
+        <RichView
+          segments={validSegments}
+          dataOffcanvas={dataOffcanvas}
+          setDataOffcanvas={setDataOffcanvas}
+        />
+      )}
       {radioValue === 'json' && <JsonView segments={validSegments} />}
 
       <MissingRecords segments={invalidSegments} />

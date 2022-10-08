@@ -34,10 +34,11 @@
       "status": "M",
       "start": 6,
       "end": 16,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 11,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Total estimated fee amount that corresponds to Accounting Class Code (1) in U.S. dollars and cents. Two decimal places are implied.</p>"
     },
     {
@@ -61,7 +62,7 @@
       "start": 20,
       "end": 30,
       "filler": " ",
-      "align": null,
+      "align": "Right",
       "max": 11,
       "class": "N",
       "description": "<p>An additional fee total class and total estimated fee amount that corresponds to the Accounting Class Code in U.S. dollars and cents.</p><p>Space fill if not required/not reported.</p>"
@@ -87,7 +88,7 @@
       "start": 34,
       "end": 44,
       "filler": " ",
-      "align": null,
+      "align": "Right",
       "max": 11,
       "class": "N",
       "description": "<p>An additional fee total class and total estimated fee amount that corresponds to the Accounting Class Code in U.S. dollars and cents.</p><p>Space fill if not required/not reported.</p>"
@@ -113,7 +114,7 @@
       "start": 48,
       "end": 58,
       "filler": " ",
-      "align": null,
+      "align": "Right",
       "max": 11,
       "class": "N",
       "description": "<p>An additional fee total class and total estimated fee amount that corresponds to the Accounting Class Code in U.S. dollars and cents.</p><p>Space fill if not required/not reported.</p>"
@@ -139,7 +140,7 @@
       "start": 62,
       "end": 72,
       "filler": " ",
-      "align": null,
+      "align": "Right",
       "max": 11,
       "class": "N",
       "description": "<p>An additional fee total class and total estimated fee amount that corresponds to the Accounting Class Code in U.S. dollars and cents.</p><p>Space fill if not required/not reported.</p>"

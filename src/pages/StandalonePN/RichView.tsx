@@ -2,13 +2,21 @@ import React, { useMemo } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Segment from '../../interfaces/Segment';
 import AccordionItem from './AccordionItem';
+import { OffcanvasProps } from './Offcanvas';
 
 interface RichViewProps {
   segments: Segment[];
+
+  dataOffcanvas: OffcanvasProps | null;
+  setDataOffcanvas: (dataOffcanvas: OffcanvasProps | null) => void;
 }
 
 const EVENT_KEY_ALL = '0000';
-const RichView: React.FC<RichViewProps> = ({ segments }) => {
+const RichView: React.FC<RichViewProps> = ({
+  segments,
+  dataOffcanvas,
+  setDataOffcanvas,
+}) => {
   const [activeKey, setActiveKey] = React.useState<string[]>([]);
   const isCollapsedAll = activeKey.includes(EVENT_KEY_ALL);
   const segmentsValid = useMemo(() => {
@@ -62,7 +70,13 @@ const RichView: React.FC<RichViewProps> = ({ segments }) => {
         </Accordion.Header>
       </Accordion.Item>
       {segmentsValid.map((segment, index) => (
-        <AccordionItem key={index} eventKey={`${index}`} segment={segment} />
+        <AccordionItem
+          key={index}
+          eventKey={`${index}`}
+          segment={segment}
+          dataOffcanvas={dataOffcanvas}
+          setDataOffcanvas={setDataOffcanvas}
+        />
       ))}
     </Accordion>
   );

@@ -57,10 +57,11 @@
       "status": "M",
       "start": 6,
       "end": 13,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 8,
       "class": "N",
+      "decimal": 2,
       "description": "<p>The applicable fee amount in U.S. dollars and cents.</p><p>Two decimal places are implied.</p>"
     },
     {

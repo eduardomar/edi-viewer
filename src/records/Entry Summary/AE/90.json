@@ -21,10 +21,11 @@
       "status": "C",
       "start": 3,
       "end": 13,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 11,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Grand total estimated duty amount.</p><p>Two decimal places are implied. Report zeroes if no duty applies.</p>"
     },
     {
@@ -47,10 +48,11 @@
       "status": "C",
       "start": 15,
       "end": 25,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 11,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Grand total estimated user fee amount.</p><p>Two decimal places are implied. Report zeroes if no user fee applies.</p>"
     },
     {
@@ -73,10 +75,11 @@
       "status": "C",
       "start": 27,
       "end": 37,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 11,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Grand total estimated IR tax amount.</p><p>Two decimal places are implied. Report zeroes if no IR tax applies.</p>"
     },
     {
@@ -99,10 +102,11 @@
       "status": "C",
       "start": 39,
       "end": 49,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 11,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Grand total estimated AD duty amount.</p><p>Two decimal places are implied. Report zeroes if no AD duty applies.</p>"
     },
     {
@@ -125,10 +129,11 @@
       "status": "C",
       "start": 51,
       "end": 61,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 11,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Grand total estimated CV duty amount.</p><p>Two decimal places are implied. Report zeroes if no CV duty applies.</p>"
     },
     {
@@ -151,10 +156,11 @@
       "status": "C",
       "start": 63,
       "end": 73,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 11,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Grand total other revenue amount.</p><p>Two decimal places are implied. Report zeroes (<strong>or spaces</strong>) if no other revenue applies.</p>"
     },
     {

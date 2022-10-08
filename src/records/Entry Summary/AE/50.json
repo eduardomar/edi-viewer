@@ -47,10 +47,11 @@
       "status": "M",
       "start": 14,
       "end": 23,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 10,
       "class": "N",
+      "decimal": 2,
       "description": "<p>The duty amount estimated for the article and/or specifically the HTS Number in U.S. dollars and cents.</p><p>Two decimal places are implied. Report zero if no duty applies. See Usage Note ‘(l) Duty Reporting’ for more information.</p>"
     },
     {
@@ -73,8 +74,8 @@
       "status": "M",
       "start": 25,
       "end": 34,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 10,
       "class": "N",
       "description": "<p>Value of the article, as associated to the HTS Number, reported in whole U.S. dollars.</p><p>Report zero if not required/not reported.</p>"
@@ -99,10 +100,11 @@
       "status": "C",
       "start": 36,
       "end": 47,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 12,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Total number of primary units, associated with the HTS Number that corresponds to UOM Code (1).</p><p>Two decimal places are implied. Space fill if quantity not required/does not apply.</p>"
     },
     {
@@ -126,7 +128,7 @@
       "start": 51,
       "end": 62,
       "filler": " ",
-      "align": null,
+      "align": "Right",
       "max": 12,
       "class": "N",
       "description": "<p>Total number of secondary units, associated with the HTS Number that corresponds to UOM Code (2).</p><p>Two decimal places are implied. Space fill if quantity not required/does not apply.</p>"
@@ -152,7 +154,7 @@
       "start": 66,
       "end": 77,
       "filler": " ",
-      "align": null,
+      "align": "Right",
       "max": 12,
       "class": "N",
       "description": "<p>Total number of tertiary units, associated with the HTS Number that corresponds to UOM Code (3).</p><p>Two decimal places are implied. Space fill if quantity not required/does not apply.</p>"
