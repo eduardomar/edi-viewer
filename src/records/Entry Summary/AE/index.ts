@@ -9,6 +9,7 @@ const AE: RecordJSON[] = [
   require('./40.json'),
   require('./47.json'),
   require('./50.json'),
+  require('./60.json'),
   require('./62.json'),
   require('./89.json'),
   require('./90.json'),

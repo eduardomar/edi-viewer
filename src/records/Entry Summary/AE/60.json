@@ -1,0 +1,64 @@
+{
+  "name": "60",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>60</strong>.</p>"
+    },
+    {
+      "name": "accountingClassCode",
+      "originalName": "Accounting Class Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>CBP accounting classification code representing a specific Internal Revenue tax type.</p><p>See ‘AE Table 13 – Internal Revenue Accounting Class Codes’ for a list those codes supported at the Entry Summary line level.</p><ul class='custom'><li type='016'>Distilled Spirits.</li><li type='017'>Wines.</li><li type='018'>Tobacco Products.</li><li type='022'>Other (not included above).</li></ul>",
+      "options": {
+        "016": "Distilled Spirits.",
+        "017": "Wines.",
+        "018": "Tobacco Products.",
+        "022": "Other (not included above)."
+      }
+    },
+    {
+      "name": "irTaxAmount",
+      "originalName": "IR Tax Amount",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 15,
+      "filler": "0",
+      "align": "Right",
+      "max": 10,
+      "class": "N",
+      "decimal": 2,
+      "description": "<p>The Internal Revenue tax amount estimated for the article in U.S. dollars and cents.</p><p>Two decimal places are implied.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 16,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 65,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

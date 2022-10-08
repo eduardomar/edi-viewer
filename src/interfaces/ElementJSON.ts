@@ -13,6 +13,7 @@ interface ElementJSON {
   align: string | null;
   max: number;
   class?: string;
+  decimal?: number;
   description: string;
   options?: Option;
   datetimeFormat?: [string, string];
