@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { SyntheticEvent, useMemo, useRef, useState } from 'react';
 import { Alert, Overlay, Tooltip } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import OffcanvasBootstrap from 'react-bootstrap/Offcanvas';
@@ -11,7 +11,7 @@ import writeSegmentEdi from '../../utils/writeSegmentEdi';
 
 export interface OffcanvasProps {
   title: string;
-  dataElement: Element | null;
+  dataElement: Element;
   handleHide: () => void;
 }
 
@@ -25,7 +25,7 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
   const target = useRef(null);
 
   const formattedValue = useMemo(() => {
-    if (dataElement === null || value.trim().length === 0) return '';
+    if (value.trim().length === 0) return '';
 
     return writeSegmentEdi(
       {
@@ -49,43 +49,65 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
 
   return (
     <>
-      <OffcanvasStyled show={dataElement !== null} onHide={handleHide}>
+      <OffcanvasStyled show={true} onHide={handleHide}>
         <OffcanvasStyled.Header closeButton>
           <OffcanvasStyled.Title>
-            {title} - {dataElement?.originalName}
+            {title} - {dataElement.originalName}
           </OffcanvasStyled.Title>
         </OffcanvasStyled.Header>
         <OffcanvasStyled.Body>
           <TableStyled striped bordered responsive>
             <tbody>
               <tr>
-                <td>Value</td>
-                <td>{dataElement?.valueFormatted}</td>
+                <td>{dataElement.originalName.toLocaleLowerCase()}</td>
+                <td>
+                  {dataElement.originalName
+                    .toLocaleLowerCase()
+                    .includes('hts') ? (
+                    <Alert.Link
+                      href={`https://hts.usitc.gov/?query=${dataElement.valueFormatted.replace(
+                        /[^\d]/gi,
+                        '',
+                      )}`}
+                      onClick={(event: React.BaseSyntheticEvent) => {
+                        event.preventDefault();
+                        window.open(
+                          event.target.href,
+                          dataElement.valueFormatted,
+                        );
+                      }}
+                    >
+                      {dataElement.valueFormatted}
+                    </Alert.Link>
+                  ) : (
+                    dataElement.valueFormatted
+                  )}
+                </td>
               </tr>
               <tr>
                 <td>Length/Class</td>
                 <td>
-                  {dataElement?.max}
-                  {dataElement?.class}
+                  {dataElement.max}
+                  {dataElement.class}
                 </td>
               </tr>
               <tr>
                 <td>Position</td>
                 <td>
-                  {dataElement?.start === dataElement?.end
-                    ? dataElement?.start
-                    : `${dataElement?.start ?? ''}-${dataElement?.end ?? ''}`}
+                  {dataElement.start === dataElement.end
+                    ? dataElement.start
+                    : `${dataElement.start ?? ''}-${dataElement.end ?? ''}`}
                 </td>
               </tr>
               <tr>
                 <td>Status</td>
-                <td>{dataElement?.status}</td>
+                <td>{dataElement.status}</td>
               </tr>
               <tr>
                 <td>Description</td>
                 <td
                   dangerouslySetInnerHTML={{
-                    __html: dataElement?.description ?? '',
+                    __html: dataElement.description ?? '',
                   }}
                 />
               </tr>
