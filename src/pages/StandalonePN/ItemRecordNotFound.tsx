@@ -4,6 +4,7 @@ import Overlay from 'react-bootstrap/Overlay';
 import Tooltip from 'react-bootstrap/Tooltip';
 import styled from 'styled-components';
 import EDI from '../../components/EDI';
+import copyToClipboard from '../../utils/copyToClipboard';
 
 interface ItemRecordNotFoundProps {
   edi: string;
@@ -14,13 +15,8 @@ const ItemRecordNotFound: React.FC<ItemRecordNotFoundProps> = ({ edi }) => {
   const target = useRef(null);
 
   const handleItemClick = async (): Promise<void> => {
-    if (navigator?.clipboard !== undefined) {
-      await navigator.clipboard.writeText(edi);
-      setShow(true);
-    } else {
-      document.execCommand('copy', true, edi);
-      setShow(true);
-    }
+    await copyToClipboard(edi);
+    setShow(true);
 
     setTimeout(() => {
       setShow(false);
