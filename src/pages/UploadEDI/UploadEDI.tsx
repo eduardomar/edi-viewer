@@ -1,13 +1,20 @@
 import React, { useCallback, useState } from 'react';
 import { DropEvent, useDropzone } from 'react-dropzone';
-import { Card, Container } from 'react-bootstrap';
+import { Button, Card, Container, Form } from 'react-bootstrap';
 import styled from 'styled-components';
 import backgroundImage from '../../assets/images/background-not-found.png';
 import { useNavigate } from 'react-router-dom';
 
 const UploadEDI: React.FC = () => {
+  const [edi, setEDI] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  const loadEDI = (edi: string): void => {
+    const result = encodeURIComponent(edi.replace(/[\n\r]+/gi, ''));
+    console.log('🚀 ~ UploadEDI.tsx', { result });
+    navigate(`/${result}`);
+  };
 
   const onDropAccepted = useCallback((files: File[], event: DropEvent) => {
     if (files.length !== 1) return;
@@ -26,9 +33,7 @@ const UploadEDI: React.FC = () => {
         return;
       }
 
-      const result = encodeURIComponent(reader.result.replace(/[\n\r]+/gi, ''));
-      console.log('🚀 ~ UploadEDI.tsx', { result });
-      navigate(`/${result}`);
+      loadEDI(reader.result);
     };
 
     reader.readAsText(file);
@@ -48,6 +53,25 @@ const UploadEDI: React.FC = () => {
             <p>
               Drag &apos;n&apos; drop some files here, or click to select files
             </p>
+          </div>
+
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>EDI</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              value={edi}
+              onChange={e => setEDI(e.currentTarget.value)}
+            />
+          </Form.Group>
+
+          <div>
+            <Button
+              disabled={edi.trim().length === 0}
+              onClick={() => loadEDI(edi)}
+            >
+              Load...
+            </Button>
           </div>
 
           {error.length > 0 && <h1>{error}</h1>}
