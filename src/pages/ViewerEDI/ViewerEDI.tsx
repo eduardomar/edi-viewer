@@ -1,22 +1,23 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 import useParams from '../../hooks/useParams';
 import Segment from '../../interfaces/Segment';
 import ediToObject from '../../utils/ediToObject';
-import Actions from './Actions';
 import { optionsViewer } from './constants';
 import JsonView from './JsonView';
 import MissingRecords from './MissingRecords';
+import Navbar from './Navbar';
 import Offcanvas, { OffcanvasProps } from './Offcanvas';
 import RichView from './RichView';
-import ViewerSelector from './ViewerSelector';
 
 const ViewerEDI: React.FC = () => {
   const [dataOffcanvas, setDataOffcanvas] = useState<OffcanvasProps | null>(
     null,
   );
   const [radioValue, setRadioValue] = useState<string>(optionsViewer[0].value);
+  const [title, setTitle] = useState('');
+
   const { edi } = useParams();
   const segments = useMemo(() => {
     const arr = ediToObject(edi ?? '');
@@ -28,7 +29,7 @@ const ViewerEDI: React.FC = () => {
     );
 
     if (elementApp?.valueFormatted?.length !== undefined) {
-      document.title = elementApp.valueFormatted;
+      setTitle(elementApp.valueFormatted);
     }
 
     return arr;
@@ -48,9 +49,14 @@ const ViewerEDI: React.FC = () => {
 
   return (
     <Wrapper>
-      {dataOffcanvas !== null && <Offcanvas {...dataOffcanvas} />}
+      <Navbar
+        title={title}
+        segments={segments}
+        radioValue={radioValue}
+        setRadioValue={setRadioValue}
+      />
 
-      <ViewerSelector radioValue={radioValue} setRadioValue={setRadioValue} />
+      {dataOffcanvas !== null && <Offcanvas {...dataOffcanvas} />}
 
       {radioValue === 'rich' && (
         <RichView
@@ -62,13 +68,13 @@ const ViewerEDI: React.FC = () => {
       {radioValue === 'json' && <JsonView segments={validSegments} />}
 
       <MissingRecords segments={invalidSegments} />
-      <Actions segments={segments} />
     </Wrapper>
   );
 };
 
 const Wrapper = styled(Container)`
-  padding-block: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 `;
 
 export default ViewerEDI;

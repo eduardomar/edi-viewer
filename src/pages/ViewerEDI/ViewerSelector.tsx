@@ -44,7 +44,6 @@ const ViewerSelector: React.FC<ViewerSelectorProps> = ({
 const WrapperButtons = styled(Container)`
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 1rem;
 `;
 
 const ToggleButtonStyled = styled(ToggleButtonBootstrap)`

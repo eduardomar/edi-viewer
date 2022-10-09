@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useMemo, useRef, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { Alert, Overlay, Tooltip } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import OffcanvasBootstrap from 'react-bootstrap/Offcanvas';

@@ -7,8 +7,8 @@ export const downloadJSON = (obj: unknown, fileName: string): void => {
   );
 };
 
-export const downloadEDI = (arr: string[], fileName: string): void => {
-  downloadFile(arr.join('\n'), fileName, 'edi', 'text/plain');
+export const downloadEDI = (edi: string, fileName: string): void => {
+  downloadFile(edi, fileName, 'edi', 'text/plain');
 };
 
 const downloadFile = (
