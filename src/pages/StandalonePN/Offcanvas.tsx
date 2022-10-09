@@ -59,7 +59,7 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
           <TableStyled striped bordered responsive>
             <tbody>
               <tr>
-                <td>{dataElement.originalName.toLocaleLowerCase()}</td>
+                <td>{dataElement.originalName}</td>
                 <td>
                   {dataElement.originalName
                     .toLocaleLowerCase()
