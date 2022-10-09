@@ -12,7 +12,7 @@ import Offcanvas, { OffcanvasProps } from './Offcanvas';
 import RichView from './RichView';
 import ViewerSelector from './ViewerSelector';
 
-const StandalonePN: React.FC = () => {
+const ViewerEDI: React.FC = () => {
   const [dataOffcanvas, setDataOffcanvas] = useState<OffcanvasProps | null>(
     null,
   );
@@ -71,4 +71,4 @@ const Wrapper = styled(Container)`
   padding-block: 2rem;
 `;
 
-export default StandalonePN;
+export default ViewerEDI;

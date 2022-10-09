@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
 import NotFound from './pages/NotFound';
-import StandalonePN from './pages/StandalonePN';
+import ViewerEDI from './pages/ViewerEDI';
 import UploadEDI from './pages/UploadEDI';
 import reportWebVitals from './reportWebVitals';
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/:edi',
-    element: <StandalonePN />,
+    element: <ViewerEDI />,
   },
   {
     path: '*',
