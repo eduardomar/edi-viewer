@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert2';
 import Segment from '../../interfaces/Segment';
+import copyToClipboard from '../../utils/copyToClipboard';
 import { downloadEDI, downloadJSON } from '../../utils/downloadFile';
 import ViewerSelector from './ViewerSelector';
 
@@ -14,6 +15,11 @@ interface NavbarProps {
   title: string;
   radioValue: string;
   setRadioValue: (radioValue: string) => void;
+}
+
+enum OptionToDownload {
+  FILE,
+  COPY,
 }
 
 enum TypeDownload {
@@ -27,14 +33,18 @@ const Navbar: React.FC<NavbarProps> = ({
   radioValue,
   setRadioValue,
 }) => {
-  const handleDownloadClick = async (type: TypeDownload): Promise<void> => {
+  const handleDownloadClick = async (
+    option: OptionToDownload,
+    type: TypeDownload,
+  ): Promise<void> => {
     if (type === TypeDownload.JSON) {
-      downloadJSON(
-        segments.map(({ elements }) =>
-          Object.fromEntries(elements.map(({ name, value }) => [name, value])),
-        ),
-        'edi',
+      const data = segments.map(({ elements }) =>
+        Object.fromEntries(elements.map(({ name, value }) => [name, value])),
       );
+
+      if (option === OptionToDownload.COPY)
+        copyToClipboard(JSON.stringify(data)).catch(() => {});
+      else downloadJSON(data, 'edi');
 
       return;
     }
@@ -51,7 +61,9 @@ const Navbar: React.FC<NavbarProps> = ({
       .map(({ edi }) => edi)
       .join(result.isConfirmed ? `\n` : '');
 
-    downloadEDI(strEdi, 'edi');
+    if (option === OptionToDownload.COPY)
+      copyToClipboard(strEdi).catch(() => {});
+    else downloadEDI(strEdi, 'edi');
   };
 
   return (
@@ -77,14 +89,42 @@ const Navbar: React.FC<NavbarProps> = ({
             <NavDropdown title="Download" id="navbarScrollingDropdown">
               <NavDropdown.Item
                 onClick={() => {
-                  handleDownloadClick(TypeDownload.JSON).catch(() => {});
+                  handleDownloadClick(
+                    OptionToDownload.FILE,
+                    TypeDownload.JSON,
+                  ).catch(() => {});
                 }}
               >
                 JSON
               </NavDropdown.Item>
               <NavDropdown.Item
                 onClick={() => {
-                  handleDownloadClick(TypeDownload.EDI).catch(() => {});
+                  handleDownloadClick(
+                    OptionToDownload.FILE,
+                    TypeDownload.EDI,
+                  ).catch(() => {});
+                }}
+              >
+                EDI
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Copy To Clipboard" id="navbarScrollingDropdown">
+              <NavDropdown.Item
+                onClick={() => {
+                  handleDownloadClick(
+                    OptionToDownload.COPY,
+                    TypeDownload.JSON,
+                  ).catch(() => {});
+                }}
+              >
+                JSON
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                onClick={() => {
+                  handleDownloadClick(
+                    OptionToDownload.COPY,
+                    TypeDownload.EDI,
+                  ).catch(() => {});
                 }}
               >
                 EDI
