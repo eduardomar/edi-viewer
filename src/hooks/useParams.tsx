@@ -6,9 +6,9 @@ const useParams: any = () => {
   const str = JSON.stringify(params);
 
   return useMemo(() => {
-    console.log('🚀 ~ useParams.tsx', { str });
+    const strDecoded = decodeURIComponent(str);
 
-    return JSON.parse(str);
+    return JSON.parse(strDecoded);
   }, [str]);
 };
 

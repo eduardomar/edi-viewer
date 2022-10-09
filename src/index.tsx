@@ -1,23 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  Navigate,
-  RouterProvider,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
 import NotFound from './pages/NotFound';
 import StandalonePN from './pages/StandalonePN';
+import UploadEDI from './pages/UploadEDI';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate to="/standalone-pn" />,
+    element: <UploadEDI />,
   },
   {
-    path: '/standalone-pn/:edi',
+    path: '/:edi',
     element: <StandalonePN />,
   },
   {

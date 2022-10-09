@@ -18,9 +18,10 @@ const getValueFormatted = (seg: ElementJSON, value: string): string => {
 };
 
 const ediToObject = (edi: string): Segment[] => {
-  const max = edi.length + (80 - (edi.length % 80));
+  if (edi.length === 80) return [];
+
+  const max = edi.length % 80 === 0 ? 0 : edi.length + (80 - (edi.length % 80));
   const ediFix = edi.padEnd(max, ' ');
-  if (ediFix.length % 80 !== 0) return [];
 
   const segmentsArr: string[] = ediFix.match(/.{80}/g) ?? [];
   return segmentsArr.map(edi => {
