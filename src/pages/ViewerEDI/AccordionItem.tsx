@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled, { css } from 'styled-components';
+import ButtonClipboard from '../../components/ButtonClipboard';
 import EDI from '../../components/EDI';
+import useClipboard from '../../hooks/useClipboard';
 import Element from '../../interfaces/Element';
 import Segment from '../../interfaces/Segment';
 import { OffcanvasProps } from './Offcanvas';
@@ -26,6 +28,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   setDataOffcanvas,
 }) => {
   const [highlight, setHighlight] = useState({ start: -1, end: -1 });
+  const clipboardToEDI = useClipboard();
 
   const handleMouseOver = (start: number, end: number): void => {
     if (dataOffcanvas === null) setHighlight({ start, end });
@@ -53,6 +56,14 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
     <>
       <Accordion.Item eventKey={eventKey}>
         <Accordion.Header>
+          <ButtonClipboard
+            ref={clipboardToEDI.target}
+            onClick={(event: React.BaseSyntheticEvent) => {
+              event.stopPropagation();
+              clipboardToEDI.copy(segment.edi).catch(() => {});
+            }}
+            disabled={clipboardToEDI.copied}
+          />
           <EDI segment={segment.edi} highlight={highlight} />
         </Accordion.Header>
         <Accordion.Body>

@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from 'react';
-import { Alert, Button } from 'react-bootstrap';
-import { Clipboard, ClipboardCheck } from 'react-bootstrap-icons';
+import { Alert } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import OffcanvasBootstrap from 'react-bootstrap/Offcanvas';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
+import ButtonClipboard from '../../components/ButtonClipboard';
 import EDI from '../../components/EDI';
 import useClipboard from '../../hooks/useClipboard';
 import Element from '../../interfaces/Element';
@@ -75,23 +75,15 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
                     ) : (
                       dataElement.valueFormatted
                     )}
-                    <Button
+                    <ButtonClipboard
                       ref={clipboardToValue.target}
-                      variant="outline-info"
-                      size="sm"
                       onClick={() => {
                         clipboardToValue
                           .copy(dataElement.valueFormatted)
                           .catch(() => {});
                       }}
                       disabled={clipboardToValue.copied}
-                    >
-                      {!clipboardToValue.copied ? (
-                        <Clipboard />
-                      ) : (
-                        <ClipboardCheck />
-                      )}
-                    </Button>
+                    />
                   </WrapperValue>
                 </td>
               </tr>
