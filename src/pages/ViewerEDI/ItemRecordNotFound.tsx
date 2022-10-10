@@ -1,56 +1,31 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
-import Overlay from 'react-bootstrap/Overlay';
-import Tooltip from 'react-bootstrap/Tooltip';
-import styled from 'styled-components';
 import EDI from '../../components/EDI';
-import copyToClipboard from '../../utils/copyToClipboard';
+import useClipboard from '../../hooks/useClipboard';
 
 interface ItemRecordNotFoundProps {
   edi: string;
 }
 
 const ItemRecordNotFound: React.FC<ItemRecordNotFoundProps> = ({ edi }) => {
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
-
-  const handleItemClick = async (): Promise<void> => {
-    await copyToClipboard(edi);
-    setShow(true);
-
-    setTimeout(() => {
-      setShow(false);
-    }, 1000);
-  };
+  const clipboardToEDI = useClipboard();
 
   return (
     <>
       <ListGroupItem
-        ref={target}
+        ref={clipboardToEDI.target}
         action
         variant="danger"
         onClick={() => {
-          handleItemClick().catch(() => {});
+          clipboardToEDI.copy(edi).catch(() => {});
         }}
       >
         <EDI segment={edi} />
       </ListGroupItem>
 
-      <Overlay target={target.current} show={show} placement="right">
-        <TooltipStyled id="overlay-example">Copied!</TooltipStyled>
-      </Overlay>
+      <clipboardToEDI.Tooltip placement="right" color="#d63343" />
     </>
   );
 };
-
-const TooltipStyled = styled(Tooltip).attrs(() => ({ color: '#d63343' }))`
-  & > div.tooltip-arrow:before {
-    border-right-color: ${({ color }) => color} !important;
-  }
-
-  & > div.tooltip-inner {
-    background-color: ${({ color }) => color};
-  }
-`;
 
 export default ItemRecordNotFound;

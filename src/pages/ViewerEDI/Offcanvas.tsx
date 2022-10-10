@@ -1,12 +1,13 @@
-import React, { useMemo, useRef, useState } from 'react';
-import { Alert, Overlay, Tooltip } from 'react-bootstrap';
+import React, { useMemo, useState } from 'react';
+import { Alert, Button } from 'react-bootstrap';
+import { Clipboard, ClipboardCheck } from 'react-bootstrap-icons';
 import Form from 'react-bootstrap/Form';
 import OffcanvasBootstrap from 'react-bootstrap/Offcanvas';
 import TableBootstrap from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import EDI from '../../components/EDI';
+import useClipboard from '../../hooks/useClipboard';
 import Element from '../../interfaces/Element';
-import copyToClipboard from '../../utils/copyToClipboard';
 import writeSegmentEdi from '../../utils/writeSegmentEdi';
 
 export interface OffcanvasProps {
@@ -20,9 +21,9 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
   dataElement,
   handleHide,
 }) => {
+  const clipboardToValue = useClipboard();
+  const clipboardToFormattedValue = useClipboard();
   const [value, setValue] = useState('');
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
 
   const formattedValue = useMemo(() => {
     if (value.trim().length === 0) return '';
@@ -38,15 +39,6 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
     );
   }, [value]);
 
-  const handleValueClick = async (): Promise<void> => {
-    await copyToClipboard(formattedValue);
-    setShow(true);
-
-    setTimeout(() => {
-      setShow(false);
-    }, 1000);
-  };
-
   return (
     <>
       <OffcanvasStyled show={true} onHide={handleHide}>
@@ -59,29 +51,48 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
           <TableStyled striped bordered responsive>
             <tbody>
               <tr>
-                <td>{dataElement.originalName}</td>
+                <td>{dataElement.originalName} </td>
                 <td>
-                  {dataElement.originalName
-                    .toLocaleLowerCase()
-                    .includes('hts') ? (
-                    <Alert.Link
-                      href={`https://hts.usitc.gov/?query=${dataElement.valueFormatted.replace(
-                        /[^\d]/gi,
-                        '',
-                      )}`}
-                      onClick={(event: React.BaseSyntheticEvent) => {
-                        event.preventDefault();
-                        window.open(
-                          event.target.href,
-                          dataElement.valueFormatted,
-                        );
+                  <WrapperValue>
+                    {dataElement.originalName
+                      .toLocaleLowerCase()
+                      .includes('hts') ? (
+                      <Alert.Link
+                        href={`https://hts.usitc.gov/?query=${dataElement.valueFormatted.replace(
+                          /[^\d]/gi,
+                          '',
+                        )}`}
+                        onClick={(event: React.BaseSyntheticEvent) => {
+                          event.preventDefault();
+                          window.open(
+                            event.target.href,
+                            dataElement.valueFormatted,
+                          );
+                        }}
+                      >
+                        {dataElement.valueFormatted}
+                      </Alert.Link>
+                    ) : (
+                      dataElement.valueFormatted
+                    )}
+                    <Button
+                      ref={clipboardToValue.target}
+                      variant="outline-info"
+                      size="sm"
+                      onClick={() => {
+                        clipboardToValue
+                          .copy(dataElement.valueFormatted)
+                          .catch(() => {});
                       }}
+                      disabled={clipboardToValue.copied}
                     >
-                      {dataElement.valueFormatted}
-                    </Alert.Link>
-                  ) : (
-                    dataElement.valueFormatted
-                  )}
+                      {!clipboardToValue.copied ? (
+                        <Clipboard />
+                      ) : (
+                        <ClipboardCheck />
+                      )}
+                    </Button>
+                  </WrapperValue>
                 </td>
               </tr>
               <tr>
@@ -126,9 +137,11 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
               <FormattedValue>
                 Formatted value:{' '}
                 <Alert.Link
-                  ref={target}
+                  ref={clipboardToFormattedValue.target}
                   onClick={() => {
-                    handleValueClick().catch(() => {});
+                    clipboardToFormattedValue
+                      .copy(formattedValue)
+                      .catch(() => {});
                   }}
                 >
                   <EDI
@@ -142,9 +155,8 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
         </OffcanvasStyled.Body>
       </OffcanvasStyled>
 
-      <Overlay target={target.current} show={show} placement="bottom">
-        <Tooltip id="overlay-example">Copied!</Tooltip>
-      </Overlay>
+      <clipboardToValue.Tooltip placement="right" />
+      <clipboardToFormattedValue.Tooltip placement="bottom" />
     </>
   );
 };
@@ -158,6 +170,15 @@ const TableStyled = styled(TableBootstrap)`
 
   & > tbody > tr > td:nth-child(1) {
     width: 30%;
+  }
+`;
+
+const WrapperValue = styled.div`
+  display: flex;
+  align-items: center;
+
+  & > button {
+    margin-left: 0.5rem;
   }
 `;
 
