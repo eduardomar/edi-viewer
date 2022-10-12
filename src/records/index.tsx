@@ -24,6 +24,10 @@ const Wrapper = styled.span`
     margin-block: 1rem;
   }
 
+  & > ul.custom > li[disabled] {
+    color: #a6a6a6;
+  }
+
   & > ul.custom > li::marker {
     content: attr(type) ' ';
     font-weight: bold;
