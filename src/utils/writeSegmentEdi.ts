@@ -12,12 +12,19 @@ const writeSegmentEdi = (segment: Segment, data: any): string => {
       if (ele.name === 'controlId') return segment.name;
 
       let val: string = data?.[ele.name] ?? '';
+
+      if (ele.class === 'S') {
+        return ''.padStart(ele.max, ' ');
+      }
       if (ele.class === 'N') {
         val = val.replace(/[^\d.]/gi, '');
-        if (ele.decimal !== undefined) {
-          val = `${parseFloat(val).toFixed(2)}`.replace('.', '');
-        } else {
-          val = `${Math.round(parseFloat(val))}`;
+
+        if (val.length > 0) {
+          if (ele.decimal !== undefined) {
+            val = `${parseFloat(val).toFixed(2)}`.replace('.', '');
+          } else {
+            val = `${Math.round(parseFloat(val))}`;
+          }
         }
       }
 
@@ -34,9 +41,9 @@ const writeSegmentEdi = (segment: Segment, data: any): string => {
     .join('')
     .replace(/\/+$/, '');
 
-  if (record.replace(segment.name, '').trim().length > 0) return record;
+  // if (record.replace(segment.name, '').trim().length > 0) return record;
 
-  return '';
+  return record;
 };
 
 export default writeSegmentEdi;

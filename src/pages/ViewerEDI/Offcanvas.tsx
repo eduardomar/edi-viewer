@@ -21,12 +21,13 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
   dataElement,
   handleHide,
 }) => {
+  const clipboardToElementNameName = useClipboard();
   const clipboardToValue = useClipboard();
   const clipboardToFormattedValue = useClipboard();
   const [value, setValue] = useState('');
 
   const formattedValue = useMemo(() => {
-    if (value.trim().length === 0) return '';
+    // if (value.trim().length === 0) return '';
 
     return writeSegmentEdi(
       {
@@ -44,7 +45,18 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
       <OffcanvasStyled show={true} onHide={handleHide}>
         <OffcanvasStyled.Header closeButton>
           <OffcanvasStyled.Title>
-            {title} - {dataElement.originalName}
+            <WrapperValue>
+              {title} - {dataElement.originalName}
+              <ButtonClipboard
+                ref={clipboardToElementNameName.target}
+                onClick={() => {
+                  clipboardToElementNameName
+                    .copy(`${title} - ${dataElement.originalName}`)
+                    .catch(() => {});
+                }}
+                disabled={clipboardToElementNameName.copied}
+              />
+            </WrapperValue>
           </OffcanvasStyled.Title>
         </OffcanvasStyled.Header>
         <OffcanvasStyled.Body>
@@ -125,28 +137,28 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
               value={value}
               onChange={evt => setValue(evt.target.value)}
             />
-            {formattedValue.length > 0 && (
-              <FormattedValue>
-                Formatted value:{' '}
-                <Alert.Link
-                  ref={clipboardToFormattedValue.target}
-                  onClick={() => {
-                    clipboardToFormattedValue
-                      .copy(formattedValue)
-                      .catch(() => {});
-                  }}
-                >
-                  <EDI
-                    segment={formattedValue}
-                    highlight={{ start: 1, end: formattedValue.length }}
-                  />
-                </Alert.Link>
-              </FormattedValue>
-            )}
+
+            <FormattedValue>
+              Formatted value:{' '}
+              <Alert.Link
+                ref={clipboardToFormattedValue.target}
+                onClick={() => {
+                  clipboardToFormattedValue
+                    .copy(formattedValue)
+                    .catch(() => {});
+                }}
+              >
+                <EDI
+                  segment={formattedValue}
+                  highlight={{ start: 1, end: formattedValue.length }}
+                />
+              </Alert.Link>
+            </FormattedValue>
           </Form.Group>
         </OffcanvasStyled.Body>
       </OffcanvasStyled>
 
+      <clipboardToElementNameName.Tooltip placement="right" />
       <clipboardToValue.Tooltip placement="right" />
       <clipboardToFormattedValue.Tooltip placement="bottom" />
     </>
