@@ -2,19 +2,32 @@ import moment from 'moment';
 import records from '../records';
 import Segment from '../interfaces/Segment';
 import ElementJSON from '../interfaces/ElementJSON';
+import { COUNTRIES } from '../constants';
 
 const recordsNames = Object.keys(records);
 
 const getValueFormatted = (seg: ElementJSON, value: string): string => {
   if (value?.trim()?.length === 0) return value;
 
-  if (seg.options?.[value] !== undefined) {
-    return `${value} - ${seg.options?.[value]}`;
+  const valueWithoutSpaces = value.trim();
+  if (seg.options?.[valueWithoutSpaces] !== undefined) {
+    return `${valueWithoutSpaces} - ${seg.options?.[valueWithoutSpaces]}`;
   } else if (seg.datetimeFormat !== undefined) {
-    return moment(value, seg.datetimeFormat[0]).format(seg.datetimeFormat[1]);
+    return moment(valueWithoutSpaces, seg.datetimeFormat[0]).format(
+      seg.datetimeFormat[1],
+    );
+  } else if (
+    (seg.name.toLocaleLowerCase().includes('country') ||
+      seg.name.toLocaleLowerCase().includes('countries')) &&
+    Array.isArray(COUNTRIES[valueWithoutSpaces.toLocaleUpperCase()])
+  ) {
+    const isoCode = valueWithoutSpaces.toLocaleUpperCase();
+    const description = COUNTRIES[isoCode].join(',');
+
+    return `${isoCode} - ${description}`;
   }
 
-  return value;
+  return valueWithoutSpaces;
 };
 
 const ediToObject = (edi: string): Segment[] => {
