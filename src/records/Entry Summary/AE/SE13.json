@@ -1,0 +1,70 @@
+{
+  "name": "SE13",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>Must always equal <strong>SE13</strong>.</p>"
+    },
+    {
+      "name": "contactName",
+      "originalName": "Contact Name",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 44,
+      "filler": " ",
+      "align": "Left",
+      "max": 40,
+      "class": "AN",
+      "description": "<p>Contact Name for the Correction request.</p>"
+    },
+    {
+      "name": "contactPhone",
+      "originalName": "Contact Phone",
+      "sec": 3,
+      "status": "M",
+      "start": 45,
+      "end": 59,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "AN",
+      "description": "<p>Phone Number for the Correction request.</p>"
+    },
+    {
+      "name": "disIndicator",
+      "originalName": "DIS indicator",
+      "sec": 4,
+      "status": "O",
+      "start": 60,
+      "end": 60,
+      "filler": " ",
+      "align": "Right",
+      "max": 1,
+      "class": "N",
+      "description": "<p>Use “1” to indicate a Document Image System (DIS) submission has been made in support of the ACE Cargo Release Correction request</p><p>Space fill if no DIS submission has been made.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 61,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 20,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

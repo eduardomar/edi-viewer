@@ -1,0 +1,44 @@
+{
+  "name": "21",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>21</strong>.</p>"
+    },
+    {
+      "name": "tripIdentifier",
+      "originalName": "Trip Identifier",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "<p>Carrier’s identification of the trip/manifest.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 8,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 73,
+      "class": "S",
+      "description": "<p>Space fill until expanded length fully supported. Reserved filler for future expansion of the Trip Identifier when fully ACE compatible.</p>"
+    }
+  ]
+}
