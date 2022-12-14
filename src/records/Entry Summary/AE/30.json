@@ -1,0 +1,109 @@
+{
+  "name": "30",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>30</strong>.</p>"
+    },
+    {
+      "name": "associatedWarehouseEntryFilerCode",
+      "originalName": "Associated Warehouse Entry Filer Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>Filer’s identification code of the associated Warehouse or Re-Warehouse Entry.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 7,
+      "filler": " ",
+      "align": null,
+      "max": 2,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "associatedWarehouseEntryNumber",
+      "originalName": "Associated Warehouse Entry Number",
+      "sec": 4,
+      "status": "M",
+      "start": 8,
+      "end": 15,
+      "filler": " ",
+      "align": "Left",
+      "max": 8,
+      "class": "AN",
+      "description": "<p>Unique identifying number assigned to the associated Warehouse or Re-Warehouse Entry.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 16,
+      "end": 16,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "associatedWarehouseEntryDistrictPortCode",
+      "originalName": "Associated Warehouse Entry District/Port Code",
+      "sec": 6,
+      "status": "M",
+      "start": 17,
+      "end": 20,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>The code for the U.S. port that where associated Warehouse or Re-Warehouse Entry entered.</p>"
+    },
+    {
+      "name": "finalWarehouseWithdrawalIndicator",
+      "originalName": "Final Warehouse Withdrawal Indicator",
+      "sec": 7,
+      "status": "C",
+      "start": 21,
+      "end": 21,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication that the Warehouse Withdrawal is the final withdrawal for the Associated Warehouse or Re-Warehouse Entry.</p><ul class='custom'><li type='Y'>The final withdrawal.</li></ul><p>Space fill if not the final withdrawal.</p>"
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 22,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 59,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

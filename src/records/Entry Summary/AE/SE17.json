@@ -1,0 +1,44 @@
+{
+  "name": "SE17",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>Must always equal <strong>SE17</strong>.</p>"
+    },
+    {
+      "name": "equipmentNumber",
+      "originalName": "Equipment Number",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 24,
+      "filler": " ",
+      "align": "Left",
+      "max": 20,
+      "class": "AN",
+      "description": "<p>A valid container/equipment number associated with a bill of lading. This container/equipment number must reflect the number exactly as it physically appears on the container/equipment.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 25,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 56,
+      "class": "X",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}
