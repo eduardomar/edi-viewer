@@ -1,0 +1,45 @@
+{
+  "name": "44",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>44</strong>.</p>"
+    },
+    {
+      "name": "commercialDescriptionText",
+      "originalName": "Commercial Description Text",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 72,
+      "filler": " ",
+      "align": "Left",
+      "max": 70,
+      "class": "X",
+      "description": "<p>The commercial description as provided on the invoice line.</p><p>Broad, generalized language is unacceptable, as are tariff descriptions. Complete commercial terminology, in the English language, is mandatory.</p><p>Left justify.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 73,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 8,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

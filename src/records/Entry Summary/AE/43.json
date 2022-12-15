@@ -1,0 +1,76 @@
+{
+  "name": "43",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>43</strong>.</p>"
+    },
+    {
+      "name": "rulingTypeCode",
+      "originalName": "Ruling Type Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication as to the type of information provided in the record:</p><ul class='custom'><li type='C'>A Pre-Classification number, specifically citing the Importer and merchandise, is provided in the Ruling Number.</li><li type='P'>A Pre-Approval number, specifically citing the Importer and merchandise, is provided in the Ruling Number.</li><li type='R'>A Binding Ruling number is provided in the Ruling Number.</li></ul>",
+      "options": {
+        "C": "A Pre-Classification number, specifically citing the Importer and merchandise, is provided in the Ruling Number.",
+        "P": "A Pre-Approval number, specifically citing the Importer and merchandise, is provided in the Ruling Number.",
+        "R": "A Binding Ruling number is provided in the Ruling Number."
+      }
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 4,
+      "end": 8,
+      "filler": " ",
+      "align": null,
+      "max": 5,
+      "class": "S",
+      "description": "<p>Space fill. Reserved filler for future expansion of the Ruling Number.</p>"
+    },
+    {
+      "name": "rulingNumber",
+      "originalName": "Ruling Number",
+      "sec": 4,
+      "status": "C",
+      "start": 9,
+      "end": 14,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "class": "AN",
+      "description": "<p>The administrative number assigned by CBP to a binding ruling or a ruling under the pre-importation review program (PIRP).</p><p>Left justify, space fill.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 15,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 66,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}
