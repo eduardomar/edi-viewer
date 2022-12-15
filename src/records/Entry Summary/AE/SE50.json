@@ -1,5 +1,6 @@
 {
   "name": "SE50",
+  "status": "C",
   "elements": [
     {
       "name": "controlId",
@@ -25,7 +26,16 @@
       "align": "Left",
       "max": 3,
       "class": "A",
-      "description": "<p>Code identifying the type of commercial entity being reported.</p>"
+      "description": "<p>Code identifying the type of commercial entity being reported.</p>",
+      "options": {
+        "MF": "Manufacturer",
+        "SE": "Seller",
+        "BY": "Buyer",
+        "ST": "Ship To Party",
+        "LG": "Scheduled Container Stuffing Location",
+        "CS": "Consolidator",
+        "CN": "Consignee"
+      }
     },
     {
       "name": "entityName",
@@ -64,7 +74,12 @@
       "align": "Left",
       "max": 20,
       "class": "X",
-      "description": "<p>The code identified by the entity identifier qualifier. This field is mandatory if the entity code is CN.</p><p>This field is mandatory if the Entity Code is CN unless the total shipment value for the individual Consignee is &lt; $2500.00.</p>"
+      "description": "<p>The code identified by the entity identifier qualifier. This field is mandatory if the entity code is CN.</p><p>This field is mandatory if the Entity Code is CN unless the total shipment value for the individual Consignee is &lt; $2500.00.</p>",
+      "options": {
+        "34": "Social Security Number",
+        "EI": "Employer Identification Number (IRS #)",
+        "ANI": "CBP-assigned Number"
+      }
     },
     {
       "name": "filler",

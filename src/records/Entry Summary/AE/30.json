@@ -90,7 +90,10 @@
       "align": "Left",
       "max": 1,
       "class": "AN",
-      "description": "<p>An indication that the Warehouse Withdrawal is the final withdrawal for the Associated Warehouse or Re-Warehouse Entry.</p><ul class='custom'><li type='Y'>The final withdrawal.</li></ul><p>Space fill if not the final withdrawal.</p>"
+      "description": "<p>An indication that the Warehouse Withdrawal is the final withdrawal for the Associated Warehouse or Re-Warehouse Entry.</p><ul class='custom'><li type='Y'>The final withdrawal.</li></ul><p>Space fill if not the final withdrawal.</p>",
+      "options": {
+        "Y": "The final withdrawal."
+      }
     },
     {
       "name": "filler3",
