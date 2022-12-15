@@ -1,0 +1,45 @@
+{
+  "name": "SE61",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>Must always equal <strong>SE61</strong>.</p>"
+    },
+    {
+      "name": "currentHtsNumberForPfStatusMerchandise",
+      "originalName": "Current HTS Number for PF Status Merchandise",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 14,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "<p>The current Harmonized Tariff Schedule number that fully or partially describes/classifies the article.</p><p>Report the full 10-digit classification number.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 15,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 66,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}
