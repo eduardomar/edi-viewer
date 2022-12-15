@@ -1,0 +1,93 @@
+{
+  "name": "34",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>34</strong>.</p>"
+    },
+    {
+      "name": "accountingClassCode1",
+      "originalName": "Accounting Class Code (1)",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>CBP accounting classification code representing a specific fee type applicable for the summary as a whole.</p>",
+      "options": {
+        "311": "Informal Merchandise Processing Fee ",
+        "496": "Dutiable Mail Fee",
+        "500": "Manual Entry Surcharge"
+      }
+    },
+    {
+      "name": "headerFeeAmount1",
+      "originalName": "Header Fee Amount (1)",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 13,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "<p>The applicable fee amount in U.S. dollars and cents that corresponds to Accounting Class Code (1).</p><p>Two decimal places are implied.</p>"
+    },
+    {
+      "name": "accountingClassCode2",
+      "originalName": "Accounting Class Code (2)",
+      "sec": 4,
+      "status": "C",
+      "start": 14,
+      "end": 16,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>An additional CBP accounting classification code representing a specific fee type applicable for the summary as a whole.</p><p>Space fill if not used.</p>",
+      "options": {
+        "311": "Informal Merchandise Processing Fee ",
+        "496": "Dutiable Mail Fee",
+        "500": "Manual Entry Surcharge"
+      }
+    },
+    {
+      "name": "headerFeeAmount2",
+      "originalName": "Header Fee Amount (2)",
+      "sec": 5,
+      "status": "C",
+      "start": 17,
+      "end": 24,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "<p>An additional Applicable fee amount in U.S. dollars and cents that corresponds to Accounting Class Code (1). Two decimal places are implied.</p><p>Space fill if not used.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 25,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 56,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "name": "33",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>33</strong>.</p>"
+    },
+    {
+      "name": "missingDocumentCode1",
+      "originalName": "Missing Document Code (1)",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>First missing document code or ‘<strong>98</strong>’ (Other document not codified).</p>",
+      "options": {
+        "01": "Commercial Invoice",
+        "10": "CBPF 5523 (19 CFR 141.89)",
+        "11": "CBPF 3291",
+        "14": "Lease Statement (19 CFR 10.108(b))",
+        "15": "Re-melting Certificate (19 CFR 54.6(a))",
+        "16": "Corrected Commercial Invoice (19 CFR 141.89 et al)",
+        "17": "Other Agency Forms (19 CFR Part 12)",
+        "18": "Duty Free Entry Certificate (19 CFR 10.102); HTS 9808.00.30009",
+        "19": "Scale Weight (19 CFR 151, Subpart B)",
+        "20": "End Use Certificate (19 CFR 10.138)",
+        "21": "Form O (Coffee)",
+        "22": "Chemical Analysis",
+        "23": "Out Turn Report (19 CFR 151, Sub part C)",
+        "26": "Packing List (19 CFR 141.86(e))",
+        "98": "Other document (not listed)",
+        "99": "More than two documents listed."
+      }
+    },
+    {
+      "name": "missingDocumentCode2",
+      "originalName": "Missing Document Code (2)",
+      "sec": 3,
+      "status": "C",
+      "start": 5,
+      "end": 6,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Second missing document code (if any), ‘<strong>98</strong>’ (Other document not codified), or ‘<strong>99</strong>’ (More than two documents missing).</p><p>Space fill if not used.</p>",
+      "options": {
+        "01": "Commercial Invoice",
+        "10": "CBPF 5523 (19 CFR 141.89)",
+        "11": "CBPF 3291",
+        "14": "Lease Statement (19 CFR 10.108(b))",
+        "15": "Re-melting Certificate (19 CFR 54.6(a))",
+        "16": "Corrected Commercial Invoice (19 CFR 141.89 et al)",
+        "17": "Other Agency Forms (19 CFR Part 12)",
+        "18": "Duty Free Entry Certificate (19 CFR 10.102); HTS 9808.00.30009",
+        "19": "Scale Weight (19 CFR 151, Subpart B)",
+        "20": "End Use Certificate (19 CFR 10.138)",
+        "21": "Form O (Coffee)",
+        "22": "Chemical Analysis",
+        "23": "Out Turn Report (19 CFR 151, Sub part C)",
+        "26": "Packing List (19 CFR 141.86(e))",
+        "98": "Other document (not listed)",
+        "99": "More than two documents listed."
+      }
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 7,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 74,
+      "class": "S",
+      "description": "<p>Space Fill.</p>"
+    }
+  ]
+}
