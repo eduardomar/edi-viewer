@@ -1,0 +1,45 @@
+{
+  "name": "54",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>54</strong>.</p>"
+    },
+    {
+      "name": "importersAdditionalDeclarationTypeCode",
+      "originalName": "Importer’s Additional Declaration Type Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>A code that identifies the type of additional declaration data submitted:</p><ul class='custom'><li type='01'>Softwood Lumber Export Information. Information declared to conform to the Softwood Lumber Importer Declaration Program.</li><li type='02'>Product Exclusion Information – Steel products.</li><li type='03'>Product Exclusion Information – Aluminum products. .</li><li type='04'>South Korean (KR) Export Steel Certificate.</li></ul>"
+    },
+    {
+      "name": "importersAdditionalDeclarationInformation",
+      "originalName": "Importer’s Additional Declaration Information",
+      "sec": 3,
+      "status": "M",
+      "start": 5,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 76,
+      "class": "X",
+      "description": "<p>Importer’s additional declaration information that corresponds to the declaration type.</p>"
+    }
+  ]
+}

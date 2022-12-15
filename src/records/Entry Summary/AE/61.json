@@ -1,0 +1,58 @@
+{
+  "name": "61",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>61</strong>.</p>"
+    },
+    {
+      "name": "accountingClassCode",
+      "originalName": "Accounting Class Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>CBP accounting classification code representing an other revenue type.</p><ul class='custom'><li type='672'>Coffee Imports to Puerto Rico – Duty Assessment.</li></ul>"
+    },
+    {
+      "name": "otherRevenueAmount",
+      "originalName": "Other Revenue Amount",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 15,
+      "filler": " ",
+      "align": "Right",
+      "max": 10,
+      "class": "N",
+      "description": "<p>The other revenue amount estimated for the article in U.S. dollars and cents.</p><p>Two decimal places are implied.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 16,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 65,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

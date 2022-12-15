@@ -1,0 +1,97 @@
+{
+  "name": "63",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>63</strong>.</p>"
+    },
+    {
+      "name": "postSummaryCorrectionLineReasonCode1",
+      "originalName": "Post Summary Correction Line Reason Code (1)",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>A code that identifies the reason that the submitted line data is being changed for a PSC.</p>"
+    },
+    {
+      "name": "postSummaryCorrectionLineReasonCode2",
+      "originalName": "Post Summary Correction Line Reason Code (2)",
+      "sec": 3,
+      "status": "C",
+      "start": 6,
+      "end": 8,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>An additional line level PSC reason code.</p><p>Space fill if not used.</p>"
+    },
+    {
+      "name": "postSummaryCorrectionLineReasonCode3",
+      "originalName": "Post Summary Correction Line Reason Code (3)",
+      "sec": 4,
+      "status": "C",
+      "start": 9,
+      "end": 11,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>An additional line level PSC reason code.</p><p>Space fill if not used.</p>"
+    },
+    {
+      "name": "postSummaryCorrectionLineReasonCode4",
+      "originalName": "Post Summary Correction Line Reason Code (4)",
+      "sec": 5,
+      "status": "C",
+      "start": 12,
+      "end": 14,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>An additional line level PSC reason code.</p><p>Space fill if not used.</p>"
+    },
+    {
+      "name": "postSummaryCorrectionLineReasonCode5",
+      "originalName": "Post Summary Correction Line Reason Code (5)",
+      "sec": 6,
+      "status": "C",
+      "start": 15,
+      "end": 17,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>An additional line level PSC reason code.</p><p>Space fill if not used.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 7,
+      "status": "M",
+      "start": 18,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 63,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}
