@@ -1,0 +1,44 @@
+{
+  "name": "36",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>36</strong>.</p>"
+    },
+    {
+      "name": "pscFilingExplanationText",
+      "originalName": "PSC Filing Explanation Text",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 77,
+      "filler": " ",
+      "align": "Left",
+      "max": 75,
+      "class": "X",
+      "description": "<p>A text line of the PSC filing explanation.</p><p>Left justify.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 78,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 3,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

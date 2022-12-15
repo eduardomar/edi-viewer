@@ -1,0 +1,66 @@
+{
+  "name": "SE20",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>Must always equal <strong>SE20</strong>.</p>"
+    },
+    {
+      "name": "referenceIdentifierQualifier",
+      "originalName": "Reference Identifier Qualifier",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>Code that defines the Reference Identifier.</p>",
+      "options": {
+        "EXP": "Express Consignment Shipment.",
+        "SSR": "Split Shipment Release Election Code.",
+        "CES": "Elected Exam Site (FIRMS).",
+        "NAM": "Non-AMS Bill(s) of Lading.",
+        "RRN": "Rail Reference Number.",
+        "LOC": "Location of Goods (FIRMS) - [for Entry Types 21 & 22 Only]",
+        "GEN": "General Order (G.O.) Number [20AN]"
+      }
+    },
+    {
+      "name": "referenceIdentifier",
+      "originalName": "Reference Identifier",
+      "sec": 3,
+      "status": "M",
+      "start": 8,
+      "end": 57,
+      "filler": " ",
+      "align": "Left",
+      "max": 50,
+      "class": "X",
+      "description": "<p>Reference data.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 58,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 23,
+      "class": "X",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

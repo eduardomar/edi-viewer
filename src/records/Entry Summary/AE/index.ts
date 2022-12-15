@@ -12,6 +12,7 @@ const AE: RecordJSON[] = [
   require('./33.json'),
   require('./34.json'),
   require('./35.json'),
+  require('./36.json'),
   require('./40.json'),
   require('./47.json'),
   require('./50.json'),
@@ -23,6 +24,8 @@ const AE: RecordJSON[] = [
   require('./SE13.json'),
   require('./SE16.json'),
   require('./SE17.json'),
+  require('./SE20.json'),
+  require('./SE30.json'),
   require('./SE50.json'),
 ];
 

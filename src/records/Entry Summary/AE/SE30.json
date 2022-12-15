@@ -1,0 +1,96 @@
+{
+  "name": "SE30",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>Always <strong>SE30</strong>.</p>"
+    },
+    {
+      "name": "entityCode",
+      "originalName": "Entity Code",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 7,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "A",
+      "description": "<p>Code identifying the type of commercial entity being reported.</p>",
+      "options": {
+        "CN": "Consignee",
+        "SE": "Seller",
+        "BY": "Buyer",
+        "ST": "Ship To Party",
+        "LG": "Scheduled Container Stuffing Location",
+        "CS": "Consolidator"
+      }
+    },
+    {
+      "name": "entityName",
+      "originalName": "Entity Name",
+      "sec": 3,
+      "status": "C",
+      "start": 8,
+      "end": 42,
+      "filler": " ",
+      "align": "Left",
+      "max": 35,
+      "class": "X",
+      "description": "<p>The name of the entity identified by the Entity Code.</p>"
+    },
+    {
+      "name": "entityIdentifierQualifier",
+      "originalName": "Entity Identifier Qualifier",
+      "sec": 4,
+      "status": "C",
+      "start": 43,
+      "end": 45,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "X",
+      "description": "<p>This field must be used if the entity identifier is being supplied in lieu of name and address.</p>",
+      "options": {
+        "EI": "Employer Identification Number (IRS #)",
+        "ANI": "CBP-assigned Number",
+        "34": "Social Security Number"
+      }
+    },
+    {
+      "name": "entityIdentifier",
+      "originalName": "Entity Identifier",
+      "sec": 5,
+      "status": "C",
+      "start": 46,
+      "end": 65,
+      "filler": " ",
+      "align": "Left",
+      "max": 20,
+      "class": "X",
+      "description": "<p>The code identified by the entity identifier qualifier.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 66,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "X",
+      "description": "<p>This field is to be space filled.</p>"
+    }
+  ]
+}
