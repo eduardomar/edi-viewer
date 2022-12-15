@@ -1,0 +1,66 @@
+{
+  "name": "SE35",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 4,
+      "filler": " ",
+      "align": "Left",
+      "max": 4
+    },
+    {
+      "name": "addressComponentQualifier1",
+      "sec": 2,
+      "status": "M",
+      "start": 5,
+      "end": 6,
+      "filler": " ",
+      "align": "Left",
+      "max": 2
+    },
+    {
+      "name": "addressInformation1",
+      "sec": 3,
+      "status": "M",
+      "start": 7,
+      "end": 41,
+      "filler": " ",
+      "align": "Left",
+      "max": 35
+    },
+    {
+      "name": "addressComponentQualifier2",
+      "sec": 4,
+      "status": "O",
+      "start": 42,
+      "end": 43,
+      "filler": " ",
+      "align": "Left",
+      "max": 2
+    },
+    {
+      "name": "addressInformation2",
+      "sec": 5,
+      "status": "O",
+      "start": 44,
+      "end": 78,
+      "filler": " ",
+      "align": "Left",
+      "max": 35
+    },
+    {
+      "name": "filler",
+      "sec": 6,
+      "status": "M",
+      "start": 79,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 2
+    }
+  ]
+}

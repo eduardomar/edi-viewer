@@ -1,0 +1,72 @@
+{
+  "name": "41",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always <strong>41</strong>.</p>"
+    },
+    {
+      "name": "ftzMerchandiseStatusCode",
+      "originalName": "FTZ Merchandise Status Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication as to the ‘status’ of the FTZ merchandise:</p><ul class='custom'><li type='P'>Privileged Foreign.</li><li type='N'>Non-Privileged Foreign.</li><li type='D'>Domestic.</li></ul>"
+    },
+    {
+      "name": "privilegedFtzMerchandiseFilingDate",
+      "originalName": "Privileged FTZ Merchandise Filing Date",
+      "sec": 3,
+      "status": "C",
+      "start": 4,
+      "end": 9,
+      "filler": " ",
+      "align": null,
+      "max": 6,
+      "class": "D",
+      "description": "<p>For Privileged Foreign (i.e., that merchandise that has not been manipulated or manufactured so as to effect a change in tariff), the date the merchandise entered the zone.</p><p>Space fill if NOT Privileged Foreign. See Usage Note ‘(j) <i>Basic Article Classification and Tariff Considerations – Duty Rate Date Matrix Hierarchy</i>’.</p>",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
+    },
+    {
+      "name": "ftzLineItemQuantity",
+      "originalName": "FTZ Line Item Quantity",
+      "sec": 4,
+      "status": "M",
+      "start": 10,
+      "end": 19,
+      "filler": " ",
+      "align": "Right",
+      "max": 10,
+      "class": "N",
+      "description": "<p>Quantity of units removed from the FTZ and entered into the commerce of the U.S.</p><p>Report a value greater than zero in whole units.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 20,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 61,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}
