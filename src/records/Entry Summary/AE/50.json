@@ -1,5 +1,6 @@
 {
   "name": "50",
+  "status": "M",
   "elements": [
     {
       "name": "controlId",
@@ -127,10 +128,11 @@
       "status": "C",
       "start": 51,
       "end": 62,
-      "filler": " ",
+      "filler": "0",
       "align": "Right",
       "max": 12,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Total number of secondary units, associated with the HTS Number that corresponds to UOM Code (2).</p><p>Two decimal places are implied. Space fill if quantity not required/does not apply.</p>"
     },
     {
@@ -153,10 +155,11 @@
       "status": "C",
       "start": 66,
       "end": 77,
-      "filler": " ",
+      "filler": "0",
       "align": "Right",
       "max": 12,
       "class": "N",
+      "decimal": 2,
       "description": "<p>Total number of tertiary units, associated with the HTS Number that corresponds to UOM Code (3).</p><p>Two decimal places are implied. Space fill if quantity not required/does not apply.</p>"
     },
     {

@@ -25,7 +25,7 @@
       "align": "Left",
       "max": 1,
       "class": "A",
-      "description": "A code representing the update action.",
+      "description": "<p>A code representing the update action.</p><ul class='custom'><li type='A'>Add.</li><li type='D'>Cancel.</li><li type='R'>Replace.</li><li type='U'>Update.</li></ul>",
       "options": {
         "A": "Add",
         "D": "Cancel",

@@ -211,7 +211,7 @@
       "start": 60,
       "end": 80,
       "filler": " ",
-      "align": "Left",
+      "align": "Right",
       "max": 21,
       "class": "X",
       "description": "Provided for the transmitter's internal use. These positions are returned, unmodified, in the A-Record returned in the response to the batch.<br /><br />Space fill if not used."
