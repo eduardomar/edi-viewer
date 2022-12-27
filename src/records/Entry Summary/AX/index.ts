@@ -19,7 +19,6 @@ const AX: RecordJSON[] = [
   require('./LINFEE.json'),
   require('./LINITM.json'),
   require('./MISDOC.json'),
-  require('./PGOI.json'),
   require('./PSCEXP.json'),
   require('./PSCHRE.json'),
   require('./PSCLRE.json'),

@@ -1,5 +1,6 @@
 {
   "name": "10",
+  "status": "M",
   "elements": [
     {
       "name": "controlId",
@@ -43,7 +44,7 @@
       "align": "Left",
       "max": 3,
       "class": "AN",
-      "description": "Entry Filer’s identification code (as assigned by CBP)."
+      "description": "<p>Entry Filer’s identification code (as assigned by CBP).</p>"
     },
     {
       "name": "filler1",
@@ -69,7 +70,7 @@
       "align": "Left",
       "max": 8,
       "class": "AN",
-      "description": "Unique identifying number assigned to the Entry by the Filer.<br /><br />The check digit must be computed using the formula found in ‘<i>AE Table 1 – Check Digit Computation Formula</i>’."
+      "description": "<p>Unique identifying number assigned to the Entry by the Filer.<br /><br />The check digit must be computed using the formula found in ‘<i>AE Table 1 – Check Digit Computation Formula</i>’.</p>"
     },
     {
       "name": "filler2",
@@ -108,7 +109,7 @@
       "align": "Left",
       "max": 9,
       "class": "X",
-      "description": "Filer/Preparer’s internal Entry Summary identifier.<br /><br />Space fill if not used."
+      "description": "<p>Filer/Preparer’s internal Entry Summary identifier.</p><p>Space fill if not used.</p>"
     },
     {
       "name": "filler3",

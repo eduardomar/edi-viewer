@@ -62,7 +62,7 @@
     },
     {
       "name": "licenseNumberCertificateNumberPermitNumber",
-      "originalName": "License Number/ Certificate Number/Permit Number",
+      "originalName": "License Number/Certificate Number/Permit Number",
       "sec": 3,
       "status": "M",
       "start": 5,
