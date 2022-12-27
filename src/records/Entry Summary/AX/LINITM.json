@@ -1,0 +1,32 @@
+{
+  "name": "LINITM",
+  "status": "C",
+  "elements": [
+    {
+      "name": "lineItemIdentifier",
+      "originalName": "Line Item Identifier (40-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 28,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "X",
+      "description": "<p>The filer/transmitter’s identity of the specific line item within an Entry Summary.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 29,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 52,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "ARPART",
+  "status": "C",
+  "elements": [
+    {
+      "name": "articlePartyTypeCode",
+      "originalName": "Article Party Type Code (47-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 26,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>The type of Party reported in the Article Party Identifier:</p><ul class='custom'><li type='M'>Manufacturer/Supplier.</li><li type='C'>Delivered To Party.</li><li type='S'>Sold To Party.</li><li type='E'>Foreign Exporter.</li></ul>",
+      "options": {
+        "M": "Manufacturer/Supplier.",
+        "C": "Delivered To Party.",
+        "S": "Sold To Party.",
+        "E": "Foreign Exporter."
+      }
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 27,
+      "end": 27,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "articlePartyIdentifier",
+      "originalName": "Article Party Identifier (47-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 28,
+      "end": 42,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "AN",
+      "description": "<p>The identifying code of the party.</p><p>Required when Type Code = <strong>M</strong>:</p><p>Manufacturer / Supplier Code.</p><p>Identification of the manufacturer/supplier. See CBP Directive 3500-13 (November 1986) for algorithm directions.</p><p>When reported, left justify, space fill.</p><p>Required when Type Code = <strong>C</strong>:</p><p>Delivered To Party Identifier.</p><p>The U.S. party or other entity (individual or firm) identified as the first delivered-to party scheduled to physically receive the merchandise after released from CBP custody.</p><p>When reported, the identifier can be no longer than 12 characters. Positions 16-18 must be space fill.</p><p>When reported, left justify, space fill.</p><p>Required when Type Code = <strong>S</strong>:</p><p>Sold To Party Identifier.</p><p>Identification of the U.S. party or other entity to whom the imported merchandise was sold or agreed to be sold.</p><p>When reported, identifier can be no longer than 12 characters. Positions 16-18 must be space fill.</p><p>Required when Type Code = <strong>E</strong>:</p><p>Foreign Exporter Code.</p><p>Identification of the foreign exporter. See CBP Directive 3500-13 (November 1986) for algorithm directions.</p><p>When reported, left justify, space fill.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 43,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 38,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

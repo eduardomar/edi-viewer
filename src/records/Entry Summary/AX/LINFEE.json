@@ -1,0 +1,81 @@
+{
+  "name": "LINFEE",
+  "status": "C",
+  "elements": [
+    {
+      "name": "accountingClassCode",
+      "originalName": "Accounting Class Code (62-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 28,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>CBP accounting classification code representing a specific fee type.</p><p>See ‘<i>AE Table 6 – User Fee Accounting Class Codes</i>’ for a list those codes supported at the Entry Summary line level.</p>",
+      "options": {
+        "102": "Lime Fee",
+        "103": "Mushroom Fee",
+        "104": "Watermelon Fee",
+        "105": "Softwood Lumber Fee",
+        "106": "Blueberry Fee",
+        "107": "Avocado Fee",
+        "108": "Mango Fee",
+        "109": "Sorghum Fee",
+        "110": "Dairy Product Fee",
+        "311": "Informal Merchandise Processing Fee ",
+        "496": "Dutiable Mail Fee",
+        "499": "Formal Merchandise Processing Fee ",
+        "500": "Manual Entry Surcharge",
+        "501": "Harbor Maintenance Fee",
+        "053": "Beef Fee",
+        "054": "Pork Fee",
+        "055": "Honey Fee",
+        "056": "Cotton Fee",
+        "057": "Raspberry Fee",
+        "079": "Sugar Fee",
+        "090": "Potato Fee"
+      }
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 29,
+      "end": 29,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "userFeeAmount",
+      "originalName": "User Fee Amount (62-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 30,
+      "end": 37,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "<p>The applicable fee amount in U.S. dollars and cents.</p><p>Two decimal places are implied.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 38,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 43,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

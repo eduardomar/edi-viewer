@@ -1,0 +1,63 @@
+{
+  "name": "HDRFEE",
+  "status": "C",
+  "elements": [
+    {
+      "name": "accountingClassCode",
+      "originalName": "Accounting Class Code (34-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 28,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>CBP accounting classification code representing a specific fee type applicable for the summary as a whole.</p>",
+      "options": {
+        "311": "Informal Merchandise Processing Fee ",
+        "496": "Dutiable Mail Fee",
+        "500": "Manual Entry Surcharge"
+      }
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 29,
+      "end": 29,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "headerFeeAmount",
+      "originalName": "Header Fee Amount (34-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 30,
+      "end": 37,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "<p>The applicable fee amount in U.S. dollars and cents that corresponds to Accounting Class Code (1).</p><p>Two decimal places are implied.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 38,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 43,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

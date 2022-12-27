@@ -1,0 +1,58 @@
+{
+  "name": "CARMAN",
+  "status": "C",
+  "elements": [
+    {
+      "name": "manifestedQuantity",
+      "originalName": "Manifested Quantity (22-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 33,
+      "filler": " ",
+      "align": "Right",
+      "max": 8,
+      "class": "N",
+      "description": "<p>Total number of units manifested on the lowest bill level reported; total number of units that correspond to the Manifested Quantity Unit of Measure Code.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 34,
+      "end": 34,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "manifestedQuantityUnitOfMeasureCode",
+      "originalName": "Manifested Quantity Unit of Measure Code (22-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 35,
+      "end": 39,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "X",
+      "description": "<p>A unit of measure code that corresponds to the manifested quantity.</p><p>Left justify; trailing spaces.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 40,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 41,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

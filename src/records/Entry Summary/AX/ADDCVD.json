@@ -1,0 +1,32 @@
+{
+  "name": "ADDCVD",
+  "status": "C",
+  "elements": [
+    {
+      "name": "caseNumber",
+      "originalName": "Case Number (53-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 35,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "<p>The identifying number of the case. Do 1 not include hyphens (‘-‘).</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 36,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 45,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

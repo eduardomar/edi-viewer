@@ -1,0 +1,64 @@
+{
+  "name": "BOLINB",
+  "status": "C",
+  "elements": [
+    {
+      "name": "manifestComponentTypeCode",
+      "originalName": "Manifest Component Type Code (23-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 26,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>The type of identifier reported in the Manifest Component Identifier data element.</p><ul class='custom'> <li type='I'>In-Bond/In-Transit Number.</li> <li type='M'>Master Bill Number.</li> <li type='H'>House Bill Number.</li> <li type='S'>Sub-House Bill Number.</li> </ul>",
+      "options": {
+        "I": "In-Bond/In-Transit Number.",
+        "M": "Master Bill Number.",
+        "H": "House Bill Number.",
+        "S": "Sub-House Bill Number."
+      }
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 27,
+      "end": 27,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "manifestComponentIdentifier",
+      "originalName": "Manifest Component Identifier (23-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 28,
+      "end": 39,
+      "filler": " ",
+      "align": "Left",
+      "max": 12,
+      "class": "X",
+      "description": "<p>The identifier of the manifest component.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 40,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 41,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

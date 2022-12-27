@@ -1,0 +1,58 @@
+{
+  "name": "TARQTY",
+  "status": "C",
+  "elements": [
+    {
+      "name": "quantity",
+      "originalName": "Quantity (50-Record)",
+      "sec": 1,
+      "status": "C",
+      "start": 26,
+      "end": 37,
+      "filler": " ",
+      "align": "Right",
+      "max": 12,
+      "class": "N",
+      "description": "<p>Total number of units, associated with the HTS Number that corresponds to UOM Code.</p><p>Two decimal places are implied. Space fill if quantity not required/does not apply.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 38,
+      "end": 38,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "unitOfMeasureCode",
+      "originalName": "Unit of Measure Code (50-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 39,
+      "end": 41,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>A unit of measure code that corresponds to the Quantity as prescribed by the HTS Number reported.</p><p>The unit of measure must match exactly the unit of measure as listed in the Harmonized Tariff Schedule for the tariff number.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 42,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 39,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

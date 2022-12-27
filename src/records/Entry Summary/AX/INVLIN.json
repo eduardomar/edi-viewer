@@ -1,0 +1,58 @@
+{
+  "name": "INVLIN",
+  "status": "C",
+  "elements": [
+    {
+      "name": "invoiceLineRangeBegin",
+      "originalName": "Invoice Line Range - Begin (42-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 29,
+      "filler": " ",
+      "align": "Right",
+      "max": 4,
+      "class": "N",
+      "description": "<p>The first invoice line number that references the article.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 30,
+      "end": 30,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "invoiceLineRangeEnd",
+      "originalName": "Invoice Line Range - End (42-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 31,
+      "end": 34,
+      "filler": " ",
+      "align": "Right",
+      "max": 4,
+      "class": "N",
+      "description": "<p>The ending invoice line number that references the article if a contiguous range of numbers is needed. If only a single line number is needed to specify the reference, repeat the beginning line number.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 35,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 46,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

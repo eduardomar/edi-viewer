@@ -1,0 +1,94 @@
+{
+  "name": "BNDDTL",
+  "status": "C",
+  "elements": [
+    {
+      "name": "bondTypeCode",
+      "originalName": "Bond Type Code (31-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 26,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication of the type of bond coverage required for the payment of duties, fees, and taxes, when required. <ul class='custom'><li type='8'>A continuous (multiple transaction) bond.</li>.<li type='9'>A single transaction bond (STB).</li>.</ul></p>",
+      "options": {
+        "8": "A continuous (multiple transaction) bond.",
+        "9": "A single transaction bond (STB)."
+      }
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 27,
+      "end": 27,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "bondDesignationTypeCode",
+      "originalName": "Bond Designation Type Code (31-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 28,
+      "end": 28,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>An indication as to the general purpose of the bond. <ul class='custom'><li type='B'>The basic bond; the bond that secures the Entry and Entry Summary requirements.</li>.<li type='A'>An additional bond; the bond that secures an AD/CVD, PGA or any other aspect not covered by the basic bond requirement.</li>.<li type='U'>Substitution single transaction bond; this bond is a substitute for the bond presented at time of entry.</li>.<li type='E'>Superseding single transaction bond; this bond supersedes the bond presented at time of entry.</li>.</ul></p>",
+      "options": {
+        "B": "The basic bond; the bond that secures the Entry and Entry Summary requirements.",
+        "A": "An additional bond; the bond that secures an AD/CVD, PGA or any other aspect not covered by the basic bond requirement.",
+        "U": "Substitution single transaction bond; this bond is a substitute for the bond presented at time of entry.",
+        "E": "Superseding single transaction bond; this bond supersedes the bond presented at time of entry."
+      }
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 29,
+      "end": 29,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "suretyCompanyCode",
+      "originalName": "Surety Company Code (31-Record)",
+      "sec": 5,
+      "status": "M",
+      "start": 30,
+      "end": 32,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>Identification of the Surety company that has underwritten the bond.</p>"
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 33,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 48,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

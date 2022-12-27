@@ -1,0 +1,32 @@
+{
+  "name": "IADDET",
+  "status": "C",
+  "elements": [
+    {
+      "name": "importerSAdditionalDeclarationTypeCode",
+      "originalName": "Importer’s Additional Declaration Type Code (54-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 27,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>A code that identifies the type of additional declaration data submitted:</p><ul class='custom'><li type='01'>Softwood Lumber Export Information. Information declared to conform to the Softwood Lumber Importer Declaration Program.</li><li type='02'>Product Exclusion Information – Steel products.</li><li type='03'>Product Exclusion Information – Aluminum products. .</li><li type='04'>South Korean (KR) Export Steel Certificate.</li></ul>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 28,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 53,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

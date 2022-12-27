@@ -1,0 +1,50 @@
+{
+  "name": "MISDOC",
+  "status": "C",
+  "elements": [
+    {
+      "name": "missingDocumentCode",
+      "originalName": "Missing Document Code (33-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 27,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>First missing document code or ‘<strong>98</strong>’ (Other document not codified).</p>",
+      "options": {
+        "10": "CBPF 5523 (19 CFR 141.89)",
+        "11": "CBPF 3291",
+        "14": "Lease Statement (19 CFR 10.108(b))",
+        "15": "Re-melting Certificate (19 CFR 54.6(a))",
+        "16": "Corrected Commercial Invoice (19 CFR 141.89 et al)",
+        "17": "Other Agency Forms (19 CFR Part 12)",
+        "18": "Duty Free Entry Certificate (19 CFR 10.102); HTS 9808.00.30009",
+        "19": "Scale Weight (19 CFR 151, Subpart B)",
+        "20": "End Use Certificate (19 CFR 10.138)",
+        "21": "Form O (Coffee)",
+        "22": "Chemical Analysis",
+        "23": "Out Turn Report (19 CFR 151, Sub part C)",
+        "26": "Packing List (19 CFR 141.86(e))",
+        "98": "Other document (not listed)",
+        "99": "More than two documents listed.",
+        "01": "Commercial Invoice"
+      }
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 28,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 53,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "TARIFF",
+  "status": "C",
+  "elements": [
+    {
+      "name": "htsNumber",
+      "originalName": "HTS Number (50-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 35,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "<p>A numeric code from the Harmonized Tariff Schedule that fully or partially describes/classifies the article.</p><p>Report the full 10-digit classification number unless a legitimate 8-digit-<strong>ONLY</strong> classification number applies.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 36,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 45,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

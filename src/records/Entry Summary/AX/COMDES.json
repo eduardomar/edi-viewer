@@ -1,0 +1,19 @@
+{
+  "name": "COMDES",
+  "status": "C",
+  "elements": [
+    {
+      "name": "commercialDescriptionText",
+      "originalName": "Commercial Description Text (44-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 55,
+      "class": "X",
+      "description": "<p>The commercial description as provided on the invoice line.</p><p>Broad, generalized language is unacceptable, as are tariff descriptions. Complete commercial terminology, in the English language, is mandatory.</p><p>Left justify.</p>"
+    }
+  ]
+}

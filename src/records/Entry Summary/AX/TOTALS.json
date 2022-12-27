@@ -1,0 +1,84 @@
+{
+  "name": "TOTALS",
+  "status": "C",
+  "elements": [
+    {
+      "name": "entryFilerCode",
+      "originalName": "Entry Filer Code (10-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 28,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "<p>Entry Filer’s identification code (as assigned by CBP).</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 29,
+      "end": 29,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "entryNumber",
+      "originalName": "Entry Number (10-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 30,
+      "end": 37,
+      "filler": " ",
+      "align": "Left",
+      "max": 8,
+      "class": "AN",
+      "description": "<p>Unique identifying number assigned to the Entry by the Filer.<br /><br />The check digit must be computed using the formula found in ‘<i>AE Table 1 – Check Digit Computation Formula</i>’.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 38,
+      "end": 38,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "brokerReferenceNumber",
+      "originalName": "Broker Reference Number (10-Record)",
+      "sec": 5,
+      "status": "C",
+      "start": 39,
+      "end": 50,
+      "filler": " ",
+      "align": "Left",
+      "max": 12,
+      "class": "X",
+      "description": "<p>Filer/Preparer’s internal Entry Summary identifier.</p><p>Space fill if not used.</p>"
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler",
+      "sec": 6,
+      "status": "M",
+      "start": 51,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 30,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

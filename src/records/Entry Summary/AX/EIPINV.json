@@ -1,0 +1,58 @@
+{
+  "name": "EIPINV",
+  "status": "C",
+  "elements": [
+    {
+      "name": "supplierIdCode",
+      "originalName": "Supplier ID Code (42-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 40,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "AN",
+      "description": "<p>A code identifying the supplier. Refer to CBP Directive 3500-13 of November 24, 1986, for complete instructions on determining this code.</p>"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 41,
+      "end": 41,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "invoiceNumber",
+      "originalName": "Invoice Number (42-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 42,
+      "end": 58,
+      "filler": " ",
+      "align": "Left",
+      "max": 17,
+      "class": "X",
+      "description": "<p>The invoice number as issued by the Supplier. (Use alphanumeric and dash [‘-‘] only).</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 59,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 22,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

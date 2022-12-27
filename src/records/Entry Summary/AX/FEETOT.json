@@ -1,0 +1,81 @@
+{
+  "name": "FEETOT",
+  "status": "C",
+  "elements": [
+    {
+      "name": "accountingClassCode",
+      "originalName": "Accounting Class Code (89-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 28,
+      "filler": " ",
+      "align": "Right",
+      "max": 3,
+      "class": "N",
+      "description": "<p>CBP accounting classification code representing a specific fee type previously reported at the Entry Summary Header Fee (34-Record) or Line User Fee (62-Record) level.</p><ul class='custom'><li type='311'>Informal Merchandise Processing Fee.</li><li type='496'>Dutiable Mail Fee.</li><li type='500'>Manual Entry Surcharge.</li><li type='053'>Beef Fee.</li><li type='054'>Pork Fee.</li><li type='055'>Honey Fee.</li><li type='056'>Cotton Fee.</li><li type='057'>Raspberry Fee.</li><li type='079'>Sugar Fee.</li><li type='090'>Potato Fee.</li><li type='102'>Lime Fee.</li><li type='103'>Mushroom Fee.</li><li type='104'>Watermelon Fee.</li><li type='105'>Softwood Lumber Fee.</li><li type='106'>Blueberry Fee.</li><li type='107'>Avocado Fee.</li><li type='108'>Mango Fee.</li><li type='109'>Sorghum Fee.</li><li type='110'>Dairy Product Fee.</li><li type='499'>Formal Merchandise Processing Fee.</li><li type='501'>Harbor Maintenance Fee.</li></ul>",
+      "options": {
+        "102": "Lime Fee",
+        "103": "Mushroom Fee",
+        "104": "Watermelon Fee",
+        "105": "Softwood Lumber Fee",
+        "106": "Blueberry Fee",
+        "107": "Avocado Fee",
+        "108": "Mango Fee",
+        "109": "Sorghum Fee",
+        "110": "Dairy Product Fee",
+        "311": "Informal Merchandise Processing Fee",
+        "496": "Dutiable Mail Fee",
+        "499": "Formal Merchandise Processing Fee",
+        "500": "Manual Entry Surcharge",
+        "501": "Harbor Maintenance Fee",
+        "053": "Beef Fee",
+        "054": "Pork Fee",
+        "055": "Honey Fee",
+        "056": "Cotton Fee",
+        "057": "Raspberry Fee",
+        "079": "Sugar Fee",
+        "090": "Potato Fee"
+      }
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 29,
+      "end": 29,
+      "filler": " ",
+      "align": null,
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "totalFeeAmount",
+      "originalName": "Total Fee Amount (89-Record)",
+      "sec": 3,
+      "status": "M",
+      "start": 30,
+      "end": 40,
+      "filler": " ",
+      "align": "Right",
+      "max": 11,
+      "class": "N",
+      "description": "<p>Total estimated fee amount that corresponds to Accounting Class Code (1) in U.S. dollars and cents. Two decimal places are implied.</p>"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 41,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 40,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

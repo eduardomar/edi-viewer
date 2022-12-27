@@ -1,0 +1,19 @@
+{
+  "name": "PSCEXP",
+  "status": "C",
+  "elements": [
+    {
+      "name": "pscFilingExplanationText",
+      "originalName": "PSC Filing Explanation Text (36-Record)",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 55,
+      "class": "X",
+      "description": "<p>A text line of the PSC filing explanation.</p><p>Left justify.</p>"
+    }
+  ]
+}

@@ -1,4 +1,33 @@
 import RecordJSON from '../../../interfaces/RecordJSON';
-const AX: RecordJSON[] = [require('./E0.json'), require('./E1.json')];
+const AX: RecordJSON[] = [
+  require('./ADDCVD.json'),
+  require('./ARPART.json'),
+  require('./BNDDTL.json'),
+  require('./BOLINB.json'),
+  require('./CARMAN.json'),
+  require('./CENWRN.json'),
+  require('./COMDES.json'),
+  require('./CONREL.json'),
+  require('./E0.json'),
+  require('./E1.json'),
+  require('./EIPINV.json'),
+  require('./FEETOT.json'),
+  require('./HDRFEE.json'),
+  require('./IADDET.json'),
+  require('./INVLIN.json'),
+  require('./LICNSE.json'),
+  require('./LINFEE.json'),
+  require('./LINITM.json'),
+  require('./MISDOC.json'),
+  require('./PGOI.json'),
+  require('./PSCEXP.json'),
+  require('./PSCHRE.json'),
+  require('./PSCLRE.json'),
+  require('./PSTLIN.json'),
+  require('./SUMMRY.json'),
+  require('./TARIFF.json'),
+  require('./TARQTY.json'),
+  require('./TOTALS.json'),
+];
 
 export default AX;
