@@ -44,10 +44,42 @@ const ediToObject = (edi: string): Segment[] => {
 
     if (index !== -1) {
       const segName = recordsNames[index];
+      let elements = records[segName];
+      if (segName === 'E0') {
+        const record = records[segName].find(
+          ({ name }) => name === 'referenceDataTypeCode',
+        );
+        if (record !== undefined) {
+          const referenceDataTypeCode = edi.substring(
+            record.start - 1,
+            record.end,
+          );
+
+          const elementsByDataType = records[referenceDataTypeCode];
+          if (elementsByDataType !== undefined) {
+            const start = Math.min(
+              ...elementsByDataType.map(({ start }) => start),
+            );
+            const end = Math.max(...elementsByDataType.map(({ end }) => end));
+            elements = elements
+              .filter(
+                el =>
+                  (el.start < start && el.end < start) ||
+                  (el.start > end && el.end > end),
+              )
+              .concat(elementsByDataType)
+              .sort(({ start: a }, { start: b }) => a - b)
+              .map((el, index) => {
+                el.sec = index + 1;
+                return el;
+              });
+          } else console.log('🚀 ~ ediToObject.ts', { referenceDataTypeCode });
+        }
+      }
 
       return {
         edi,
-        elements: records[segName].map(seg => {
+        elements: elements.map(seg => {
           const value = edi.substring(seg.start - 1, seg.end);
           const valueFormatted = value.trim();
 
