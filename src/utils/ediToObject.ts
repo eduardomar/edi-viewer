@@ -31,8 +31,6 @@ const getValueFormatted = (seg: ElementJSON, value: string): string => {
 };
 
 const ediToObject = (edi: string): Segment[] => {
-  if (edi.length === 80) return [];
-
   const max = edi.length % 80 === 0 ? 0 : edi.length + (80 - (edi.length % 80));
   const ediFix = edi.padEnd(max, ' ');
 

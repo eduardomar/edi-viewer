@@ -166,7 +166,7 @@ const Offcanvas: React.FC<OffcanvasProps> = ({
 };
 
 const OffcanvasStyled = styled(OffcanvasBootstrap)`
-  width: 50% !important;
+  width: 75% !important;
 `;
 
 const TableStyled = styled(TableBootstrap)`

@@ -81,7 +81,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
                     handleMouseOver(element.start, element.end)
                   }
                   onMouseLeave={handleMouseLeave}
-                  onClick={() => handleShow(element)}
+                  onDoubleClick={() => handleShow(element)}
                 >
                   <td
                     dangerouslySetInnerHTML={{ __html: element.originalName }}

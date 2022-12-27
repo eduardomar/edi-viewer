@@ -32,7 +32,7 @@ const writeSegmentEdi = (segment: Segment, data: any): string => {
 
       if (ele.align === 'Left') return val.padEnd(ele.max, ele.filler);
 
-      if (ele.align === 'Right')
+      if (ele.align === 'Right' || ele.align === null)
         return val.padStart(ele.max, val.length > 0 ? ele.filler : ' ');
 
       return null;
