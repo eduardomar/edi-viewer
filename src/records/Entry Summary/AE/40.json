@@ -131,8 +131,8 @@
       "status": "C",
       "start": 27,
       "end": 36,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 10,
       "class": "N",
       "description": "<p>Aggregate cost (excluding duty) of freight, insurance, and other costs incurred, reported in whole U.S. dollars.</p><p>See Usage Note ‘<i>(v) Article Charges</i>’ for more information. Report zeroes if not</p>"
@@ -157,8 +157,8 @@
       "status": "C",
       "start": 42,
       "end": 51,
-      "filler": " ",
-      "align": null,
+      "filler": "0",
+      "align": "Right",
       "max": 10,
       "class": "N",
       "description": "<p>Gross shipping weight of the article in kilograms. Weight to include packaging, but exclude carrier equipment (shipping container, etc.).</p><p>Report zeroes if not used.</p>"

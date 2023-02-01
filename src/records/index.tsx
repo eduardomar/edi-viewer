@@ -9,10 +9,12 @@ import EntrySummary from './Entry Summary';
 const recordsJSON: RecordJSON[] = [
   require('./A.json'),
   require('./B.json'),
+  require('./BLOCK.json'),
   require('./OI.json'),
   require('./PE10.json'),
   require('./PE90.json'),
   require('./PG01.json'),
+  require('./X0.json'),
   CargoRelease,
   EntrySummary,
   require('./Y.json'),

@@ -59,7 +59,9 @@
       "filler": " ",
       "align": null,
       "max": 6,
-      "description": "Transmitter’s date of batch transmission.<br />Space fill if not used."
+      "class": "D",
+      "description": "Transmitter’s date of batch transmission.<br />Space fill if not used.",
+      "datetimeFormat": ["MMDDYY", "MM/DD/YYYY"]
     },
     {
       "name": "filler1",

@@ -45,15 +45,15 @@ const ediToObject = (edi: string): Segment[] => {
     if (index !== -1) {
       const segName = recordsNames[index];
       let elements = records[segName];
-      if (segName === 'E0') {
+      if (['E0', 'X0'].includes(segName)) {
         const record = records[segName].find(
           ({ name }) => name === 'referenceDataTypeCode',
         );
+
         if (record !== undefined) {
-          const referenceDataTypeCode = edi.substring(
-            record.start - 1,
-            record.end,
-          );
+          const referenceDataTypeCode = edi
+            .substring(record.start - 1, record.end)
+            .trim();
 
           const elementsByDataType = records[referenceDataTypeCode];
           if (elementsByDataType !== undefined) {
