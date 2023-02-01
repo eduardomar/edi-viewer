@@ -12,6 +12,7 @@
       "filler": " ",
       "align": "Left",
       "max": 4,
+      "class": "AN",
       "description": "The code for the U.S. port where the enclosed transaction(s) are to be ‘processed’."
     },
     {
@@ -53,21 +54,21 @@
       "description": "<p>Space</p>"
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "processingFilerOfficeCode",
+      "originalName": "Processing Filer Office Code",
       "sec": 5,
-      "status": "M",
+      "status": "C",
       "start": 35,
       "end": 36,
       "filler": " ",
       "align": "Left",
-      "max": 1,
+      "max": 2,
       "class": "AN",
-      "description": "Always X0"
+      "description": "A code agreed upon by the Filer and CBP representing a specific Filer ‘office’ (or sub-location)."
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "filler3",
+      "originalName": "Filler",
       "sec": 6,
       "status": "M",
       "start": 37,
@@ -76,24 +77,24 @@
       "align": "Left",
       "max": 1,
       "class": "AN",
-      "description": "Always X0"
+      "description": "<p>Space</p>"
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "applicationIdentifierCode",
+      "originalName": "Application Identifier Code",
       "sec": 7,
       "status": "M",
       "start": 38,
       "end": 39,
       "filler": " ",
       "align": "Left",
-      "max": 1,
+      "max": 2,
       "class": "AN",
-      "description": "Always X0"
+      "description": "A code that identifies the type of transaction data within the block."
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "filler4",
+      "originalName": "Filler",
       "sec": 8,
       "status": "M",
       "start": 40,
@@ -102,24 +103,24 @@
       "align": "Left",
       "max": 1,
       "class": "AN",
-      "description": "Always X0"
+      "description": "<p>Space</p>"
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "filerPreparersUserDataText",
+      "originalName": "Filer / Preparer’s User Data Text ",
       "sec": 9,
-      "status": "M",
+      "status": "O",
       "start": 41,
       "end": 61,
       "filler": " ",
       "align": "Left",
-      "max": 1,
+      "max": 21,
       "class": "AN",
-      "description": "Always X0"
+      "description": "Provided for the Filer/Preparer’s internal use. These positions are returned, unmodified, in the B-Record returned in the response to the block.<br> Space fill if not used."
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "filler5",
+      "originalName": "Filler",
       "sec": 10,
       "status": "M",
       "start": 62,
@@ -128,24 +129,24 @@
       "align": "Left",
       "max": 1,
       "class": "AN",
-      "description": "Always X0"
+      "description": "<p>Space</p>"
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "remotePreparerPort",
+      "originalName": "Remote Preparer Port",
       "sec": 11,
-      "status": "M",
+      "status": "C",
       "start": 63,
       "end": 66,
       "filler": " ",
       "align": "Left",
-      "max": 1,
+      "max": 4,
       "class": "AN",
-      "description": "Always X0"
+      "description": "For a B-Record returned in response to an input: the code for the U.S. port location of the Remote Preparer.<br>For ACE generated notifications: always space fill."
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "filler6",
+      "originalName": "Filler",
       "sec": 12,
       "status": "M",
       "start": 67,
@@ -154,24 +155,24 @@
       "align": "Left",
       "max": 1,
       "class": "AN",
-      "description": "Always X0"
+      "description": "<p>Space</p>"
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "remotePreparerFilerCode",
+      "originalName": "Remote Preparer Filer Code",
       "sec": 13,
-      "status": "M",
+      "status": "C",
       "start": 70,
       "end": 71,
       "filler": " ",
       "align": "Left",
-      "max": 1,
+      "max": 3,
       "class": "AN",
-      "description": "Always X0"
+      "description": "For a B-Record returned in response to an input: Remote Filer’s (Preparer) identification code (as assigned by CBP).<br>For ACE generated notifications: always space fill."
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "filler7",
+      "originalName": "Filler",
       "sec": 14,
       "status": "M",
       "start": 72,
@@ -180,20 +181,72 @@
       "align": "Left",
       "max": 1,
       "class": "AN",
-      "description": "Always X0"
+      "description": "<p>Space</p>"
     },
     {
-      "name": "controlId",
-      "originalName": "Control Identifier",
+      "name": "remotePreparerOfficeCode",
+      "originalName": "Remote Preparer Office Code",
       "sec": 15,
-      "status": "M",
+      "status": "C",
       "start": 73,
       "end": 80,
       "filler": " ",
       "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "For a B-Record returned in response to an input: a code agreed upon by the Remote Preparer and CBP representing a specific Preparer ‘office’ (or sub-location).<br>For ACE generated notifications: always space fill."
+    },
+    {
+      "name": "filler8",
+      "originalName": "Filler",
+      "sec": 16,
+      "status": "M",
+      "start": 81,
+      "end": 81,
+      "filler": " ",
+      "align": "Left",
       "max": 1,
       "class": "AN",
-      "description": "Always X0"
+      "description": "<p>Space</p>"
+    },
+    {
+      "name": "remotelyFieldIndicator",
+      "originalName": "Remotely Filed Indicator",
+      "sec": 17,
+      "status": "C",
+      "start": 82,
+      "end": 82,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "For a B-Record returned in response to an input: an indication that the block has been prepared and filed remotely in accordance with the Broker District permit rules as set forth in CBP regulation.<br>1 = Remote Entry submission.<br>For ACE generated notifications: always space fill."
+    },
+    {
+      "name": "filler8",
+      "originalName": "Filler",
+      "sec": 18,
+      "status": "M",
+      "start": 83,
+      "end": 83,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>Space</p>"
+    },
+    {
+      "name": "filerPreparersUserDataText",
+      "originalName": "Filer / Preparer’s User Data Text",
+      "sec": 19,
+      "status": "C",
+      "start": 84,
+      "end": 105,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "X",
+      "description": "For a B-Record returned in response to an input: the exact value submitted in the input B-Record."
     }
   ]
 }

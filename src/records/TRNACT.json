@@ -1,0 +1,57 @@
+{
+  "name": "TRNACT",
+  "status": "C",
+  "elements": [
+    {
+      "name": "record1",
+      "originalName": "Record Content",
+      "sec": 1,
+      "status": "M",
+      "start": 26,
+      "end": 32,
+      "filler": " ",
+      "align": "Left",
+      "max": 7,
+      "class": "AN",
+      "description": "Relative position of the 80-Character record within the batch"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 33,
+      "end": 33,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>Space</p>"
+    },
+    {
+      "name": "record1",
+      "originalName": "Record Syntax Content",
+      "sec": 3,
+      "status": "M",
+      "start": 34,
+      "end": 35,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "description": "Relative position of the syntax problem within the 80-Character record - ‘00’ when the condition applies to the entire record."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 36,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 45,
+      "class": "AN",
+      "description": "<p>Space</p>"
+    }
+  ]
+}

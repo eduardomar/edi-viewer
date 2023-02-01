@@ -45,7 +45,7 @@ const ediToObject = (edi: string): Segment[] => {
     if (index !== -1) {
       const segName = recordsNames[index];
       let elements = records[segName];
-      if (['E0', 'X0'].includes(segName)) {
+      if (['E0', 'X0', 'X1'].includes(segName)) {
         const record = records[segName].find(
           ({ name }) => name === 'referenceDataTypeCode',
         );
