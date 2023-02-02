@@ -1,0 +1,84 @@
+{
+  "name": "K6",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Always equals K6"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 34,
+      "filler": " ",
+      "align": "Left",
+      "max": 32,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "city",
+      "originalName": "City",
+      "sec": 4,
+      "status": "M",
+      "start": 35,
+      "end": 35,
+      "filler": " ",
+      "align": "Left",
+      "max": 21,
+      "class": "X",
+      "description": "City portion of the mailing address"
+    },
+    {
+      "name": "stateCode",
+      "originalName": "State Code",
+      "sec": 5,
+      "status": "M",
+      "start": 56,
+      "end": 57,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "A",
+      "description": "For U.S. addresses, the U.S. Postal Service state code abbreviation. <br> For Canadian addresses, the Canadian province/territory code. <br> For Mexican addresses, the Mexican state code.Otherwise, the code is FN for foreign."
+    },
+    {
+      "name": "postalCode",
+      "originalName": "Postal Code",
+      "sec": 6,
+      "status": "M",
+      "start": 58,
+      "end": 66,
+      "filler": " ",
+      "align": "Left",
+      "max": 9,
+      "class": "AN",
+      "description": "If the address is a U.S. address, the first 5 positions of the ZIP code are numeric. The last 4 positions of the U.S. ZIP code are optional; and if they are included, they are also numeric.For a Canadian address, the Canadian Postal Codewill be an in ANANAN format.For a Mexican address, the Postal Code will be 5 numeric characters.All other foreign addresses may use up to 9 characters or may be space filled."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 7,
+      "status": "M",
+      "start": 67,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 14,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

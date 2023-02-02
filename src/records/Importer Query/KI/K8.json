@@ -1,0 +1,58 @@
+{
+  "name": "K8",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Always equals K8"
+    },
+    {
+      "name": "additionalInformationQualifierCode",
+      "originalName": "Additional Information Qualifier Code",
+      "sec": 2,
+      "status": "C",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "Code indicating the type of additional information being provided."
+    },
+    {
+      "name": "additionalInformation",
+      "originalName": "Additional Information",
+      "sec": 3,
+      "status": "C",
+      "start": 6,
+      "end": 75,
+      "filler": " ",
+      "align": "Left",
+      "max": 70,
+      "class": "X",
+      "description": "Text of the additional information related to the additional reference qualifier code."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 76,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "K3",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Always equals K3"
+    },
+    {
+      "name": "addressLineOne",
+      "originalName": "Address Line One",
+      "sec": 2,
+      "status": "C",
+      "start": 3,
+      "end": 34,
+      "filler": " ",
+      "align": "Left",
+      "max": 32,
+      "class": "X",
+      "description": "Street address or post office box number of the importer/consignee."
+    },
+    {
+      "name": "addressLineTwo",
+      "originalName": "Address Line Two",
+      "sec": 3,
+      "status": "C",
+      "start": 36,
+      "end": 66,
+      "filler": " ",
+      "align": "Left",
+      "max": 32,
+      "class": "X",
+      "description": "Second line of the mailing address."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 67,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 14,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

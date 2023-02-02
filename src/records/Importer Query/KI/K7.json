@@ -1,0 +1,97 @@
+{
+  "name": "K7",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Always equals K7"
+    },
+    {
+      "name": "fullLegalImporterName",
+      "originalName": "Full Legal Importer Name",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 32,
+      "filler": " ",
+      "align": "Left",
+      "max": 30,
+      "class": "X",
+      "description": "Street address or post office box number of the importer/consignee."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 33,
+      "end": 33,
+      "filler": " ",
+      "align": "Left",
+      "max": 48,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "centerIdentifier",
+      "originalName": "Center Identifier",
+      "sec": 4,
+      "status": "M",
+      "start": 34,
+      "end": 39,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "class": "AN",
+      "description": "Center Identifier assigned to the Importer/ConsigneeCEE001-CEE010, NOTELG,PNDING."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 40,
+      "end": 40,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    },
+    {
+      "name": "centerIdDescription",
+      "originalName": "Center ID Description",
+      "sec": 6,
+      "status": "M",
+      "start": 41,
+      "end": 70,
+      "filler": " ",
+      "align": "Left",
+      "max": 30,
+      "class": "AN",
+      "description": "Descriptive name associated with Center Identifier as shown <br><br/> Center ID  Description <br> CEE001  Pharmaceuticals, Health and Chemicals <br>CEE002 Agriculture and Prepared Products <br> CEE003 Automotive and Aerospace<br>CEE004  Apparel, Footwear and Textiles<br>CEE005  Base Metals<br>CEE006  Petroleum, Natural Gas and Minerals<br>CEE007  Electronics<br>CEE008  Consumer Products and Mass Merchandising<br>CEE009 Industrial and Manufacturing Materials<br>CEE010 Machinery<br>NOTELG  Not Center Eligible<br>PNDING  Pending Center Assignment"
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler",
+      "sec": 7,
+      "status": "M",
+      "start": 71,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}
