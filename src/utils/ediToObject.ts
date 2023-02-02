@@ -4,7 +4,7 @@ import Segment from '../interfaces/Segment';
 import ElementJSON from '../interfaces/ElementJSON';
 import { COUNTRIES } from '../constants';
 
-const recordsNames = Object.keys(records);
+const recordsNames = Object.keys(records).sort().reverse();
 
 const getValueFormatted = (seg: ElementJSON, value: string): string => {
   if (value?.trim()?.length === 0) return value;
