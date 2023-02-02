@@ -5,12 +5,12 @@ import RecordJSON from '../interfaces/RecordJSON';
 import Record from '../interfaces/Record';
 import CargoRelease from './Cargo Release';
 import EntrySummary from './Entry Summary';
+import ImporterQuery from './Importer Query';
 
 const recordsJSON: RecordJSON[] = [
   require('./A.json'),
   require('./B.json'),
   require('./BLOCK.json'),
-  require('./K.json'),
   require('./OI.json'),
   require('./PE10.json'),
   require('./PE90.json'),
@@ -20,6 +20,7 @@ const recordsJSON: RecordJSON[] = [
   require('./X1.json'),
   CargoRelease,
   EntrySummary,
+  ImporterQuery,
   require('./Y.json'),
   require('./Z.json'),
 ];
