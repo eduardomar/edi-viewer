@@ -130,7 +130,7 @@
       "align": "Left",
       "max": 9,
       "class": "AN",
-      "description": "A numeric date in MMDDYY (month, day, and year) format representing the bond effective day."
+      "description": "The number assigned to the bond."
     },
     {
       "name": "filler1",
