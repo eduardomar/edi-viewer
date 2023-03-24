@@ -1,0 +1,110 @@
+{
+  "name": "Q6",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Must always equal <strong>Q6</strong>.</p>"
+    },
+    {
+      "name": "totalAntidumpingDuty",
+      "originalName": "Total Antidumping Duty",
+      "sec": 2,
+      "status": "C",
+      "start": 3,
+      "end": 13,
+      "filler": " ",
+      "align": "Right",
+      "max": 11,
+      "class": "N",
+      "description": "<p>A value representing the total antidumping duty. Two decimal places are implied. If the duty is a whole number, the two low-order (cents) positions contain zeroes.</p>"
+    },
+    {
+      "name": "totalCountervailingDuty",
+      "originalName": "Total Countervailing Duty",
+      "sec": 3,
+      "status": "C",
+      "start": 14,
+      "end": 24,
+      "filler": " ",
+      "align": "Right",
+      "max": 11,
+      "class": "N",
+      "description": "<p>A value representing the total countervailing duty amount. Two decimal places are implied. If the duty is a whole number, the two low-order (cents) positions contain zeroes.</p>"
+    },
+    {
+      "name": "totalAmountPaid",
+      "originalName": "Total Amount Paid",
+      "sec": 4,
+      "status": "C",
+      "start": 25,
+      "end": 35,
+      "filler": " ",
+      "align": "Right",
+      "max": 11,
+      "class": "N",
+      "description": "<p>A value representing the total amount paid. Two decimal places are implied. If the amount is a whole number, the two low-order (cents) positions contain zeroes.</p>"
+    },
+    {
+      "name": "totalInterestAmountForReconciliationSummary",
+      "originalName": "Total Interest Amount For Reconciliation Summary",
+      "sec": 5,
+      "status": "C",
+      "start": 36,
+      "end": 46,
+      "filler": " ",
+      "align": "Right",
+      "max": 11,
+      "class": "N",
+      "description": "<p>A value representing the total interest amount for reconciliation summary. Two decimal places are implied. If the interest is a whole number, the two low-order (cents) positions contain zeroes.</p>"
+    },
+    {
+      "name": "totalNumberRevenueProducingEntries",
+      "originalName": "Total Number Revenue Producing Entries",
+      "sec": 6,
+      "status": "M",
+      "start": 47,
+      "end": 51,
+      "filler": " ",
+      "align": "Right",
+      "max": 5,
+      "class": "N",
+      "description": "<p>The number of total revenue-producing entries in the transaction.</p>"
+    },
+    {
+      "name": "totalNumberNonRevenueProducingEntries",
+      "originalName": "Total Number Non-Revenue Producing Entries",
+      "sec": 7,
+      "status": "M",
+      "start": 52,
+      "end": 56,
+      "filler": " ",
+      "align": "Right",
+      "max": 5,
+      "class": "N",
+      "description": "<p>The total number of non-revenue producing entries in the transaction.</p>"
+    },
+    {
+      "name": "filler",
+      "originalName": "Filler",
+      "sec": 8,
+      "status": "M",
+      "start": 57,
+      "end": 80,
+      "filler": " ",
+      "align": null,
+      "max": 24,
+      "class": "S",
+      "description": "<p>Space fill.</p>"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import RecordJSON from '../interfaces/RecordJSON';
 import Record from '../interfaces/Record';
 import CargoRelease from './Cargo Release';
+import DailyStatement from './DailyStatement';
 import EntrySummary from './Entry Summary';
 import ImporterQuery from './Importer Query';
 
@@ -19,6 +20,7 @@ const recordsJSON: RecordJSON[] = [
   require('./X0.json'),
   require('./X1.json'),
   CargoRelease,
+  DailyStatement,
   EntrySummary,
   ImporterQuery,
   require('./Y.json'),
@@ -46,8 +48,8 @@ const Wrapper = styled.span`
 
 const recordsEntries = recordsJSON
   .flat()
-  .filter(({ name, elements }) => {
-    return name?.length > 0 && elements?.length > 0;
+  .filter(it => {
+    return it?.name?.length > 0 && it?.elements?.length > 0;
   })
   .map(({ name, elements }) => {
     return [
