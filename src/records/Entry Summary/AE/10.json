@@ -398,8 +398,8 @@
       "status": "C",
       "start": 58,
       "end": 59,
-      "filler": " ",
-      "align": "Left",
+      "filler": "0",
+      "align": "Right",
       "max": 2,
       "class": "AN",
       "description": "<p>The calendar month that the Entry Summary is accounted for on the Preliminary Periodic Monthly Statement. (MM Format).</p><p>Space fill if not on Periodic Monthly Statement or if statement fields not allowed.</p>"
