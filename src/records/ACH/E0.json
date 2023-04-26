@@ -1,0 +1,123 @@
+{
+  "name": "E0",
+  "status": "M",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal E0"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler 1",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "A",
+      "description": "Always space."
+    },
+    {
+      "name": "referenceDataTypeCode",
+      "originalName": "Reference Data Type Code",
+      "sec": 3,
+      "status": "C",
+      "start": 4,
+      "end": 9,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "class": "AN",
+      "description": "An indication as to the type of reference information returned. <br /><br /> For ACH Debit Authorization/Entry Summary <br /><br /> Presentation, code will be STMTNO"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler 2",
+      "sec": 4,
+      "status": "M",
+      "start": 10,
+      "end": 10,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "X",
+      "description": "Space fill."
+    },
+    {
+      "name": "occurrencePosition",
+      "originalName": "Occurrence Position",
+      "sec": 5,
+      "status": "M",
+      "start": 11,
+      "end": 16,
+      "filler": " ",
+      "align": "Left",
+      "max": 6,
+      "class": "N",
+      "description": "If a repeating group, the relative position of the submitted input detail within the grouping."
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler 3",
+      "sec": 6,
+      "status": "M",
+      "start": 17,
+      "end": 17,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "X",
+      "description": "Space fill."
+    },
+    {
+      "name": "referenceIdConstant",
+      "originalName": "Reference ID Constant",
+      "sec": 7,
+      "status": "M",
+      "start": 18,
+      "end": 24,
+      "filler": " ",
+      "align": "Left",
+      "max": 7,
+      "class": "X",
+      "description": "Always 'REF ID:'"
+    },
+    {
+      "name": "filler4",
+      "originalName": "Filler 4",
+      "sec": 8,
+      "status": "M",
+      "start": 25,
+      "end": 25,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "X",
+      "description": "Space fill."
+    },
+    {
+      "name": "referenceDataText",
+      "originalName": "Reference Data Text",
+      "sec": 9,
+      "status": "M",
+      "start": 26,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 55,
+      "class": "X",
+      "description": "Identifying data extracted from the submitted input that corresponds to the Reference Data Type Code. <br /><br /> The Statement Number, PUN, Payment Type, Payment Amount if available."
+    }
+  ]
+}
