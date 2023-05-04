@@ -7,6 +7,7 @@ import CargoRelease from './Cargo Release';
 import DailyStatement from './DailyStatement';
 import EntrySummary from './Entry Summary';
 import ImporterQuery from './Importer Query';
+import ACH from './ACH';
 
 const recordsJSON: RecordJSON[] = [
   require('./A.json'),
@@ -23,6 +24,7 @@ const recordsJSON: RecordJSON[] = [
   DailyStatement,
   EntrySummary,
   ImporterQuery,
+  ACH,
   require('./Y.json'),
   require('./Z.json'),
 ];

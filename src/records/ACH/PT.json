@@ -8,12 +8,12 @@
       "sec": 1,
       "status": "M",
       "start": 1,
-      "end": 1,
+      "end": 2,
       "filler": " ",
       "align": "Left",
       "max": 1,
       "class": "A",
-      "description": "Must always equal P"
+      "description": "Must always equal PT"
     },
     {
       "name": "payersUnitNumber",
