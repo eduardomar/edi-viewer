@@ -88,7 +88,7 @@
       "start": 25,
       "end": 34,
       "filler": " ",
-      "align": "Left",
+      "align": "Right",
       "max": 10,
       "class": "N",
       "description": "A value representing the amount of the Statement. This amount must be identical to the total Daily or Periodic Daily Statement amount and must also be provided for statements with a zero amount. Two decimal places are implied. If the amount is a whole number, the two low-order (cents) positions contain zeroes. For ACH Debit participants this is the amount of money that is to be electronically debited from the payer's bank account."
