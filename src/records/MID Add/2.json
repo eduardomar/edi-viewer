@@ -1,0 +1,58 @@
+{
+  "name": "$2",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal $2"
+    },
+    {
+      "name": "firmName",
+      "originalName": "Firm Name",
+      "sec": 2,
+      "status": "C",
+      "start": 3,
+      "end": 32,
+      "filler": " ",
+      "align": "Left",
+      "max": 30,
+      "class": "AN",
+      "description": " A firm name can consist of up to 100 positions. The first 70 positions are reported on Record Identifier $2; the next 30 positions are reported on Record Identifier $3."
+    },
+    {
+      "name": "streetName",
+      "originalName": "Street Name",
+      "sec": 3,
+      "status": "C",
+      "start": 33,
+      "end": 75,
+      "filler": " ",
+      "align": "Left",
+      "max": 43,
+      "class": "AN",
+      "description": "The street name can contain up to 94 positions. The first 43 positions are reported on Record Identifier $3; the next 51 positions are reported on Record Identifier $4."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 76,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 5,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    }
+  ]
+}

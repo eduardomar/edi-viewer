@@ -1,0 +1,97 @@
+{
+  "name": "$6",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal $6"
+    },
+    {
+      "name": "firmName",
+      "originalName": "Firm Name",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 32,
+      "filler": " ",
+      "align": "Left",
+      "max": 30,
+      "class": "AN",
+      "description": "A firm name can contain up to 100 positions. The first 70 positions are reported on Record Identifier $5; the next 30 positions are reported on Record Identifier $6."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 33,
+      "end": 33,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    },
+    {
+      "name": "manufacturerId",
+      "originalName": "Manufacturer Identifier",
+      "sec": 4,
+      "status": "C",
+      "start": 34,
+      "end": 48,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "AN",
+      "description": "The new manufacturer ID code generated based on the submitted manufacturer name and address is displayed when an Add ('A') update action message is successful. The manufacturer ID code submitted in the $4 Input record for an Update manufacturer postal code ('U') update action message. This field is required in response to an Update Manufacturer Postal Code message."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 48,
+      "end": 49,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    },
+    {
+      "name": "postalCode",
+      "originalName": "Zip or Postal Code",
+      "sec": 6,
+      "status": "C",
+      "start": 51,
+      "end": 60,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "The ZIP or postal code submitted in $4 record of an update manufacturer postal code message (update action code = 'U' in $1 Input record). This field is required in response to an Update Manufacturer Postal Code message."
+    },
+    {
+      "name": "filler3",
+      "originalName": "Filler",
+      "sec": 7,
+      "status": "M",
+      "start": 61,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 20,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    }
+  ]
+}

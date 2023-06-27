@@ -1,0 +1,71 @@
+{
+  "name": "$7",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal $7"
+    },
+    {
+      "name": "errorMessageIdentifier",
+      "originalName": "Error Message Identifier",
+      "sec": 2,
+      "status": "C",
+      "start": 3,
+      "end": 5,
+      "filler": " ",
+      "align": "Left",
+      "max": 3,
+      "class": "AN",
+      "description": "A code identifying the error message"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 6,
+      "end": 6,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    },
+    {
+      "name": "narrativeMessage",
+      "originalName": "Narrative Message",
+      "sec": 4,
+      "status": "M",
+      "start": 7,
+      "end": 46,
+      "filler": " ",
+      "align": "Left",
+      "max": 40,
+      "class": "AN",
+      "description": "A narrative message explaining the error"
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 47,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 34,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    }
+  ]
+}

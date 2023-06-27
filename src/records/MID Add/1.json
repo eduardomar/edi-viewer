@@ -1,0 +1,71 @@
+{
+  "name": "$1",
+  "status": "M",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal $1"
+    },
+    {
+      "name": "updateActionCode",
+      "originalName": "Update Action Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 3,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "A",
+      "description": "A (add) or U (update)."
+    },
+    {
+      "name": "updateSequenceNumber",
+      "originalName": "Update Sequence Number",
+      "sec": 3,
+      "status": "M",
+      "start": 4,
+      "end": 8,
+      "filler": "0",
+      "align": "Left",
+      "max": 5,
+      "class": "N",
+      "description": "A number from 00001 to 99999 representing the sequence number of update action (each set of record identifiers $1 through $4) contained within a block"
+    },
+    {
+      "name": "isoCountryCode",
+      "originalName": "ISO Country Code",
+      "sec": 4,
+      "status": "C",
+      "start": 9,
+      "end": 10,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "A",
+      "description": "The International Organization for Standardization (ISO) country code representing the country where the firm is located for all countries except Canada. Valid ISO codes are listed in Appendix B of this publication."
+    },
+    {
+      "name": "firmName",
+      "originalName": "Firm Name",
+      "sec": 5,
+      "status": "C",
+      "start": 11,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 70,
+      "class": "AN",
+      "description": " A firm name can consist of up to 100 positions. The first 70 positions are reported on Record Identifier $2; the next 30 positions are reported on Record Identifier $3."
+    }
+  ]
+}

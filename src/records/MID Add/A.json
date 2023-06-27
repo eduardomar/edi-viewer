@@ -1,0 +1,32 @@
+{
+  "name": "$A",
+  "status": "M",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "X",
+      "description": "Must always equal $A"
+    },
+    {
+      "name": "userData",
+      "originalName": "User Data",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 78,
+      "class": "X",
+      "description": "This field is used for internal use"
+    }
+  ]
+}

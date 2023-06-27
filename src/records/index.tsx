@@ -8,6 +8,7 @@ import DailyStatement from './DailyStatement';
 import EntrySummary from './Entry Summary';
 import ImporterQuery from './Importer Query';
 import ACH from './ACH';
+import MIDAdd from './MID Add';
 
 const recordsJSON: RecordJSON[] = [
   require('./A.json'),
@@ -25,6 +26,7 @@ const recordsJSON: RecordJSON[] = [
   EntrySummary,
   ImporterQuery,
   ACH,
+  MIDAdd,
   require('./Y.json'),
   require('./Z.json'),
 ];
