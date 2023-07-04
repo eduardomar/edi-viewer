@@ -1,0 +1,58 @@
+{
+  "name": "$5",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal $5"
+    },
+    {
+      "name": "cityName",
+      "originalName": "City Name",
+      "sec": 2,
+      "status": "C",
+      "start": 3,
+      "end": 46,
+      "filler": " ",
+      "align": "Left",
+      "max": 44,
+      "class": "AN",
+      "description": "The city name can contain up to 67 positions. The first 23 positions are reported on Record Identifier $4; the next 44 positions are reported on Record Identifier $5."
+    },
+    {
+      "name": "postalCode",
+      "originalName": "Zip or Postal Code",
+      "sec": 3,
+      "status": "C",
+      "start": 47,
+      "end": 56,
+      "filler": " ",
+      "align": "Left",
+      "max": 10,
+      "class": "AN",
+      "description": "The ZIP or postal code"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 4,
+      "status": "M",
+      "start": 57,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 24,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    }
+  ]
+}

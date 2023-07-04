@@ -1,0 +1,71 @@
+{
+  "name": "$2",
+  "status": "C",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 1,
+      "end": 2,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal $2"
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 6,
+      "filler": " ",
+      "align": "Left",
+      "max": 4,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    },
+    {
+      "name": "isoCountryCode",
+      "originalName": "ISO Country Code",
+      "sec": 3,
+      "status": "M",
+      "start": 7,
+      "end": 8,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "A",
+      "description": "The International Organization for Standardization (ISO) country code representing the country where the firm is located for all countries except Canada. Valid ISO codes are listed in Appendix B of this publication."
+    },
+    {
+      "name": "firmName",
+      "originalName": "Firm Name",
+      "sec": 4,
+      "status": "M",
+      "start": 9,
+      "end": 78,
+      "filler": " ",
+      "align": "Left",
+      "max": 70,
+      "class": "AN",
+      "description": " A firm name can consist of up to 100 positions. The first 70 positions are reported on Record Identifier $2; the next 30 positions are reported on Record Identifier $3."
+    },
+    {
+      "name": "filler2",
+      "originalName": "Filler",
+      "sec": 5,
+      "status": "M",
+      "start": 79,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 2,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    }
+  ]
+}

@@ -42,8 +42,8 @@
       "description": "A sequential number from 00001 to 99999"
     },
     {
-      "name": "updateSequenceNumber",
-      "originalName": "Update Sequence Number",
+      "name": "isoCountryCode",
+      "originalName": "Country",
       "sec": 4,
       "status": "M",
       "start": 9,

@@ -1,0 +1,45 @@
+{
+  "name": "$1",
+  "status": "M",
+  "elements": [
+    {
+      "name": "controlId",
+      "originalName": "Control Identifier",
+      "sec": 1,
+      "status": "M",
+      "start": 2,
+      "end": 1,
+      "filler": " ",
+      "align": "Left",
+      "max": 1,
+      "class": "AN",
+      "description": "Must always equal $1"
+    },
+    {
+      "name": "manufacturerIDCode",
+      "originalName": "Manufacturer ID Code",
+      "sec": 2,
+      "status": "M",
+      "start": 3,
+      "end": 17,
+      "filler": " ",
+      "align": "Left",
+      "max": 15,
+      "class": "AN",
+      "description": "A code identifying the manufacturer. Refer to CBP Directive 3500-13 dated November 24, 1986, for instructions on determining the manufacturer ID."
+    },
+    {
+      "name": "filler1",
+      "originalName": "Filler",
+      "sec": 3,
+      "status": "M",
+      "start": 18,
+      "end": 80,
+      "filler": " ",
+      "align": "Left",
+      "max": 63,
+      "class": "AN",
+      "description": "<p>Always space.</p>"
+    }
+  ]
+}
