@@ -16,7 +16,7 @@
       "description": "Must always equal $4"
     },
     {
-      "name": "streetName",
+      "name": "street",
       "originalName": "Street Name",
       "sec": 2,
       "status": "C",
@@ -29,7 +29,7 @@
       "description": "The street name can contain up to 94 positions. The first 43 positions are reported on Record Identifier $3; the next 51 positions are reported on Record Identifier $4."
     },
     {
-      "name": "cityName",
+      "name": "city",
       "originalName": "City Name",
       "sec": 3,
       "status": "M",

@@ -29,7 +29,7 @@
       "description": "<p>Always space.</p>"
     },
     {
-      "name": "manufacturerIDCode",
+      "name": "manufacturerId",
       "originalName": "Manufacturer ID Code",
       "sec": 3,
       "status": "M",

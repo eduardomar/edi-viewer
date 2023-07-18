@@ -29,7 +29,7 @@
       "description": " A firm name can consist of up to 100 positions. The first 70 positions are reported on Record Identifier $2; the next 30 positions are reported on Record Identifier $3."
     },
     {
-      "name": "streetName",
+      "name": "street",
       "originalName": "Street Name",
       "sec": 3,
       "status": "C",

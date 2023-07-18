@@ -16,7 +16,7 @@
       "description": "Must always equal $5"
     },
     {
-      "name": "cityName",
+      "name": "city",
       "originalName": "City Name",
       "sec": 2,
       "status": "C",

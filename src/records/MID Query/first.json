@@ -7,8 +7,8 @@
       "originalName": "Control Identifier",
       "sec": 1,
       "status": "M",
-      "start": 2,
-      "end": 1,
+      "start": 1,
+      "end": 2,
       "filler": " ",
       "align": "Left",
       "max": 1,
@@ -16,7 +16,7 @@
       "description": "Must always equal $1"
     },
     {
-      "name": "manufacturerIDCode",
+      "name": "manufacturerId",
       "originalName": "Manufacturer ID Code",
       "sec": 2,
       "status": "M",
