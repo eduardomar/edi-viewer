@@ -10,6 +10,7 @@ import ImporterQuery from './Importer Query';
 import ACH from './ACH';
 import MIDAdd from './MID Add';
 import MIDQuery from './MID Query';
+import CensusWarning from './Census';
 
 const recordsJSON: RecordJSON[] = [
   require('./A.json'),
@@ -29,6 +30,7 @@ const recordsJSON: RecordJSON[] = [
   ACH,
   MIDAdd,
   MIDQuery,
+  CensusWarning,
   require('./Y.json'),
   require('./Z.json'),
 ];
